@@ -1,0 +1,3 @@
+[submodule "software-engineering-project"]
+	path = software-engineering-project
+	url = https://github.com/NicTheStudent/software-engineering-project.git
