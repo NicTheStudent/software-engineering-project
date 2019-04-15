@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Android;
 using Xamarin.Forms;
 
 namespace REKO
@@ -14,17 +15,60 @@ namespace REKO
     public partial class MainPage : ContentPage
     {
 
-        int clickNumber = 0;
+        int amount = 0;
+        String[] prod_sing = {"lök", "ägg", "mjöl"};
+        String[] prod_plur = { "lökar", "ägg", "mjöl"};
+        int prodIndex = 0;
 
         public MainPage()
         {
             InitializeComponent();
         }
 
-        void Handle_Clicked(object sender, System.EventArgs e)
+        void Handle_ValueChanged(object sender, Xamarin.Forms.ValueChangedEventArgs e)
         {
-            clickNumber++;
-            label1.Text = String.Format("Antal klick: {0}", clickNumber);
+            int round = (int)(e.NewValue);
+            this.BackgroundColor = Color.FromRgb(255, 255-round, 255);
+        }
+
+        void Increase(object sender, System.EventArgs e)
+        {
+            amount++;
+            if(amount == 1)
+            {
+                label1.Text = String.Format("Jag vill beställa {0} {1}!", amount, prod_sing[prodIndex]);
+            }
+            else
+            {
+                label1.Text = String.Format("Jag vill beställa {0} {1}!", amount, prod_plur[prodIndex]);
+            }
+
+        }
+        void Decrease(object sender, System.EventArgs e)
+        {
+            amount--;
+            if (amount < 0) amount = 0;
+            if (amount == 1)
+            {
+                label1.Text = String.Format("Jag vill beställa {0} {1}!", amount, prod_sing[prodIndex]);
+            }
+            else
+            {
+                label1.Text = String.Format("Jag vill beställa {0} {1}!", amount, prod_plur[prodIndex]);
+            }
+        }
+        void Change_Product(object sender, System.EventArgs e)
+        {
+            prodIndex++;
+            if (prodIndex >= prod_sing.Length) prodIndex = 0;
+            if (amount == 1)
+            {
+                label1.Text = String.Format("Jag vill beställa {0} {1}!", amount, prod_sing[prodIndex]);
+            }
+            else
+            {
+                label1.Text = String.Format("Jag vill beställa {0} {1}!", amount, prod_plur[prodIndex]);
+            }
         }
     }
 }

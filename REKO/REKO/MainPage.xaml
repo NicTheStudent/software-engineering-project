@@ -5,9 +5,16 @@
              x:Class="REKO.MainPage">
     <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
         <!-- Place new controls here -->
-        <Label x:Name="label1" Text="Welcome to Xamarin.Forms!" />
-        <Button Text="Knapp" Clicked="Handle_Clicked" />
+        <Label x:Name="label1" Text="Jag vill beställa 0 lökar!" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Öka" Clicked="Increase" />
+            <Button Text="Minska" Clicked="Decrease" />
+        </StackLayout>
+            <Button Text="Byt vara" Clicked="Change_Product" />
+        <Slider x:Name="slider1" Minimum="0" Maximum="255" HeightRequest="300" 
+            ValueChanged="Handle_ValueChanged" />
     </StackLayout>
+    
 </ContentPage>
 
 

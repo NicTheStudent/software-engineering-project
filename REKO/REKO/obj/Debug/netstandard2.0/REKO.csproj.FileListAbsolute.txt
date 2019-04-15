@@ -10,3 +10,6 @@
 /Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/bin/Debug/netstandard2.0/REKO.dll
 /Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/bin/Debug/netstandard2.0/REKO.pdb
 /Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/bin/Debug/netstandard2.0/Mono.Android.dll
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/bin/Debug/netstandard2.0/Mono.Android.pdb
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.csproj.CopyComplete
