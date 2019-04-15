@@ -17,5 +17,24 @@ namespace REKO
         {
             InitializeComponent();
         }
+
+        public void OnButtonClick()
+        {
+            label1.Text = "Hej hej!";
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

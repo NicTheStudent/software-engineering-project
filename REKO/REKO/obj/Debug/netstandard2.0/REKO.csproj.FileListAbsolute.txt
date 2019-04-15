@@ -1,0 +1,8 @@
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.csprojAssemblyReference.cache
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.csproj.CoreCompileInputs.cache
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.AssemblyInfoInputs.cache
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.AssemblyInfo.cs
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.dll
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.pdb
