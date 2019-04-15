@@ -6,3 +6,7 @@
 /Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.AssemblyInfo.cs
 /Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.dll
 /Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.pdb
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/bin/Debug/netstandard2.0/REKO.deps.json
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/bin/Debug/netstandard2.0/REKO.dll
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/bin/Debug/netstandard2.0/REKO.pdb
+/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/XamlC.stamp

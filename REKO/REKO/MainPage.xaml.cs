@@ -13,14 +13,18 @@ namespace REKO
     [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
+
+        int clickNumber = 0;
+
         public MainPage()
         {
             InitializeComponent();
         }
 
-        public void OnButtonClick()
+        void Handle_Clicked(object sender, System.EventArgs e)
         {
-            label1.Text = "Hej hej!";
+            clickNumber++;
+            label1.Text = String.Format("Antal klick: {0}", clickNumber);
         }
     }
 }

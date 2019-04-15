@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:REKO" x:Class="REKO.MainPage">
-    <StackLayout>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:REKO" 
+             x:Class="REKO.MainPage">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
         <!-- Place new controls here -->
-        <Label x:Name="label1" Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        <Button Text="Knapp" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnButtonClick()"/>
+        <Label x:Name="label1" Text="Welcome to Xamarin.Forms!" />
+        <Button Text="Knapp" Clicked="Handle_Clicked" />
     </StackLayout>
 </ContentPage>
 
@@ -30,3 +33,4 @@
 
 
 
+     

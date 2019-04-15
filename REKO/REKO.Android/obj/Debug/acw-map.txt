@@ -1,3 +1,6 @@
+REKO.Droid.MainActivity, REKO.Android;md5bb04bac3e0726f7721a6daf5242099aa.MainActivity
+REKO.Droid.MainActivity;md5bb04bac3e0726f7721a6daf5242099aa.MainActivity
+reko.droid.MainActivity;md5bb04bac3e0726f7721a6daf5242099aa.MainActivity
 Android.Support.V4.View.ActionProvider+ISubUiVisibilityListenerImplementor, Xamarin.Android.Support.Compat;mono.android.support.v4.view.ActionProvider_SubUiVisibilityListenerImplementor
 Android.Support.V4.View.ActionProvider.ISubUiVisibilityListenerImplementor;mono.android.support.v4.view.ActionProvider_SubUiVisibilityListenerImplementor
 mono.android.support.v4.view.ActionProvider_SubUiVisibilityListenerImplementor;mono.android.support.v4.view.ActionProvider_SubUiVisibilityListenerImplementor

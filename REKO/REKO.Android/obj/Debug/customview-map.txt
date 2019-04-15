@@ -22,12 +22,16 @@ android.support.v7.widget.Toolbar;/Users/oskar/Desktop/Git/software-engineering-
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/toolbar.xml
 background;obj/Debug/res/mipmap-anydpi-v26/icon.xml
 background;obj/Debug/res/mipmap-anydpi-v26/icon_round.xml
+cache-path;/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/lp/23/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 color;obj/Debug/res/values/colors.xml
+external-cache-path;/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/lp/23/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
+external-path;/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/lp/23/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj/Debug/res/mipmap-anydpi-v26/icon.xml
 foreground;obj/Debug/res/mipmap-anydpi-v26/icon_round.xml
 FrameLayout;/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/lp/25/jl/res/layout/bottomtablayout.xml
 item;obj/Debug/res/values/styles.xml
 LinearLayout;/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/lp/25/jl/res/layout/bottomtablayout.xml
+paths;/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/lp/23/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 resources;obj/Debug/res/values/colors.xml
 resources;obj/Debug/res/values/styles.xml
 set;/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/lp/25/jl/res/anim/enterfromleft.xml
