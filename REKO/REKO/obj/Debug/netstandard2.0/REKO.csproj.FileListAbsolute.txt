@@ -13,3 +13,15 @@
 /Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/bin/Debug/netstandard2.0/Mono.Android.dll
 /Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/bin/Debug/netstandard2.0/Mono.Android.pdb
 /Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.csproj.CopyComplete
+C:\Users\Fredrik\Source\Repos\software-engineering-project\REKO\REKO\obj\Debug\netstandard2.0\REKO.csprojAssemblyReference.cache
+C:\Users\Fredrik\Source\Repos\software-engineering-project\REKO\REKO\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Fredrik\Source\Repos\software-engineering-project\REKO\REKO\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Fredrik\Source\Repos\software-engineering-project\REKO\REKO\obj\Debug\netstandard2.0\REKO.csproj.CoreCompileInputs.cache
+C:\Users\Fredrik\Source\Repos\software-engineering-project\REKO\REKO\obj\Debug\netstandard2.0\REKO.AssemblyInfoInputs.cache
+C:\Users\Fredrik\Source\Repos\software-engineering-project\REKO\REKO\obj\Debug\netstandard2.0\REKO.AssemblyInfo.cs
+C:\Users\Fredrik\Source\Repos\software-engineering-project\REKO\REKO\obj\Debug\netstandard2.0\REKO.dll
+C:\Users\Fredrik\Source\Repos\software-engineering-project\REKO\REKO\obj\Debug\netstandard2.0\REKO.pdb
+C:\Users\Fredrik\Source\Repos\software-engineering-project\REKO\REKO\bin\Debug\netstandard2.0\REKO.deps.json
+C:\Users\Fredrik\Source\Repos\software-engineering-project\REKO\REKO\bin\Debug\netstandard2.0\REKO.dll
+C:\Users\Fredrik\Source\Repos\software-engineering-project\REKO\REKO\bin\Debug\netstandard2.0\REKO.pdb
+C:\Users\Fredrik\Source\Repos\software-engineering-project\REKO\REKO\obj\Debug\netstandard2.0\XamlC.stamp
