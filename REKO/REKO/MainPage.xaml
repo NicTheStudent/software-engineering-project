@@ -3,18 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:REKO" 
              x:Class="REKO.MainPage">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
-        <!-- Place new controls here -->
-        <Label x:Name="label1" Text="Jag vill beställa 0 lökar!" />
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <Button Text="Öka" Clicked="Increase" />
-            <Button Text="Minska" Clicked="Decrease" />
-        </StackLayout>
-            <Button Text="Byt vara" Clicked="Change_Product" />
-        <Slider x:Name="slider1" Minimum="0" Maximum="255" HeightRequest="300" 
-            ValueChanged="Handle_ValueChanged" />
-    </StackLayout>
-    
+    <ListView x:Name="MainListView"  
+             HasUnevenRows="True"  
+             ItemTapped="MainListView_ItemTapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="{Binding Name}" />
+                        <Label Text="{Binding Description}" />
+                        <Label Text="{Binding AmountDescription}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
 </ContentPage>
 
 
