@@ -6,6 +6,16 @@
     <ListView x:Name="MainListView"  
              HasUnevenRows="True"  
              ItemTapped="MainListView_ItemTapped">
+        
+        <ListView.Header>
+            <StackLayout Padding="30,0,30,0">
+                <Entry Text="REKO-ringen Göteborg"
+                       FontSize="Medium"/>
+                <Entry Text="Nästa meetup 5/4, 13.15"
+                       FontSize="Small"/>
+            </StackLayout>
+            
+        </ListView.Header>
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>

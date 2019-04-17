@@ -47,6 +47,54 @@ namespace REKO
                    Amount = 400,
                    OrderNumber = 4
                    
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+
                }
            };
         }

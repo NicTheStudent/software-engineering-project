@@ -8,16 +8,27 @@
              FontSize="Large"  
              HorizontalOptions="Center"  
              VerticalOptions="Center"/>
-            
-            <Label Text="Pris"  
-             FontSize="Medium"  
-             HorizontalOptions="Start"  
-             VerticalOptions="Center"/>
 
+            <StackLayout Orientation="Horizontal" HeightRequest="50">
+                
+                <Label Text="Pris"  
+                 FontSize="Medium"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+
+                <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                    <Button Text="Beställ" 
+
+                     HorizontalOptions="StartAndExpand"
+                     VerticalOptions="Center"/>
+                </StackLayout>
+                
+            </StackLayout>
             <Label Text="Info"  
              FontSize="Medium"  
              HorizontalOptions="Start"  
              VerticalOptions="Center"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
