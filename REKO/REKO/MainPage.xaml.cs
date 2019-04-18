@@ -1,88 +1,123 @@
-﻿using System;
+﻿using REKO.classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Android;
+//using Android;
 using Xamarin.Forms;
 
 namespace REKO
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
-
-        int amount = 0;
-        String[] prod_sing = {"lök", "ägg", "mjöl"};
-        String[] prod_plur = { "lökar", "ägg", "mjöl"};
-        int prodIndex = 0;
-
         public MainPage()
         {
             InitializeComponent();
-        }
 
-        void Handle_ValueChanged(object sender, Xamarin.Forms.ValueChangedEventArgs e)
-        {
-            int round = (int)(e.NewValue);
-            this.BackgroundColor = Color.FromRgb(255, 255-round, 255);
-        }
+            MainListView.ItemsSource = new List<OfferButton>
 
-        void Increase(object sender, System.EventArgs e)
+            {
+            new OfferButton
+                {
+                Name = "Eggberts Ägg",
+                    Description = "12 för 40",
+                    Amount = 10,
+                    OrderNumber = 1
+               },
+               new OfferButton
+               {
+                   Name = "Bertils Betor",
+                   Description = "10 kr/kg",
+                   Amount = 20,
+                   OrderNumber = 2
+                },
+                new OfferButton
+                {
+                    Name = "Mjölmers Mjöl",
+                    Description = "15 kr/kg",
+                    Amount = 35,
+                    OrderNumber = 3
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+                   
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+
+               },
+               new OfferButton
+               {
+                   Name = "Niclas Nicotin",
+                   Description = "5 för 5",
+                   Amount = 400,
+                   OrderNumber = 4
+
+               }
+           };
+        }
+        async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            amount++;
-            if(amount == 1)
+            var Selected = e.Item as OfferButton;
+
+            switch (Selected.OrderNumber)
             {
-                label1.Text = String.Format("Jag vill beställa {0} {1}!", amount, prod_sing[prodIndex]);
-            }
-            else
-            {
-                label1.Text = String.Format("Jag vill beställa {0} {1}!", amount, prod_plur[prodIndex]);
+                case 1:
+                    await Navigation.PushAsync(new Page1());
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
             }
 
-        }
-        void Decrease(object sender, System.EventArgs e)
-        {
-            amount--;
-            if (amount < 0) amount = 0;
-            if (amount == 1)
-            {
-                label1.Text = String.Format("Jag vill beställa {0} {1}!", amount, prod_sing[prodIndex]);
-            }
-            else
-            {
-                label1.Text = String.Format("Jag vill beställa {0} {1}!", amount, prod_plur[prodIndex]);
-            }
-        }
-        void Change_Product(object sender, System.EventArgs e)
-        {
-            prodIndex++;
-            if (prodIndex >= prod_sing.Length) prodIndex = 0;
-            if (amount == 1)
-            {
-                label1.Text = String.Format("Jag vill beställa {0} {1}!", amount, prod_sing[prodIndex]);
-            }
-            else
-            {
-                label1.Text = String.Format("Jag vill beställa {0} {1}!", amount, prod_plur[prodIndex]);
-            }
+               ((ListView)sender).SelectedItem = null;
+
+
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
