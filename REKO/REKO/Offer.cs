@@ -20,37 +20,44 @@ namespace REKO
             this.published = published;
         }
 
-        public String GetName()
+        public String Name
         {
-            return name;
+            get { return name; }
+            set { name = value; }
         }
-        public double GetPrice()
+        public double Price
         {
-            return price;
+            get { return price; }
+            set { price = value; }
         }
         public String GetPriceString()
         {
             return String.Format("{0:F2}", price);
         }
-        public String GetSeller()
+        public String Seller
         {
-            return seller;
+            get { return seller; }
+            set { seller = value; }
         }
-        public int GetAvailable()
+        public int Available
         {
-            return available;
+            get { return available; }
+            set { available = value; }
         }
-        public int GetOrdered()
+        public int Ordered
         {
-            return ordered;
+            get { return ordered; }
+            set { ordered = value; }
         }
-        public String GetUnit()
+        public String Unit
         {
-            return unit;
+            get { return unit; }
+            set { unit = value; }
         }
-        public bool GetPublished()
+        public bool Published
         {
-            return published;
+            get { return published; }
+            set { published = value; }
         }
 
         //----------------------------------

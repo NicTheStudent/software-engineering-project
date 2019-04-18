@@ -17,18 +17,13 @@
               <Node name="MainPage.xaml" expanded="True" />
             </Node>
             <Node name="REKO.Android" expanded="True">
-              <Node name="Packages" expanded="True" />
               <Node name="Properties" expanded="True" />
             </Node>
             <Node name="REKO.iOS" expanded="True">
               <Node name="References" expanded="True" />
-              <Node name="Packages" expanded="True" />
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
