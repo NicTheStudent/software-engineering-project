@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "b7e3b3f06fa88a134026503c9217986dc35fd55b"
+    "signature": "18addaefd4d6db2f548e7683cc03368e6cd16606"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,8 +11,8 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.0.0.304370-pre8",
-          "Xamarin.Forms.Extended.InfiniteScrolling": "1.0.0-preview2"
+          "Xamarin.Forms": "3.6.0.293080",
+          "Mono.Android": "0.0.0.0"
         },
         "runtime": {
           "REKO.dll": {}
@@ -43,7 +43,7 @@
           }
         }
       },
-      "Xamarin.Forms/4.0.0.304370-pre8": {
+      "Xamarin.Forms/3.6.0.293080": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
@@ -59,15 +59,11 @@
           }
         }
       },
-      "Xamarin.Forms.Extended.InfiniteScrolling/1.0.0-preview2": {
-        "dependencies": {
-          "NETStandard.Library": "2.0.3",
-          "Xamarin.Forms": "4.0.0.304370-pre8"
-        },
+      "Mono.Android/0.0.0.0": {
         "runtime": {
-          "lib/netstandard1.0/Xamarin.Forms.Extended.InfiniteScrolling.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "Mono.Android.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
           }
         }
       }
@@ -82,7 +78,7 @@
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "sha512-a/iSwnRZb+LHFk49hQOyThh/ZNC3vsbZsF65XwQIb863qF6msmhdQtxGXFL28Ob2NsCz/drEj28BJd/YPpLRBg==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
@@ -96,30 +92,28 @@
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "sha512": "sha512-nATsBTD2CKr4AYN6eRszhX4sptImWmBJwB/U6XKCWWfnCcrTBw8XSCm3QA9gjppkHTr8OkXUY21MR91D3QZXsw==",
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     },
     "Xamarin.Essentials/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-W0XOt1dNMAE2POcsVotoKDDy5FdAOnR0qULKl6WI4kQEMxQ1sp84DsSU5iacV7oQUMuPhUBAm/3ywks0HO1QrQ==",
+      "sha512": "sha512-AGismQb55pszEQ/ZIv9O1U2YyaF2gHdBdAUO79+biHf1s7AL2R++DIvmf7Z+wtfhZrB9wxhXAkOUuYHgpY6oTw==",
       "path": "xamarin.essentials/1.1.0",
       "hashPath": "xamarin.essentials.1.1.0.nupkg.sha512"
     },
-    "Xamarin.Forms/4.0.0.304370-pre8": {
+    "Xamarin.Forms/3.6.0.293080": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jZAIU0HltG7fp9YZZckGjF1kiTwhsgpc2HFpbSO2pKYhW48WfS5kD6w5U0qpZMh7jvQvM/VCvTDBVAJBiJ0r9g==",
-      "path": "xamarin.forms/4.0.0.304370-pre8",
-      "hashPath": "xamarin.forms.4.0.0.304370-pre8.nupkg.sha512"
+      "sha512": "sha512-o7GH+huLZMGlBxFCFAV5g+P3xoYoXFPeGrZ+AI8ezt2Gey/ZeZjSlf3nR3DzZKClVsCTvJS8Z5rVlC1dexSv+A==",
+      "path": "xamarin.forms/3.6.0.293080",
+      "hashPath": "xamarin.forms.3.6.0.293080.nupkg.sha512"
     },
-    "Xamarin.Forms.Extended.InfiniteScrolling/1.0.0-preview2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-q3MleY9BqDnVKUiXSvYETV++mg70CVXt7h2jqd3etdq5HHrRTYJdjZUdAEBYg5OozfABV7m5QtISU1XheV83XQ==",
-      "path": "xamarin.forms.extended.infinitescrolling/1.0.0-preview2",
-      "hashPath": "xamarin.forms.extended.infinitescrolling.1.0.0-preview2.nupkg.sha512"
+    "Mono.Android/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
