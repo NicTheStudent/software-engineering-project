@@ -1,29 +1,20 @@
 ﻿<Properties StartupConfiguration="{B4919809-A401-4DC1-9355-D354F07496B9}|Default">
-  <MonoDevelop.Ide.ItemProperties.REKO.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.ItemProperties.REKO.iOS FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="REKO/MainPage.xaml">
+  <MonoDevelop.Ide.ItemProperties.REKO.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="REKO/DatabaseFacade.cs">
     <Files>
       <File FileName="REKO/MainPage.xaml.cs" Line="1" Column="1" />
       <File FileName="REKO/MainPage.xaml" />
-<<<<<<< HEAD
-      <File FileName="REKO/DatabaseFacade.cs" Line="7" Column="1" />
-=======
+      <File FileName="REKO/Offer.cs" Line="68" Column="2" />
       <File FileName="REKO/DatabaseFacade.cs" Line="1" Column="1" />
-      <File FileName="REKO/Offer.cs" Line="60" Column="39" />
->>>>>>> databas
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-<<<<<<< HEAD
-          <Node name="REKO" expanded="True" selected="True" />
-=======
           <Node name="REKO" expanded="True">
             <Node name="REKO" expanded="True">
-              <Node name="MainPage.xaml" selected="True" />
+              <Node name="DatabaseFacade.cs" selected="True" />
             </Node>
           </Node>
->>>>>>> databas
         </State>
       </Pad>
     </Pads>
