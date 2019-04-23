@@ -4,16 +4,15 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="REKO/MainPage.xaml">
     <Files>
       <File FileName="REKO/MainPage.xaml" />
+      <File FileName="REKO/Page1.xaml" />
+      <File FileName="REKO/MainPage.xaml.cs" Line="24" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="REKO" expanded="True">
             <Node name="REKO" expanded="True">
-              <Node name="MainPage.xaml" selected="True" />
-            </Node>
-            <Node name="REKO.Android" expanded="True">
-              <Node name="Properties" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>

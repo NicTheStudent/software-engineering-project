@@ -4,7 +4,8 @@
               x:Class="REKO.MainPage"
               xmlns:local="clr-namespace:REKO"
               BackgroundColor="{DynamicResource ThemeBackGroundColor}"
-              BarBackgroundColor="#47b300" >
+              BarBackgroundColor="#47b300"
+              >
    
     <!-- The BarBackgrouncColor sets the DynamicResource ThemeBackGroundColor (i.e. the 
          color of the tabs) to your favourite color-->
