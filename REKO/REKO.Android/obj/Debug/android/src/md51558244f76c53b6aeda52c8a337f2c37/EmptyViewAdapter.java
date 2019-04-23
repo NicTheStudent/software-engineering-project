@@ -11,6 +11,7 @@ public class EmptyViewAdapter
 	static {
 		__md_methods = 
 			"n_getItemCount:()I:GetGetItemCountHandler\n" +
+			"n_onViewRecycled:(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V:GetOnViewRecycled_Landroid_support_v7_widget_RecyclerView_ViewHolder_Handler\n" +
 			"n_onBindViewHolder:(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V:GetOnBindViewHolder_Landroid_support_v7_widget_RecyclerView_ViewHolder_IHandler\n" +
 			"n_onCreateViewHolder:(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;:GetOnCreateViewHolder_Landroid_view_ViewGroup_IHandler\n" +
 			"";
@@ -32,6 +33,14 @@ public class EmptyViewAdapter
 	}
 
 	private native int n_getItemCount ();
+
+
+	public void onViewRecycled (android.support.v7.widget.RecyclerView.ViewHolder p0)
+	{
+		n_onViewRecycled (p0);
+	}
+
+	private native void n_onViewRecycled (android.support.v7.widget.RecyclerView.ViewHolder p0);
 
 
 	public void onBindViewHolder (android.support.v7.widget.RecyclerView.ViewHolder p0, int p1)

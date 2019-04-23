@@ -5574,20 +5574,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/oskar/.nuget/packages/": {}
+    "/Users/Lucasandren/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO.iOS/REKO.iOS.csproj",
+      "projectUniqueName": "/Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO.iOS/REKO.iOS.csproj",
       "projectName": "REKO.iOS",
-      "projectPath": "/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO.iOS/REKO.iOS.csproj",
-      "packagesPath": "/Users/oskar/.nuget/packages/",
-      "outputPath": "/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO.iOS/obj/",
+      "projectPath": "/Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO.iOS/REKO.iOS.csproj",
+      "packagesPath": "/Users/Lucasandren/.nuget/packages/",
+      "outputPath": "/Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/oskar/.config/NuGet/NuGet.Config"
+        "/Users/Lucasandren/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -5598,8 +5598,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/REKO.csproj": {
-              "projectPath": "/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/REKO.csproj"
+            "/Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/REKO.csproj": {
+              "projectPath": "/Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/REKO.csproj"
             }
           }
         }

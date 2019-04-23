@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+              xmlns:local="clr-namespace:REKO" 
+             x:Class="REKO.OrderTab"
+             Title="Beställningar"
+             Icon="ShoppingCart.png">
+   
+    <ContentPage.Content>
+        
+    <!-- Child of MainPage.xaml which displays all orders that I've made-->
+            
+          <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Label Text="Welcome to your orders, where dreams come true"/>
+          </StackLayout>
+            
+    </ContentPage.Content>
+</ContentPage>

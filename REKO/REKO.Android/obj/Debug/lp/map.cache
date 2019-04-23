@@ -23,6 +23,7 @@ Xamarin.Android.Support.v7.RecyclerView
 Xamarin.Android.Support.Vector.Drawable
 Xamarin.Essentials
 Xamarin.Forms.Core
+Xamarin.Forms.Extended.InfiniteScrolling
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
