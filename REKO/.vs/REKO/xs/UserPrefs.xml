@@ -1,19 +1,26 @@
 ﻿<Properties StartupConfiguration="{B4919809-A401-4DC1-9355-D354F07496B9}|Default">
   <MonoDevelop.Ide.ItemProperties.REKO.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
   <MonoDevelop.Ide.ItemProperties.REKO.iOS FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="REKO/AccountTab.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="REKO/OfferTab.xaml">
     <Files>
-      <File FileName="REKO/AccountTab.xaml" />
-      <File FileName="REKO/AccountTab.xaml.cs" Line="1" Column="1" />
+      <File FileName="REKO/LoginPage.xaml" />
+      <File FileName="REKO/LoginPage.xaml.cs" Line="21" Column="84" />
+      <File FileName="REKO/classes/User.cs" Line="23" Column="71" />
+      <File FileName="REKO/App.xaml.cs" Line="13" Column="59" />
       <File FileName="REKO/OfferTab.xaml" />
-      <File FileName="REKO/DatabaseFacade.cs" Line="22" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="REKO" expanded="True">
             <Node name="REKO" expanded="True">
-              <Node name="AccountTab.xaml" selected="True" />
+              <Node name="classes" expanded="True" />
+              <Node name="AccountTab.xaml" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+              <Node name="LoginPage.xaml" expanded="True" />
+              <Node name="OfferTab.xaml" expanded="True" selected="True" />
+              <Node name="OrderTab.xaml" expanded="True" />
+              <Node name="Page1.xaml" expanded="True" />
             </Node>
           </Node>
         </State>

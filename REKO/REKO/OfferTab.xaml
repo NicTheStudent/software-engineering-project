@@ -16,9 +16,11 @@
         <ListView.Header>
             <StackLayout Padding="30,0,30,0">
                 <Entry Text="REKO-ringen Göteborg"
-                       FontSize="Medium"/>
+                       FontSize="Medium"
+                       IsReadOnly="true"/>
                 <Entry Text="Nästa meetup 5/4, 13.15"
-                       FontSize="Small"/>
+                       FontSize="Small"
+                       IsReadOnly="true"/>
             </StackLayout>
             
         </ListView.Header>
