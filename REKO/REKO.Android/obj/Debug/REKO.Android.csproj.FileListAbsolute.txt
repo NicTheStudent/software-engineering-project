@@ -346,6 +346,7 @@
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/stamp/_CopyMdbFiles.stamp
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/stamp/_CopyPdbFiles.stamp
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
+/Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/res/drawable/producer.png
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/android/assets/machine.config
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/stamp/_CompileToDalvik.stamp
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp

@@ -4,9 +4,31 @@ using System.Text;
 
 namespace REKO
 {
-    class Producer
+    public class Producer
     {
-        public string Name { get; set; }
+        String name, description, rekoRing;
+        int id;
+
+        public Producer(String name, String description, int id, String rekoRing)
+        {
+            this.name = name;
+            this.description = description;
+            this.id = id;
+            this.rekoRing = rekoRing;
+        }
+
+
+        public string Name {
+            get
+            {
+                return name;
+            } 
+            set
+            { 
+                 name = value;
+                 }
+    }
+       
        public string Description { get; set; }
 
        public string RekoRing { get; set; }

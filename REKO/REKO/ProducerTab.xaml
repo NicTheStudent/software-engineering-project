@@ -18,7 +18,7 @@
                     <ViewCell>
                         <StackLayout Orientation="Vertical">
                             <Label Text="{Binding Name}" 
-                                   FontSize="Large"/>
+                                   FontSize="Medium"/>
                          </StackLayout>
                     </ViewCell>
                 </DataTemplate>
