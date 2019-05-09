@@ -10,6 +10,13 @@ namespace REKO
 {
     public class DatabaseFacade
     {
+        // SÅ HÄR SER DU DATABASEN
+        // steg 1: ladda ner mongodb compass https://www.mongodb.com/products/compass
+        // steg 2: kopiera följande mongodb+srv://RekoUser:<password>@rekodb-fhi6h.gcp.mongodb.net/test
+        // steg 3: öppna mongodb compass, den kommer säga "vill du öppna med lönken du har kopierat"
+        // steg 4: klicka ja
+        // steg 5: fyll i lådan "password" med "pw"
+        // steg 6: klicka på connect
 
         MongoClient client;
         IMongoDatabase db;

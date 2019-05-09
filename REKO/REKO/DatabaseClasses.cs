@@ -32,7 +32,7 @@ namespace REKO
         public string name { get; set; }
     }
 
-    public class Offer
+    public class Offer // denna klass måste ses över, t.ex måste få ObjectId id
     {
 
         String name, seller, unit;
