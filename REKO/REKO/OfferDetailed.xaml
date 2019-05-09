@@ -10,15 +10,28 @@
              VerticalOptions="Center"/>
 
             <StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="Pris: "
+                 FontSize="Medium"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
 
                 <Label Text="{Binding Offer.Price}"  
                  FontSize="Medium"  
                  HorizontalOptions="Start"  
                  VerticalOptions="Center"/>
 
+                <Label Text="kr /"  
+                 FontSize="Medium"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+                
+                <Label Text="{Binding Offer.Unit}"  
+                 FontSize="Medium"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+
                 <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
                     <Button Text="Beställ" 
-
                      HorizontalOptions="StartAndExpand"
                      VerticalOptions="Center"/>
                 </StackLayout>
