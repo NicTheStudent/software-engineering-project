@@ -42,6 +42,7 @@ C:/Users/Fredrik/Source/Repos/software-engineering-project/REKO/REKO/obj/Debug/n
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/AccountTab.xaml.g.cs
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/OfferTab.xaml.g.cs
+<<<<<<< HEAD
 C:/Users/samue/Desktop/Git/software-engineering-project/REKO/REKO/bin/Debug/netstandard2.0/REKO.deps.json
 C:/Users/samue/Desktop/Git/software-engineering-project/REKO/REKO/bin/Debug/netstandard2.0/REKO.dll
 C:/Users/samue/Desktop/Git/software-engineering-project/REKO/REKO/bin/Debug/netstandard2.0/REKO.pdb
@@ -60,3 +61,6 @@ C:/Users/samue/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/nets
 C:/Users/samue/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/XamlC.stamp
 C:/Users/samue/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/ProducerTab.xaml.g.cs
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/ProducerTab.xaml.g.cs
+=======
+/Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/LoginPage.xaml.g.cs
+>>>>>>> origin/LoginScreen
