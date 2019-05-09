@@ -1,6 +1,37 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using MongoDB.Bson;
+using MongoDB.Driver;
+
 namespace REKO
 {
+    public class User
+    {
+        public ObjectId id { get; set; }
+        public string emailAdress { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public int phoneNumber { get; set; }
+
+    }
+
+    public class Producer
+    {
+        public ObjectId id { get; set; }
+        public User user { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int PhoneNumber { get; set; }
+
+    }
+
+    public class RekoRing
+    {
+        public ObjectId id { get; set; }
+        public string name { get; set; }
+    }
+
     public class Offer
     {
 
