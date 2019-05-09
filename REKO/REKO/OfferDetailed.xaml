@@ -5,13 +5,13 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{Binding Offer.Name}"
-            FontSize="Large"  
+             FontSize="Large"  
              HorizontalOptions="Center"  
              VerticalOptions="Center"/>
 
             <StackLayout Orientation="Horizontal" HeightRequest="50">
-                
-                <Label Text="{Binding Price}"  
+
+                <Label Text="{Binding Offer.Price}"  
                  FontSize="Medium"  
                  HorizontalOptions="Start"  
                  VerticalOptions="Center"/>
@@ -22,7 +22,7 @@
                      HorizontalOptions="StartAndExpand"
                      VerticalOptions="Center"/>
                 </StackLayout>
-                
+
             </StackLayout>
             <Label Text="Info"  
              FontSize="Medium"  

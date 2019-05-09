@@ -12,11 +12,12 @@ namespace REKO
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class OfferDetailed : ContentPage
 	{
-        public Offer Offer { get; }
+        public Offer Offer { get; set; }
 		public OfferDetailed (Offer offer)
 		{
 			InitializeComponent ();
-            this.Offer = offer;
+            Offer = offer;
+            BindingContext = this;
 		}
 
 	}

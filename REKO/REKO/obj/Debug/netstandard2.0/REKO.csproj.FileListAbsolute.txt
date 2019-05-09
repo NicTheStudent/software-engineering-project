@@ -57,3 +57,4 @@ D:\REKO\REKO\REKO\obj\Debug\netstandard2.0\XamlC.stamp
 D:\REKO\REKO\REKO\obj\Debug\netstandard2.0\REKO.dll
 D:\REKO\REKO\REKO\obj\Debug\netstandard2.0\REKO.pdb
 D:\REKO\REKO\REKO\obj\Debug\netstandard2.0\OfferDetailed.xaml.g.cs
+D:\REKO\REKO\REKO\obj\Debug\netstandard2.0\REKO.csprojAssemblyReference.cache
