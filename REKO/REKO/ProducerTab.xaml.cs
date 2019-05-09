@@ -22,8 +22,7 @@ namespace REKO
     
         }
 
-
-        async private void ProducerListView_ItemTapped(object sender, ItemTappedEventArgs e)
+async private void ProducerListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var Selected = e.Item as Producer;
 
