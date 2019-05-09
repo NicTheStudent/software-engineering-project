@@ -83,7 +83,7 @@ namespace REKO
             return resultList;
         }
 
-        // adds new user to database
+        // adds new user to database using many args
         public void AddUser(string first, string last, string email, int phone)
         {
             User newUser = new User
@@ -93,9 +93,21 @@ namespace REKO
                 emailAdress = email,
                 phoneNumber = phone
             };
+            AddUser(newUser);
+        }
 
+        // adds new user to database, user id should be null.
+        public void AddUser(User user)
+        {
             var collection = db.GetCollection<User>("User");
-            collection.InsertOne(newUser);
+            collection.InsertOne(user);
+        }
+
+        // adds new offer to database, offer id should be null.
+        public void AddOffer(Offer offer)
+        {
+            var collection = db.GetCollection<Offer>("Offer");
+            collection.InsertOne(offer);
         }
     }
 }
