@@ -1,6 +1,6 @@
 ﻿using System;
 namespace REKO
-{
+{/*
     public class Offer
     {
 
@@ -70,5 +70,5 @@ namespace REKO
 
 
 
-    }
+    } */
 }

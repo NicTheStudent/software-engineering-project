@@ -19,7 +19,7 @@ namespace REKO
             DatabaseFacade d = new DatabaseFacade();
             
 
-            MainListView.ItemsSource = d.OfferList;
+            MainListView.ItemsSource = d.offerList;
 
 
         }
@@ -28,23 +28,6 @@ namespace REKO
             var Selected = e.Item as Offer;
             OfferDetailed detailedPage = new OfferDetailed(Selected);
             await Navigation.PushAsync(detailedPage);
-            /*
-            switch (Selected.OfferId)
-            {
-                case 1:
-                    await Navigation.PushAsync(detailedPage);
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-            }
-
-               ((ListView)sender).SelectedItem = null;
-               */
-
         }
     }
 }
