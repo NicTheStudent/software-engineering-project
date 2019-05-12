@@ -9,7 +9,7 @@
              HorizontalOptions="Center"  
              VerticalOptions="Center"/>
 
-            <StackLayout Orientation="Horizontal" HeightRequest="50">
+            <StackLayout Orientation="Horizontal">
                 <Label Text="Pris: "
                  FontSize="Medium"  
                  HorizontalOptions="Start"  
@@ -37,10 +37,47 @@
                 </StackLayout>
 
             </StackLayout>
-            <Label Text="Info"  
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Antal: "  
+                FontSize="Small"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+
+                <Label Text="{Binding Offer.Available}"  
+                FontSize="Small"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HeightRequest="100">
+                <Label Text="Plats: "  
+                FontSize="Medium"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+
+                <Label Text="Queen Street 17-19"  
+                FontSize="Medium"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+            </StackLayout>
+            
+            <Label Text="Information: "  
              FontSize="Medium"  
              HorizontalOptions="Start"  
              VerticalOptions="Center"/>
+
+            <Label Text="TODO "  
+                FontSize="Small"  
+                HorizontalOptions="Start"  
+                VerticalOptions="Center"/>
+
+            <Label Text="Betalning sker med: "  
+             FontSize="Small"  
+             HorizontalOptions="Start"  
+             VerticalOptions="Center"/>
+
 
         </StackLayout>
     </ContentPage.Content>
