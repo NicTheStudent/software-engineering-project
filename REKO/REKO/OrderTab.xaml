@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-              xmlns:local="clr-namespace:REKO" 
+             xmlns:local="clr-namespace:REKO" 
              x:Class="REKO.OrderTab"
              Title="Beställningar"
              Icon="ShoppingCart.png">
    
     <ContentPage.Content>
-        
-    <!-- Child of MainPage.xaml which displays all orders that I've made-->
-            
-          <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
-                <Label Text="Welcome to your orders, where dreams come true"/>
-          </StackLayout>
-            
+        <ListView x:Name="MainListView"  
+             HasUnevenRows="True"  
+             ItemTapped="MainListView_ItemTapped">
+
+            <!-- Child of MainPage.xaml which displays all orders that I've made-->
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+
+                                <Label Text="{Binding Name}" />
+                                <Label Text="från" />
+                                <Label Text="{Binding Seller}" />
+
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Horizontal">
+                                
+                                <Label Text="Pris: " />
+                                
+                            </StackLayout>
+                            <Label Text="Hämtas: " />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
