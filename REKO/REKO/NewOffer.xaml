@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="REKO.NewOffer"
+             >
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <TextCell x:Name="newOfferLabel" Text="Nytt erbjudande" />
+                        <EntryCell x:Name="offerNameEntry" Label="Namn" Placeholder="Namn på erbjudande" />
+                        <EntryCell x:Name="productEntry" Label="Produkt" Placeholder="Namn på produkt" />
+                        <EntryCell x:Name="priceEntry" Label="Pris" Placeholder="Pris per enhet" />
+                        <EntryCell x:Name="unitEntry" Label="Enhet" Placeholder="Försäljningsenhet" />
+                        <EntryCell x:Name="amountEntry" Label="Mängd" Placeholder="Tillgänglig mängd" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            
+            <Button Text="Skapa" Clicked="Handle_Clicked_Create_Offer" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
