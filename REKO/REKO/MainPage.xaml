@@ -14,8 +14,9 @@
     <local:OfferTab></local:OfferTab>
     <local:OrderTab></local:OrderTab>
     <local:AccountTab></local:AccountTab>
-   
-            
+    <local:ProducerTab></local:ProducerTab>
+
+
 </TabbedPage>
 
 

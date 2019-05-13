@@ -30,13 +30,39 @@
     <EmbeddedResource Update="OfferDetailed.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="ProducerTab.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="TabController.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="OfferDetailed.xaml.cs">
-      <DependentUpon>OfferDetailed.xaml</DependentUpon>
-    </Compile>
+
+    <None Remove="ProducerTab.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="AccountTab.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="OfferTab.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="OrderTab.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Page1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="TabController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+
   </ItemGroup>
 </Project>
