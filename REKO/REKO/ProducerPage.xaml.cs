@@ -10,7 +10,7 @@ namespace REKO
     public partial class ProducerPage : ContentPage
     {
 
-        Producer Producer { get; set; }
+        Producer Producer; 
         public ProducerPage(Producer producer)
         {
             
