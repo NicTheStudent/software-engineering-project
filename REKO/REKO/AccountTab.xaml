@@ -4,13 +4,33 @@
              x:Class="REKO.AccountTab"
              Title="Mitt Konto"
              Icon="MittKonto.png">
-             
+
     <ContentPage.Content>
-         <StackLayout>
-            <Label Text="Welcome to Mitt Konto" 
-                   HorizontalOptions="Center" 
-                   VerticalOptions="CenterAndExpand"/>
+        <StackLayout>
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <TextCell x:Name="myOffersCell" Text="Mina Erbjudanden" Tapped="MyOffersCell_Tapped" Detail=""/>
+                        <SwitchCell Text="Notifikationer" On="false" />
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal" Padding="13, 0">
+                                    <Label Text="Välj REKO-ring" VerticalOptions="Center"></Label>
+                                    <Picker  
+                                    x:Name="picker"
+                                    Title="Välj..."
+                                    TitleColor="Navy"
+                                    WidthRequest="120">
+                                    </Picker>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                        <TextCell x:Name="ringLabel" Text="Ingen REKO-ring vald" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
         </StackLayout>
     </ContentPage.Content>
-    
+
+
 </ContentPage>
