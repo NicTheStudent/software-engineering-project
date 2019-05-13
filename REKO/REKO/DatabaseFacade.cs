@@ -21,12 +21,12 @@ namespace REKO
         MongoClient client;
         IMongoDatabase db;
 
-        List<Offer> offerList = new List<Offer>(); // tillhör stenåldern
+        public List<Offer> offerList = new List<Offer>(); // tillhör stenåldern
 
         public DatabaseFacade()
         {
-            client = new MongoClient("mongodb+srv://RekoUser:pw@rekodb-fhi6h.gcp.mongodb.net/test?retryWrites=true");
-            db = client.GetDatabase("RekoDB");
+           // client = new MongoClient("mongodb+srv://RekoUser:pw@rekodb-fhi6h.gcp.mongodb.net/test?retryWrites=true");
+           // db = client.GetDatabase("RekoDB");
 
             // kvar för att inte förstöra något gammalt
             offerList.Add(new Offer("Eggberts Ägg", 40, "E.L. Eggbert", 144, 0, "dussin", true));

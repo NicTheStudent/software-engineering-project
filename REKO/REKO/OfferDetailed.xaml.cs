@@ -10,11 +10,15 @@ using Xamarin.Forms.Xaml;
 namespace REKO
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Page1 : ContentPage
+	public partial class OfferDetailed : ContentPage
 	{
-		public Page1 ()
+        public Offer Offer { get; set; }
+		public OfferDetailed (Offer offer)
 		{
 			InitializeComponent ();
+            Offer = offer;
+            BindingContext = this;
 		}
+
 	}
 }
