@@ -28,8 +28,8 @@ namespace REKO
      
         public DatabaseFacade()
         {
-           // client = new MongoClient("mongodb+srv://RekoUser:pw@rekodb-fhi6h.gcp.mongodb.net/test?retryWrites=true");
-           // db = client.GetDatabase("RekoDB");
+           client = new MongoClient("mongodb+srv://RekoUser:pw@rekodb-fhi6h.gcp.mongodb.net/test?retryWrites=true");
+           db = client.GetDatabase("RekoDB");
 
             // kvar för att inte förstöra något gammalt
             offerList.Add(new Offer("Eggberts Ägg", "ägg", 40, "E.L. Eggbert", 144, 0, "dussin", true));

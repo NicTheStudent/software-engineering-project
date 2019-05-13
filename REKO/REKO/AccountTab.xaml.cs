@@ -49,6 +49,12 @@ namespace REKO
         {
             await Navigation.PushAsync(new MyOffersPage());
         }
+
+        async void loginCell_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
+
         /*
         async void AboutAppCell_Tapped(object sender, EventArgs e)
         {
