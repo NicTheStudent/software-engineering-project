@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-6f5b9e66-3883-4c59-b6ca-d6b4dd364af8
-=======
-242c26db-e118-433d-95e2-89a3f9cc4fa9
->>>>>>> origin/LoginScreen
+c04fef38-06f8-4d15-9acb-d44a87fe35e3

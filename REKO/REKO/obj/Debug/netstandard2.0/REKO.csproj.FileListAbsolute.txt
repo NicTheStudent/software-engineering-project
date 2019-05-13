@@ -64,3 +64,4 @@ C:/Users/samue/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/nets
 =======
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/LoginPage.xaml.g.cs
 >>>>>>> origin/LoginScreen
+/Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/ProducerPage.xaml.g.cs

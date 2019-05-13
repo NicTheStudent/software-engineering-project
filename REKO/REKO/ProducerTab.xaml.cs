@@ -10,6 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace REKO
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
+    /* This class represents the tab in which all the producers are shown.
+     * All the producers are all visualized in a list.
+     * 
+     */    
     public partial class ProducerTab : ContentPage
     {
         public ProducerTab()
@@ -26,7 +31,7 @@ async private void ProducerListView_ItemTapped(object sender, ItemTappedEventArg
         {
             var Selected = e.Item as Producer;
 
-           
+            await Navigation.PushAsync(new ProducerPage(Selected));
 
                ((ListView)sender).SelectedItem = null;
 

@@ -1,23 +1,13 @@
 ﻿<Properties StartupConfiguration="{B4919809-A401-4DC1-9355-D354F07496B9}|Default">
   <MonoDevelop.Ide.ItemProperties.REKO.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.ItemProperties.REKO.iOS FirstBuild="True" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="REKO/DatabaseFacade.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="REKO/LoginPage.xaml.cs">
     <Files>
-      <File FileName="REKO/Offer.cs" Line="27" Column="10" />
-      <File FileName="REKO/Producer.cs" Line="10" Column="16" />
-      <File FileName="REKO/ProducerTab.xaml" Line="14" Column="1" />
-      <File FileName="REKO/ProducerTab.xaml.cs" Line="18" Column="23" />
-      <File FileName="REKO/DatabaseFacade.cs" Line="26" Column="81" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="REKO/OfferTab.xaml">
-    <Files>
+      <File FileName="REKO/AccountTab.xaml" />
       <File FileName="REKO/LoginPage.xaml" />
-      <File FileName="REKO/LoginPage.xaml.cs" Line="21" Column="84" />
-      <File FileName="REKO/classes/User.cs" Line="23" Column="71" />
-      <File FileName="REKO/App.xaml.cs" Line="13" Column="59" />
-      <File FileName="REKO/OfferTab.xaml" />
->>>>>>> origin/LoginScreen
+      <File FileName="REKO/ProducerPage.xaml" />
+      <File FileName="REKO/ProducerPage.xaml.cs" Line="13" Column="40" />
+      <File FileName="REKO/Producer.cs" Line="17" Column="38" />
+      <File FileName="REKO/LoginPage.xaml.cs" Line="19" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,18 +15,13 @@
           <Node name="REKO" expanded="True">
             <Node name="REKO" expanded="True">
               <Node name="classes" expanded="True" />
-<<<<<<< HEAD
-              <Node name="DatabaseFacade.cs" selected="True" />
-              <Node name="OfferTab.xaml" expanded="True" />
-              <Node name="ProducerTab.xaml" expanded="True" />
-=======
-              <Node name="AccountTab.xaml" expanded="True" />
               <Node name="App.xaml" expanded="True" />
-              <Node name="LoginPage.xaml" expanded="True" />
-              <Node name="OfferTab.xaml" expanded="True" selected="True" />
-              <Node name="OrderTab.xaml" expanded="True" />
-              <Node name="Page1.xaml" expanded="True" />
->>>>>>> origin/LoginScreen
+              <Node name="LoginPage.xaml" expanded="True">
+                <Node name="LoginPage.xaml.cs" selected="True" />
+              </Node>
+              <Node name="OfferTab.xaml" expanded="True" />
+              <Node name="ProducerPage.xaml" expanded="True" />
+              <Node name="ProducerTab.xaml" expanded="True" />
             </Node>
           </Node>
         </State>

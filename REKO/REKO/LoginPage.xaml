@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="REKO.LoginPage" Title="REKO-Ringen">
     <ContentPage.Content>
-      <StackLayout>
+      
+        <!-- Layout for the loginpage --> 
+        <StackLayout>
             <Label x:Name="Lbl_Anvnamn" Text="Användarnamn" TextColor="#296600"/>
             <Entry x:Name="Ent_Anvnamn" Placeholder="Användarnamn"/>
            
