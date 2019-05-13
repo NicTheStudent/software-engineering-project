@@ -31,7 +31,7 @@ namespace REKO
         public ObjectId id { get; set; }
         public string name { get; set; }
     }
-
+    /*
     public class Offer // denna klass måste ses över, t.ex måste få ObjectId id
     {
 
@@ -95,5 +95,5 @@ namespace REKO
 
 
 
-    }
+    }*/
 }

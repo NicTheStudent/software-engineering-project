@@ -49,10 +49,11 @@ namespace REKO
         {
             await Navigation.PushAsync(new MyOffersPage());
         }
-
+        /*
         async void AboutAppCell_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AboutAppPage());
         }
+        */
     }
 }

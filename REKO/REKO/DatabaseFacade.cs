@@ -29,11 +29,11 @@ namespace REKO
            // db = client.GetDatabase("RekoDB");
 
             // kvar för att inte förstöra något gammalt
-            offerList.Add(new Offer("Eggberts Ägg", 40, "E.L. Eggbert", 144, 0, "dussin", true));
-            offerList.Add(new Offer("Bertils betor", 10, "Bertil Knutsson", 20, 0, "kg", true));
-            offerList.Add(new Offer("Grönqvists gröna gurkor", 30, "Oskar Grönqvist", 15, 0, "st.", true));
-            offerList.Add(new Offer("Marias margarin", 50, "Maria", 1000, 0, "g", true));
-            offerList.Add(new Offer("Hampus & Sampas hampa", 50, "Hampus & Samuel", 300, 0, "g", true));
+            offerList.Add(new Offer("Eggberts Ägg", "ägg", 40, "E.L. Eggbert", 144, 0, "dussin", true));
+            offerList.Add(new Offer("Bertils betor", "betor", 10, "Bertil Knutsson", 20, 0, "kg", true));
+            offerList.Add(new Offer("Grönqvists gröna gurkor", "gurka", 30, "Oskar Grönqvist", 15, 0, "st.", true));
+            offerList.Add(new Offer("Marias margarin", "margarin", 50, "Maria", 1000, 0, "g", true));
+            offerList.Add(new Offer("Hampus & Sampas hampa", "hampa", 50, "Hampus & Samuel", 300, 0, "g", true));
 
         }
 

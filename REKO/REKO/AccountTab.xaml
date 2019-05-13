@@ -26,7 +26,6 @@
                             </ViewCell.View>
                         </ViewCell>
                         <TextCell x:Name="ringLabel" Text="Ingen REKO-ring vald" />
-                        <TextCell x:Name="aboutAppCell" Text="Om Appen" Detail="" Tapped="AboutAppCell_Tapped"/>
                     </TableSection>
                 </TableRoot>
             </TableView>
