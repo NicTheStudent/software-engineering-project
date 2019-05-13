@@ -30,7 +30,6 @@ C:/Users/Fredrik/Source/Repos/software-engineering-project/REKO/REKO/obj/Debug/n
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/OrderTab.xaml.g.cs
-/Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/Page1.xaml.g.cs
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.csproj.CoreCompileInputs.cache
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.AssemblyInfoInputs.cache
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/REKO.AssemblyInfo.cs
@@ -65,3 +64,4 @@ C:/Users/samue/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/nets
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/LoginPage.xaml.g.cs
 >>>>>>> origin/LoginScreen
 /Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/ProducerPage.xaml.g.cs
+/Users/Lucasandren/Desktop/Git/software-engineering-project/REKO/REKO/obj/Debug/netstandard2.0/OfferDetailed.xaml.g.cs

@@ -18,16 +18,14 @@ namespace REKO
         // steg 5: fyll i lådan "password" med "pw"
         // steg 6: klicka på connect
 
-<<<<<<< HEAD
+
         public  List<Offer> offerList = new List<Offer>();
         public List<Producer> ProducerList= new List<Producer>();
-=======
+
         MongoClient client;
         IMongoDatabase db;
 
-        public List<Offer> offerList = new List<Offer>(); // tillhör stenåldern
->>>>>>> master
-
+     
         public DatabaseFacade()
         {
            // client = new MongoClient("mongodb+srv://RekoUser:pw@rekodb-fhi6h.gcp.mongodb.net/test?retryWrites=true");
@@ -40,7 +38,7 @@ namespace REKO
             offerList.Add(new Offer("Marias margarin", 50, "Maria", 1000, 0, "g", true));
             offerList.Add(new Offer("Hampus & Sampas hampa", 50, "Hampus & Samuel", 300, 0, "g", true));
 
-<<<<<<< HEAD
+
             ProducerList.Add(new Producer("Eggberts Ägg", "Jag har 800 hönor men är allergisk mot ägg, säljer därför av lite nu till påsk", 1337, "Göteborg"));
             ProducerList.Add(new Producer("Bertils Betor", "Säljer schyssta röd-, gul- och polkabetor", 241, "Göteborg"));
             ProducerList.Add(new Producer("Grönqvists gurkor", "Salta och söta", 42, "Göteborg"));
@@ -49,7 +47,7 @@ namespace REKO
             ProducerList.Add(new Producer("Niclas Nikotin", "Mängdrabatt! Extrapris på limpor och stockar. Ciggen har jag rullat själv", 19, "Göteborg"));
             ProducerList.Add(new Producer("Lök-Lucas", "Röd-,gul-, vit- och silverlök. Fina priser!", 33, "Göteborg"));
             ProducerList.Add(new Producer("Freddans fisk", "Varmrökt och kallrökt sump-gädda", 80, "Göteborg" ));
-=======
+
         }
 
         //returns all users
@@ -65,7 +63,7 @@ namespace REKO
             var collection = db.GetCollection<User>("User");
             collection.FindSync(filter).ForEachAsync(User => userList.Add(User));
             return userList;
->>>>>>> master
+
         }
 
 

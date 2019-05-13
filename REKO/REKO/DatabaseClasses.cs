@@ -16,6 +16,7 @@ namespace REKO
 
     }
 
+    /*
     public class Producer
     {
         public ObjectId id { get; set; }
@@ -25,6 +26,7 @@ namespace REKO
         public int PhoneNumber { get; set; }
 
     }
+    */ 
 
     public class RekoRing
     {

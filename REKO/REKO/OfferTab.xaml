@@ -6,7 +6,7 @@
              Title="Erbjudanden"
              Icon="MyOffers.png">
    
-    
+   
     <ContentPage.Content>
     
     <ListView x:Name="MainListView"  

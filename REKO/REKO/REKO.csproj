@@ -38,7 +38,7 @@
     <Compile Remove="TabController.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+
     <None Remove="ProducerTab.xaml" />
   </ItemGroup>
   <ItemGroup>
@@ -63,10 +63,6 @@
     <None Update="TabController.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-=======
-    <Compile Update="OfferDetailed.xaml.cs">
-      <DependentUpon>OfferDetailed.xaml</DependentUpon>
-    </Compile>
->>>>>>> master
+
   </ItemGroup>
 </Project>
