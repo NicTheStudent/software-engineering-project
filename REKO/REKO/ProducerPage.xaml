@@ -5,7 +5,7 @@
         <StackLayout>
             <Label Text="Välkommen" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
 
-            <Label Text=" {Binding Producer.Description}"
+            <Label Text=" {Binding Description}"
                    HorizontalOptions="Center" 
                    VerticalOptions="CenterAndExpand"/>
         </StackLayout>

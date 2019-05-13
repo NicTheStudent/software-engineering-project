@@ -1,27 +1,16 @@
 ﻿<Properties StartupConfiguration="{B4919809-A401-4DC1-9355-D354F07496B9}|Default">
   <MonoDevelop.Ide.ItemProperties.REKO.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="REKO/LoginPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="REKO/ProducerPage.xaml">
     <Files>
-      <File FileName="REKO/AccountTab.xaml" />
-      <File FileName="REKO/LoginPage.xaml" />
       <File FileName="REKO/ProducerPage.xaml" />
-      <File FileName="REKO/ProducerPage.xaml.cs" Line="13" Column="40" />
-      <File FileName="REKO/Producer.cs" Line="17" Column="38" />
-      <File FileName="REKO/LoginPage.xaml.cs" Line="19" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="REKO" expanded="True">
             <Node name="REKO" expanded="True">
-              <Node name="classes" expanded="True" />
-              <Node name="App.xaml" expanded="True" />
-              <Node name="LoginPage.xaml" expanded="True">
-                <Node name="LoginPage.xaml.cs" selected="True" />
-              </Node>
-              <Node name="OfferTab.xaml" expanded="True" />
-              <Node name="ProducerPage.xaml" expanded="True" />
-              <Node name="ProducerTab.xaml" expanded="True" />
+              <Node name="LoginPage.xaml" expanded="True" />
+              <Node name="ProducerPage.xaml" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>

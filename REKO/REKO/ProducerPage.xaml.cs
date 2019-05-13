@@ -17,7 +17,7 @@ namespace REKO
          InitializeComponent();
 
             Producer = producer;
-            BindingContext = this;
+            BindingContext = Producer;
         }
 
         

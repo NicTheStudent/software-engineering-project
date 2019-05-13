@@ -7,8 +7,8 @@ namespace REKO
 {
     public partial class LoginPage : ContentPage
     { 
-        /*LoginPage which is now set at the first page that comes up when the app is opened. (Set in app.xaml.cs)
-         * 
+        /*
+         * LoginPage which is now set at the first page that comes up when the app is opened. (Set in app.xaml.cs)
          */
 
         public LoginPage()
