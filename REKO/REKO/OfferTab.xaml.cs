@@ -16,10 +16,10 @@ namespace REKO
         public OfferTab()
         {
             InitializeComponent();
-            DatabaseFacade d = new DatabaseFacade();
+            DatabaseFacade db = new DatabaseFacade();
             
 
-            MainListView.ItemsSource = d.offerList;
+            MainListView.ItemsSource = db.GetOffers();
 
 
         }

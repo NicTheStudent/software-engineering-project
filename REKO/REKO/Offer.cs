@@ -1,9 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using MongoDB.Bson;
+using MongoDB.Driver;
+
 namespace REKO
 {
     public class Offer
     {
-
+        ObjectId id;
         String name, seller, unit, product;
         double price;
         int available, ordered;
@@ -20,7 +25,10 @@ namespace REKO
             this.unit = unit;
             this.published = published;
         }
-
+        public ObjectId Id
+        {
+            get { return id;}
+        }
         public String Name
         {
             get { return name; }
