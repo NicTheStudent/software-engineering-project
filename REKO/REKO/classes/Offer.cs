@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace REKO
 {
     public class Offer
@@ -8,6 +9,7 @@ namespace REKO
         double price;
         int available, ordered;
         bool published;
+        Dictionary<int, int> orderMap; // Takes a orderNumber and maps it to the amount dedicated to that order.
 
         public Offer(String name, String product, double price, String seller, int available, int ordered, String unit, bool published)
         {
