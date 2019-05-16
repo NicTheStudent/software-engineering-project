@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,9 +29,17 @@ namespace REKO
      
         public DatabaseFacade()
         {
-           client = new MongoClient("mongodb+srv://RekoUser:pw@rekodb-fhi6h.gcp.mongodb.net/test?retryWrites=true");
+            try
+            {
+                client = new MongoClient("mongodb://10.0.2.2:27017");  // "mongodb://localhost:27017" "mongodb+srv://RekoUser:pw@rekodb-fhi6h.gcp.mongodb.net/test?retryWrites=true"
+            }
+            catch (AggregateException e)
+            {
+                System.Diagnostics.Debug.WriteLine("THE EXCPETION" + e.ToString());
+            }
+           
            db = client.GetDatabase("RekoDB");
-
+           
             // kvar för att inte förstöra något gammalt
             offerList.Add(new Offer("Eggberts Ägg", "ägg", 40, "E.L. Eggbert", 144, 0, "dussin", true));
             offerList.Add(new Offer("Bertils betor", "betor", 10, "Bertil Knutsson", 20, 0, "kg", true));

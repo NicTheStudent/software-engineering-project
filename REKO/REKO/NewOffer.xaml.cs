@@ -23,6 +23,9 @@ namespace REKO
             Offer newOffer = new Offer(name, product, price, "Bertil", amount, 0, unit, true);
 
             newOfferLabel.Text = "Nytt erbjudande skapat.";
+
+            DatabaseFacade db = new DatabaseFacade();
+            db.AddOffer(newOffer);
         }
     }
 }
