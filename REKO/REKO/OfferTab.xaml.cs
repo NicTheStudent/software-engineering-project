@@ -27,6 +27,7 @@ namespace REKO
             var Selected = e.Item as Offer;
             OfferDetailed detailedPage = new OfferDetailed(Selected);
             await Navigation.PushAsync(detailedPage);
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }
