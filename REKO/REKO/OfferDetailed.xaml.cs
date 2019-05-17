@@ -14,8 +14,9 @@ namespace REKO
 	{
         public Offer Offer { get; set; }
 
-        //This User is a dummy-user, made to test the class.
+        //This User is a dummy-user, made to test the class. (TODO)
         User testUser;
+
         public OfferDetailed (Offer offer)
 		{
 			InitializeComponent ();
@@ -23,8 +24,6 @@ namespace REKO
             BindingContext = this;
 
             testUser = new User("Sam the ham(maker)", "nalle123");
-            
-
 		}
 
 

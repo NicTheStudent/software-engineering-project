@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization;
 
 namespace REKO
 {
@@ -81,7 +83,6 @@ namespace REKO
             var collection = db.GetCollection<User>("User");
             collection.FindSync(filter).ForEachAsync(User => userList.Add(User));
             return userList;
-
         }
 
         //returns all offers
@@ -105,6 +106,7 @@ namespace REKO
         {
             return GetOrdersFiltered(new FilterDefinitionBuilder<Order>().Empty);
         }
+
 
         //returns orders according to FilterDefinition, use FilterDefinitionBuilder
         public List<Order> GetOrdersFiltered(FilterDefinition<Order> filter)

@@ -18,10 +18,10 @@ namespace REKO
          * All vars set to public, to be able to see how eveything works in MongoDB
          */
         public ObjectId id { get; set; }
-        public User user { get; }
-        public Offer offer { get; }
-        public int orderNumber { get; }
-        public int amount { get; }
+        public User user { get; set; }
+        public Offer offer { get; set; }
+        public int orderNumber { get; set; }
+        public int amount { get; set; }
 
         public Order(User user, Offer offer, int orderNumber, int amount)
         {
@@ -30,6 +30,5 @@ namespace REKO
             this.orderNumber = orderNumber;
             this.amount = amount;
         }
-       
     }
 }
