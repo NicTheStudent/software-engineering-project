@@ -13,18 +13,20 @@ namespace REKO
         {
             InitializeComponent();
 
-            List<String> ringList = new List<string>();
+            List<RekoRing> ringList = new List<RekoRing>();
 
-            ringList.Add("Göteborg");
-            ringList.Add("Borås");
-            ringList.Add("Partille");
-            ringList.Add("Stenungsund");
-            ringList.Add("Kungälv");
-            ringList.Add("Mölndal");
-            ringList.Add("Hästveda");
+            ringList.Add(new RekoRing("Göteborg"));
+            ringList.Add(new RekoRing("Borås"));
+            ringList.Add(new RekoRing("Partille"));
+            ringList.Add(new RekoRing("Stenungsund"));
+            ringList.Add(new RekoRing("Mölndal"));
+            ringList.Add(new RekoRing("Hästveda"));
 
+            List<string> stringRingList = new List<string>();
+            ringList.ForEach(RekoRing => stringRingList.Add(RekoRing.name)); // inte 100% snyggt men funkar
 
-            picker.ItemsSource = ringList;
+            picker.ItemsSource = stringRingList;
+
             picker.SelectedIndexChanged += OnPickerSelectedIndexChanged;
             ringLabel.Text = "Ingen REKO-ring vald";
 
@@ -36,6 +38,7 @@ namespace REKO
                 if (selectedIndex != -1)
                 {
                     ringLabel.Text = "Vald: " + (string)picker.ItemsSource[selectedIndex];
+                    Session.Instance.SetRekoRing(ringList[picker.SelectedIndex]);
                 }
                 else
                 {
@@ -62,8 +65,8 @@ namespace REKO
 
         void testCell_Tapped(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(Session.Instance.GetUser().username);
-
+            //System.Diagnostics.Debug.WriteLine(Session.Instance.GetUser().username);
+            System.Diagnostics.Debug.WriteLine(Session.Instance.GetRekoRing().name);
             /*
             var db = DatabaseFacade.Instance;
             db.GetUsers().ForEach(User => System.Diagnostics.Debug.WriteLine(User.firstName)); // 

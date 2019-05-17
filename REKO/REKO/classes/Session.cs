@@ -12,6 +12,8 @@ namespace REKO
     {
         Boolean loggedIn = false;
         User currentUser;
+        RekoRing currentRekoRing;
+
         private static readonly Session INSTANCE = new Session();
 
         private Session()
@@ -59,6 +61,16 @@ namespace REKO
             if (currentUser != null && loggedIn == true)
                 return true;
             else return false;
+        }
+
+        public void SetRekoRing(RekoRing newRing)
+        {
+            currentRekoRing = newRing;
+        }
+
+        public RekoRing GetRekoRing()
+        {
+            return currentRekoRing;
         }
     }
 }
