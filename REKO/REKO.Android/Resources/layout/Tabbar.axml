@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.TabLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+                                         xmlns:app="http://schemas.android.com/apk/res-auto" 
+                                         android:id="@+id/sliding_tabs" 
+                                         android:layout_width="match_parent" 
+                                         android:layout_height="wrap_content" 
+                                         android:background="?attr/colorPrimary" 
+                                         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" 
+                                         app:tabIndicatorColor="#296600"
+                                         app:tabGravity="fill" 
+                                         app:tabMode="fixed"
+                                         app:tabTextAppearance="@style/CustomTab"
+                                         />
+                                         
+<!-- The "tabIndicatorColot changes the color of the the slider that shows which tab that is open -->
+<!-- The tabTextAppearance sets fintSize according to what has been specified under CustomTab in styles.xml -->

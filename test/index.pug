@@ -1,0 +1,30 @@
+extends base.pug
+
+block title
+	title AlgoData: #{self.page}
+
+block styles
+	link(rel="stylesheet" href="/static/css/base.css")
+
+block content
+	header
+	h1 Browse all datasets
+	a(href="/datasets/mnist.pug") click here
+	table(style='width:100%', border='1')
+		tr
+			th Type
+			th Set
+			th Links
+		tr
+			td Face
+			td
+				img(src="https://docs.chainer.org/en/stable/_images/5.png" width="80" height="80")
+				| The mnist set is a... To use the images you have to...
+			td
+				a(href="http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz") training set images (9912422 bytes)
+				br
+				a(href="http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz") training set labels (28881 bytes)
+				br
+				a(href="http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz") test set images (1648877 bytes)
+				br
+				a(href="http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz") test set labels (4542 bytes)

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:REKO" 
+             x:Class="REKO.OfferTab"
+             Title="Erbjudanden"
+             Icon="MyOffers.png">
+   
+   
+    <ContentPage.Content>
+    
+    <ListView x:Name="MainListView"  
+             HasUnevenRows="True"  
+             ItemTapped="MainListView_ItemTapped">
+        
+        <ListView.Header>
+            <StackLayout Padding="30,0,30,0">
+                <Entry Text="REKO-ringen Göteborg"
+                       FontSize="Medium"
+                       IsReadOnly="true"/>
+                <Entry Text="Nästa meetup 5/4, 13.15"
+                       FontSize="Small"
+                       IsReadOnly="true"/>
+            </StackLayout>
+            
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="{Binding Name}" />
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Price}" />
+                                <Label Text="kr /" />
+                                <Label Text="{Binding Unit}" />
+                            </StackLayout>
+                        <Label Text="{Binding Seller}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+   </ContentPage.Content>
+</ContentPage>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     

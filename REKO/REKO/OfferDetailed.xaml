@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="REKO.OfferDetailed">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Offer.Name}"
+             FontSize="Large"  
+             HorizontalOptions="Center"  
+             VerticalOptions="Center"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Pris: "
+                 FontSize="Medium"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+
+                <Label Text="{Binding Offer.Price}"  
+                 FontSize="Medium"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+
+                <Label Text="kr /"  
+                 FontSize="Medium"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+                
+                <Label Text="{Binding Offer.Unit}"  
+                 FontSize="Medium"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+
+                <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                    <Button Text="Beställ" 
+                     HorizontalOptions="StartAndExpand"
+                     VerticalOptions="Center"/>
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Antal: "  
+                FontSize="Small"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+
+                <Label Text="{Binding Offer.Available}"  
+                FontSize="Small"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HeightRequest="100">
+                <Label Text="Plats: "  
+                FontSize="Medium"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+
+                <Label Text="Queen Street 17-19"  
+                FontSize="Medium"  
+                 HorizontalOptions="Start"  
+                 VerticalOptions="Center"/>
+            </StackLayout>
+            
+            <Label Text="Information: "  
+             FontSize="Medium"  
+             HorizontalOptions="Start"  
+             VerticalOptions="Center"/>
+
+            <Label Text="TODO "  
+                FontSize="Small"  
+                HorizontalOptions="Start"  
+                VerticalOptions="Center"/>
+
+            <Label Text="Betalning sker med: "  
+             FontSize="Small"  
+             HorizontalOptions="Start"  
+             VerticalOptions="Center"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

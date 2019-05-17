@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+              x:Class="REKO.MainPage"
+              xmlns:local="clr-namespace:REKO"
+              BackgroundColor="{DynamicResource ThemeBackGroundColor}"
+              BarBackgroundColor="#47b300"
+              >
+   
+    <!-- The BarBackgrouncColor sets the DynamicResource ThemeBackGroundColor (i.e. the 
+         color of the tabs) to your favourite color-->
+    <!-- The MainPage is the TabbedPage, which controls the children pages below.-->
+
+    <local:OfferTab></local:OfferTab>
+    <local:OrderTab></local:OrderTab>
+    <local:AccountTab></local:AccountTab>
+    <local:ProducerTab></local:ProducerTab>
+
+
+</TabbedPage>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
