@@ -6,7 +6,7 @@ using MongoDB.Driver;
 
 namespace REKO
 {
-    class Order
+    public class Order
     {
         /*
          * This class represents a order. When a order is placed, a new instance of this class is created.
@@ -14,11 +14,14 @@ namespace REKO
          * OrderNumber is the same number as the key in Dictonary found in Offer.cs.
          * To create a instance of Order, one must be logged in.
          * A order is created when "Beställ" is pressed.
+         * 
+         * All vars set to public, to be able to see how eveything works in MongoDB
          */
-       private User user { get; }
-       private Offer offer { get; }
-       private int orderNumber { get; }
-       private int amount { get; }
+        public ObjectId id { get; set; }
+        public User user { get; }
+        public Offer offer { get; }
+        public int orderNumber { get; }
+        public int amount { get; }
 
         public Order(User user, Offer offer, int orderNumber, int amount)
         {
@@ -27,6 +30,6 @@ namespace REKO
             this.orderNumber = orderNumber;
             this.amount = amount;
         }
-
+       
     }
 }

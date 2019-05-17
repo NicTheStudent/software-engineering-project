@@ -13,12 +13,32 @@ namespace REKO
 	public partial class OfferDetailed : ContentPage
 	{
         public Offer Offer { get; set; }
-		public OfferDetailed (Offer offer)
+
+        //This User is a dummy-user, made to test the class.
+        User testUser;
+        public OfferDetailed (Offer offer)
 		{
 			InitializeComponent ();
             Offer = offer;
             BindingContext = this;
+
+            testUser = new User("Sam the ham(maker)", "nalle123");
+            
+
 		}
+
+
+        public void Handle_Clicked_Place_My_Order(object sender, EventArgs e)
+        {
+            var amount = int.Parse(NrOfItems.Text);
+            var orderNumber = 3;
+            Order newOrder = new Order(testUser, Offer, orderNumber,amount);
+
+
+            //Remove when singleton is implemented
+            DatabaseFacade db = DatabaseFacade.Instance;
+            db.AddOrder(newOrder);
+        }
 
 	}
 }

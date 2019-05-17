@@ -150,5 +150,12 @@ namespace REKO
             var collection = db.GetCollection<Offer>("Offer");
             collection.InsertOne(offer);
         }
+
+        //adds a new order to the database, order id should be null
+        public void AddOrder(Order order)
+        {
+            var collection = db.GetCollection<Order>("Order");
+            collection.InsertOne(order);
+        }
     }
 }

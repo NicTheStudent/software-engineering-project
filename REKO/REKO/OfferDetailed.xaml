@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="REKO.OfferDetailed">
@@ -33,7 +33,8 @@
                 <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
                     <Button Text="Beställ" 
                      HorizontalOptions="StartAndExpand"
-                     VerticalOptions="Center"/>
+                     VerticalOptions="Center"
+                            Clicked="Handle_Clicked_Place_My_Order"/>
                 </StackLayout>
 
             </StackLayout>
@@ -43,11 +44,17 @@
                 FontSize="Small"  
                  HorizontalOptions="Start"  
                  VerticalOptions="Center"/>
-
+                 
+                <Entry x:Name="NrOfItems" />
+                
+                <Label Text="av" 
+                       HorizontalOptions="Start"  
+                       VerticalOptions="Center"/>
+                
                 <Label Text="{Binding Offer.Available}"  
-                FontSize="Small"  
-                 HorizontalOptions="Start"  
-                 VerticalOptions="Center"/>
+                       FontSize="Small"  
+                       HorizontalOptions="Start"  
+                       VerticalOptions="Center"/>
 
             </StackLayout>
             
