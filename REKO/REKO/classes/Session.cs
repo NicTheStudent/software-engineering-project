@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace REKO
 {
+    // Singleton class that logs users in or out and keep tracks of who is logged in..
+
     public sealed class Session
     {
         Boolean loggedIn = false;
@@ -22,12 +26,23 @@ namespace REKO
             }
         }
 
-        /*
-        public Boolean LogIn(string emailAdress, string password)
+        
+        public Boolean LogIn(string username, string password)
         {
-            //check database for user with these credentials
+            var dbf = DatabaseFacade.Instance;
+            var filter = Builders<User>.Filter.Eq(user => user.username, username) & Builders<User>.Filter.Eq(user => user.password, password);
+            List<User> loggedInUser = dbf.GetUsersFiltered(filter);
+            if (loggedInUser[0] != null)
+            {
+                currentUser = loggedInUser[0];
+                return true; //login success
+            }
+            else
+                return false; //login fail
+
+
         }
-        */
+        
         public void LogOut()
         {
             currentUser = null;

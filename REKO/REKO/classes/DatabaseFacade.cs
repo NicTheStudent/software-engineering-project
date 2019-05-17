@@ -11,7 +11,9 @@ namespace REKO
 {
     public sealed class DatabaseFacade
     {
-        // SÅ HÄR SER DU DATABASEN
+        //Singleton class that does all communication with database.
+
+        // SÅ HÄR SER DU DATABASEN (GAMMALT, VI ANVÄNDER NU LOKAL DATABASSERVER)
         // steg 1: ladda ner mongodb compass https://www.mongodb.com/products/compass
         // steg 2: kopiera följande mongodb+srv://RekoUser:<password>@rekodb-fhi6h.gcp.mongodb.net/test
         // steg 3: öppna mongodb compass, den kommer säga "vill du öppna med lönken du har kopierat"
