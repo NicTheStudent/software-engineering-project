@@ -124,6 +124,11 @@ namespace REKO
             return ringList;
         }
 
+        public void AddRekoRing(RekoRing rekoring)
+        {
+            var collection = db.GetCollection<RekoRing>("RekoRing");
+            collection.InsertOne(rekoring);
+        }
 
         //doesnt work quite yet
         public List<T> getAnythingFiltered<T>(FilterDefinition<T> filter)

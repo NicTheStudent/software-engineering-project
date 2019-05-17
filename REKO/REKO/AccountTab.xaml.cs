@@ -13,14 +13,7 @@ namespace REKO
         {
             InitializeComponent();
 
-            List<RekoRing> ringList = new List<RekoRing>();
-
-            ringList.Add(new RekoRing("Göteborg"));
-            ringList.Add(new RekoRing("Borås"));
-            ringList.Add(new RekoRing("Partille"));
-            ringList.Add(new RekoRing("Stenungsund"));
-            ringList.Add(new RekoRing("Mölndal"));
-            ringList.Add(new RekoRing("Hästveda"));
+            List<RekoRing> ringList = DatabaseFacade.Instance.GetRekoRings();
 
             List<string> stringRingList = new List<string>();
             ringList.ForEach(RekoRing => stringRingList.Add(RekoRing.name)); // inte 100% snyggt men funkar
