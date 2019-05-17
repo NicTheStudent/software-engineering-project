@@ -27,6 +27,7 @@
                         </ViewCell>
                         <TextCell x:Name="ringLabel" Text="Ingen REKO-ring vald" />
                         <TextCell x:Name="loginCell" Text="Logga in" Tapped="loginCell_Tapped" Detail=""/>
+                        <TextCell x:Name="signUpCell" Text="Skapa ny användare" Tapped="signUpCell_Tapped" Detail=""/>
                         <TextCell x:Name="testCell" Text="Testknapp" Tapped="testCell_Tapped" Detail=""/>
                     </TableSection>
                 </TableRoot>

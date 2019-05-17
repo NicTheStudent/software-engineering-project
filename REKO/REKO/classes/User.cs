@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using MongoDB.Bson;
 using MongoDB.Driver;
-
 using Xamarin.Forms;
-using MongoDB.Bson;
-using MongoDB.Driver;
 
 namespace REKO
 {
@@ -16,8 +13,6 @@ namespace REKO
 
         public string username { get; set; }
         public string password { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
 
         public User(string username, string password)
         {

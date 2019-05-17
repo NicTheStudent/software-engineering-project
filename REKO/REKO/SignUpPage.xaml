@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="REKO.SignUpPage" Title="REKO-Ringen">
+    <ContentPage.Content>
+
+        <!-- Layout for the SignUpPage -->
+        <StackLayout>
+            <Label x:Name="Lbl_Anvnamn" Text="Användarnamn" TextColor="#296600"/>
+            <Entry x:Name="Ent_Anvnamn" Placeholder="Användarnamn"/>
+
+            <Label x:Name="Lbl_Lösen1" Text="Lösenord" TextColor="#296600"/>
+            <Entry x:Name="Ent_Lösen1" Placeholder="Lösenord" IsPassword="true"/>
+            
+            <Label x:Name="Lbl_Lösen2" Text="Upprepa Lösenord" TextColor="#296600"/>
+            <Entry x:Name="Ent_Lösen2" Placeholder="Upprepa Lösenord" IsPassword="true"/>
+
+
+            <Button x:Name="Btn_SignUp" Text="Skapa Konto" 
+                    Clicked="SignUpClicked"
+                    BackgroundColor="#47b300"/>
+            <Image Source="Icon.png"></Image>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

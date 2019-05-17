@@ -55,6 +55,11 @@ namespace REKO
             await Navigation.PushAsync(new LoginPage());
         }
 
+        async void signUpCell_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SignUpPage());
+        }
+
         void testCell_Tapped(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine(Session.Instance.GetUser().username);

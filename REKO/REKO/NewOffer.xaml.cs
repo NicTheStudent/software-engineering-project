@@ -32,7 +32,5 @@ namespace REKO
             else
                 DisplayAlert("Du är inte inloggad", "Vänligen logga in för att kunna skapa ett erbjudande", "OK");
         }
-
-        }
     }
 }

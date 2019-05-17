@@ -86,6 +86,16 @@ namespace REKO
 
         }
 
+        //checks if a username i already taken
+        public Boolean CheckUsernameExists(string username)
+        {
+            var userList = GetUsersFiltered(new FilterDefinitionBuilder<User>().Eq(User => User.username, username));
+            if (userList.Any())
+                return true;
+            else
+                return false;
+        }
+
 
         //returns all offers
         public List<Offer> GetOffers()
