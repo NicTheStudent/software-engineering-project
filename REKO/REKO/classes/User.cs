@@ -10,13 +10,16 @@ namespace REKO
     {
         public ObjectId id { get; set; }
 
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
 
-        public User(string Username, string Password)
+        public User(string username, string password)
         {
-            this.Username = Username;
-            this.Password = Password;
+            this.username = username;
+            this.password = password;
+
 
         }
 
