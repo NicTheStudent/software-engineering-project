@@ -5,6 +5,7 @@ using Xamarin.Forms;
 
 namespace REKO
 {
+    // CLASS CURRENTLY NOT IN USE
     public partial class LoginPage : ContentPage
     { 
         /*
@@ -22,16 +23,16 @@ namespace REKO
          */
         void LoginClicked(object sender, EventArgs e)
         {
-            classes.User user = new classes.User(Ent_Anvnamn.Text, Ent_Lösen.Text);
+            User user = new User(Ent_Anvnamn.Text, Ent_Lösen.Text);
 
-            if (user.LoginValidation())
+           /* if (user.LoginValidation())
             {
                 Navigation.PushAsync(new MainPage());
             }
             else
             {
                 DisplayAlert("Inloggning", "Inloggning misslyckades",  "Försök igen");
-            }
+            } */
         }
     }
 }
