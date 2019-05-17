@@ -84,14 +84,11 @@ namespace REKO
 
         }
 
-
         //returns all offers
         public List<Offer> GetOffers()
         {
             return GetOffersFiltered(new FilterDefinitionBuilder<Offer>().Empty);
         }
-
-
 
         //returns offers according to FilterDefinition, use FilterDefinitionBuilder
         public List<Offer> GetOffersFiltered(FilterDefinition<Offer> filter)
@@ -101,6 +98,24 @@ namespace REKO
             collection.FindSync(filter).ForEachAsync(Offer => offerList.Add(Offer));
             return offerList;
         }
+
+
+        //returns all my orders
+        public List<Order> GetMyOrders()
+        {
+            return GetOrdersFiltered(new FilterDefinitionBuilder<Order>().Empty);
+        }
+
+        //returns orders according to FilterDefinition, use FilterDefinitionBuilder
+        public List<Order> GetOrdersFiltered(FilterDefinition<Order> filter)
+        {
+            List<Order> orderList = new List<Order>();
+            var collection = db.GetCollection<Order>("Order");
+            collection.FindSync(filter).ForEachAsync(Order => orderList.Add(Order));
+            return orderList;
+        }
+
+
 
         //returns all rekorings
         public List<RekoRing> GetRekoRings()

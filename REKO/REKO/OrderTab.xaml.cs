@@ -10,10 +10,8 @@ namespace REKO
         public OrderTab()
         {
             InitializeComponent();
-            DatabaseFacade d = DatabaseFacade.Instance;
-
-
-            MainListView.ItemsSource = d.offerList;
+            DatabaseFacade db = DatabaseFacade.Instance;
+            MainListView.ItemsSource = db.GetMyOrders();
 
 
         }

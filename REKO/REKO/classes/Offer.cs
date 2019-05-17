@@ -41,6 +41,12 @@ namespace REKO
             get { return price; }
             set { price = value; }
         }
+
+        public String Product
+        {
+            get { return product; }
+            set { product = value; }
+        }
         public String GetPriceString()
         {
             return String.Format("{0:F2}", price);
