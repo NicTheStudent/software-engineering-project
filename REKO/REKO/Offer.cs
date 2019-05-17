@@ -26,8 +26,9 @@ namespace REKO
             this.published = published;
         }
         public ObjectId Id
-        {
+        {   
             get { return id;}
+            set { id = value; }
         }
         public String Name
         {
