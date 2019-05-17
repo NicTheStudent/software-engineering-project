@@ -22,12 +22,12 @@ namespace REKO
             }
         }
 
-        public void LogIn(User u)
+        /*
+        public Boolean LogIn(string emailAdress, string password)
         {
-            currentUser = u;
-            loggedIn = true;
+            //check database for user with these credentials
         }
-
+        */
         public void LogOut()
         {
             currentUser = null;
@@ -37,6 +37,13 @@ namespace REKO
         public User GetUser()
         {
             return currentUser;
+        }
+
+        public Boolean IsLoggedIn()
+        {
+            if (currentUser != null && loggedIn == true)
+                return true;
+            else return false;
         }
     }
 }
