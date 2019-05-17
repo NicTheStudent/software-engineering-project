@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="TabController.xaml.cs" />
+    <Compile Remove=":Users:oskar:Desktop:Git:software-engineering-project:REKO:REKO:classes:Offer.cs" />
   </ItemGroup>
   <ItemGroup>
 

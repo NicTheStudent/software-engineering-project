@@ -117,5 +117,12 @@ namespace REKO
             var collection = db.GetCollection<Offer>("Offer");
             collection.InsertOne(offer);
         }
+
+        private bool AddOrder(Order order)
+        {
+            var collection = db.GetCollection<Order>("Order");
+            collection.InsertOne(order);
+            return true;
+        }
     }
 }

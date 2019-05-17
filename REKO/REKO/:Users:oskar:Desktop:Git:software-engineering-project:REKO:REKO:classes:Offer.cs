@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using REKO.classes;
+
 namespace REKO
 {
     public class Offer
@@ -60,17 +61,20 @@ namespace REKO
         {
             get { return published; }
             set { published = value; }
-        }
+        }/Users/oskar/Desktop/Git/software-engineering-project/REKO/REKO/classes/Offer.cs
 
-        //----------------------------------
+        //---------------------------------
 
-            EggbertsÄgg.RequestPurchase(...);
-            > true
-            > false
-
-        public bool RequestPurchase(User buyer, int buyAmount)
+        public bool RequestPurchase(int buyAmount, User buyer)
         {
-
+            if(available >= buyAmount)
+            {
+                Random random = new Random();
+                Order newOrder = new Order(new User(), "Namn", buyAmount, buyAmount*price); //Parametrar kommer behöva ändras
+                available -= buyAmount;
+                ordered += buyAmount;
+                return true;
+            }
             return false;
         }
 
