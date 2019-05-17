@@ -27,8 +27,12 @@
                         </ViewCell>
                         <TextCell x:Name="ringLabel" Text="Ingen REKO-ring vald" />
                     </TableSection>
+                                      
                 </TableRoot>
             </TableView>
+            <Button 
+                x:Name="myButton"
+                Text="TESTKNAPP"/>
         </StackLayout>
     </ContentPage.Content>
 

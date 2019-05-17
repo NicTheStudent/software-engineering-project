@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REKO.Android", "REKO.Android\REKO.Android.csproj", "{B4919809-A401-4DC1-9355-D354F07496B9}"
 EndProject
@@ -32,7 +32,6 @@ Global
 		{B4919809-A401-4DC1-9355-D354F07496B9}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{B4919809-A401-4DC1-9355-D354F07496B9}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{A8EEDF70-9266-4FA9-BB94-F27AE11468E7}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{A8EEDF70-9266-4FA9-BB94-F27AE11468E7}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{A8EEDF70-9266-4FA9-BB94-F27AE11468E7}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{A8EEDF70-9266-4FA9-BB94-F27AE11468E7}.Debug|iPhone.Build.0 = Debug|iPhone
 		{A8EEDF70-9266-4FA9-BB94-F27AE11468E7}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator

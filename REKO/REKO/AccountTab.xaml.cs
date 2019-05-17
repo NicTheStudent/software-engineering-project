@@ -28,6 +28,11 @@ namespace REKO
             picker.SelectedIndexChanged += OnPickerSelectedIndexChanged;
             ringLabel.Text = "Ingen REKO-ring vald";
 
+            myButton.Clicked += MyButton_tapped;
+                
+            
+            
+
             void OnPickerSelectedIndexChanged(object sender, EventArgs e)
             {
                 picker = (Picker)sender;
@@ -48,6 +53,11 @@ namespace REKO
         async void MyOffersCell_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MyOffersPage());
+        }
+
+        async void MyButton_tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ManageOrders());
         }
         /*
         async void AboutAppCell_Tapped(object sender, EventArgs e)
