@@ -9,7 +9,7 @@ using MongoDB.Driver;
 
 namespace REKO
 {
-    public class DatabaseFacade
+    public sealed class DatabaseFacade
     {
         // SÅ HÄR SER DU DATABASEN
         // steg 1: ladda ner mongodb compass https://www.mongodb.com/products/compass
@@ -23,11 +23,20 @@ namespace REKO
         public  List<Offer> offerList = new List<Offer>();
         public List<Producer> ProducerList= new List<Producer>();
 
+        private static readonly DatabaseFacade INSTANCE = new DatabaseFacade();
+
         MongoClient client;
         IMongoDatabase db;
 
-     
-        public DatabaseFacade()
+        public static DatabaseFacade Instance
+        {
+            get
+            {
+                return INSTANCE;
+            }
+        }
+
+        private DatabaseFacade()
         {
             try
             {
@@ -113,6 +122,7 @@ namespace REKO
             return resultList;
         }
 
+        /*
         // adds new user to database using many args
         public void AddUser(string first, string last, string email, int phone)
         {
@@ -125,6 +135,7 @@ namespace REKO
             };
             AddUser(newUser);
         }
+        */
 
         // adds new user to database, user id should be null.
         public void AddUser(User user)

@@ -10,7 +10,7 @@ namespace REKO
         public OrderTab()
         {
             InitializeComponent();
-            DatabaseFacade d = new DatabaseFacade();
+            DatabaseFacade d = DatabaseFacade.Instance;
 
 
             MainListView.ItemsSource = d.offerList;

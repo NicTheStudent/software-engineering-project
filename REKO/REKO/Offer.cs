@@ -28,6 +28,7 @@ namespace REKO
         public ObjectId Id
         {
             get { return id;}
+            set { id = value; }
         }
         public String Name
         {

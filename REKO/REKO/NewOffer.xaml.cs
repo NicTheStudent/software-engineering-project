@@ -24,7 +24,7 @@ namespace REKO
 
             newOfferLabel.Text = "Nytt erbjudande skapat.";
 
-            DatabaseFacade db = new DatabaseFacade();
+            DatabaseFacade db = DatabaseFacade.Instance;
             db.AddOffer(newOffer);
         }
     }

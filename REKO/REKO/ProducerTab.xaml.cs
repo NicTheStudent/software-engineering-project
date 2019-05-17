@@ -20,7 +20,7 @@ namespace REKO
         public ProducerTab()
         {
             InitializeComponent();
-            DatabaseFacade data = new DatabaseFacade();
+            DatabaseFacade data = DatabaseFacade.Instance;
 
             ProducerListView.ItemsSource = data.ProducerList;
 
