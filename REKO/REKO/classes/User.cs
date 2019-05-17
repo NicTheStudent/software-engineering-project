@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 using Xamarin.Forms;
 
-namespace REKO.classes
+namespace REKO
 {
     public class User
     {
-        public int Id { get; set; }
+        public ObjectId Id { get; set; }
 
         public string Username { get; set; }
         public string Password { get; set; }
