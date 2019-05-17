@@ -19,6 +19,7 @@ namespace REKO
         public void Populate()
         {
             PopulateRings();
+            PopulateUsers();
         }
 
         private void PopulateRings()
@@ -37,6 +38,27 @@ namespace REKO
 
                 ringList.ForEach(RekoRing => DatabaseFacade.Instance.AddRekoRing(RekoRing));
              }
+
+        }
+
+        private void PopulateUsers()
+        {
+            List<User> checkList = DatabaseFacade.Instance.GetUsers();
+
+            if (!checkList.Any())
+            {
+                List<User> userList = new List<User>();
+                userList.Add(new User("Namorb", "pw"));
+                userList.Add(new User("Fripperian", "pw"));
+                userList.Add(new User("NictheStudent", "pw"));
+                userList.Add(new User("FornMaria", "pw"));
+                userList.Add(new User("oscgro19", "pw"));
+                userList.Add(new User("ssamuelandersson", "pw"));
+                userList.Add(new User("LucasAndren", "pw"));
+
+
+                userList.ForEach(User => DatabaseFacade.Instance.AddUser(User));
+            }
 
         }
     }
