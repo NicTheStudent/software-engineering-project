@@ -1,54 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
-namespace REKO.classes
+namespace REKO
 {
-    public class Order
+    class Order
     {
-        int ordNo;
-        String name;
-        double price;
-        int amount;
-     
+        /*
+         * This class represents a order. When a order is placed, a new instance of this class is created.
+         * When a order is deleted this classes delete method should be called. (TODO)
+         * OrderNumber is the same number as the key in Dictonary found in Offer.cs.
+         * To create a instance of Order, one must be logged in.
+         * A order is created when "Beställ" is pressed.
+         */
 
-        public Order(int ordNo, String name, int amount, double price)
+        private ObjectId id { get; set; }
+        private User user { get; }
+        private Offer offer { get; }
+        private int orderNumber { get; }
+        private int amount { get; }
+
+        public Order(User user, Offer offer, int orderNumber, int amount)
         {
-            this.ordNo = ordNo;
-            this.name = name;         
-            this.price = price;
+            this.user = user;
+            this.offer = offer;
+            this.orderNumber = orderNumber;
             this.amount = amount;
         }
-
-        public String Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-        public double Price
-        {
-            get { return price; }
-            set { price = value; }
-        }
-        public String GetPriceString()
-        {
-            return String.Format("{0:F2}", price);
-        }
-        public int OrdNo
-        {
-            get { return ordNo; }
-            set { ordNo = value; }
-        }
-        public int Amount
-        {
-            get { return amount; }
-            set { amount = value; }
-        }
-        
-
-        //----------------------------------
-
-
-
     }
 }
