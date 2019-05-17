@@ -1,5 +1,4 @@
-﻿using REKO.classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -28,6 +27,7 @@ namespace REKO
             var Selected = e.Item as Offer;
             OfferDetailed detailedPage = new OfferDetailed(Selected);
             await Navigation.PushAsync(detailedPage);
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }

@@ -114,7 +114,7 @@ namespace REKO
         }
 
         // adds new user to database using many args
-        public void AddUser(string first, string last, string email, int phone)
+       /* public void AddUser(string first, string last, string email, int phone)
         {
             User newUser = new User
             {
@@ -124,7 +124,7 @@ namespace REKO
                 phoneNumber = phone
             };
             AddUser(newUser);
-        }
+        } */
 
         // adds new user to database, user id should be null.
         public void AddUser(User user)
