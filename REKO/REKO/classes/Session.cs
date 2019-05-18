@@ -13,6 +13,7 @@ namespace REKO
         Boolean loggedIn = false;
         User currentUser;
         RekoRing currentRekoRing;
+        Producer currentProducer;
 
         private static readonly Session INSTANCE = new Session();
 
@@ -37,6 +38,7 @@ namespace REKO
             if (loggedInUser[0] != null)
             {
                 currentUser = loggedInUser[0];
+                currentProducer = DatabaseFacade.Instance.GetProducers(currentUser)[0];
                 return true; //login success
             }
             else
@@ -71,6 +73,11 @@ namespace REKO
         public RekoRing GetRekoRing()
         {
             return currentRekoRing;
+        }
+
+        public Producer GetProcuder()
+        {
+            return currentProducer;
         }
     }
 }

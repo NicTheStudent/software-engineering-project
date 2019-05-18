@@ -10,7 +10,7 @@ namespace REKO
     {
         String name, description;
         public ObjectId id { get; set; }
-        User user;
+        public User user { get; set; }
         RekoRing rekoRing;
 
         public Producer(String name, String description, User user, RekoRing rekoRing)

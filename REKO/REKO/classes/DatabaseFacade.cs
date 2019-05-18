@@ -125,6 +125,11 @@ namespace REKO
             return GetProducersFiltered(new FilterDefinitionBuilder<Producer>().Empty);
         }
 
+        public List<Producer> GetProducers(User user)
+        {
+            return GetProducersFiltered(new FilterDefinitionBuilder<Producer>().Eq(Producer => Producer.user, user));
+        }
+
 
         //returns offers according to FilterDefinition, use FilterDefinitionBuilder
         public List<Producer> GetProducersFiltered(FilterDefinition<Producer> filter)
