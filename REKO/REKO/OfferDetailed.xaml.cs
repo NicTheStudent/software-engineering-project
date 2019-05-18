@@ -34,7 +34,7 @@ namespace REKO
             Order newOrder = new Order(testUser, Offer, orderNumber,amount);
 
             DisplayAlert("Din beställning har lagts!", "Tack för din beställning av " + amount + " " + Offer.Product + 
-                         "\n Ditt ordernummer är: " + orderNumber, "OK" );
+                         "\nDitt ordernummer är: " + orderNumber, "OK" );
 
             //Remove when singleton is implemented
             DatabaseFacade db = DatabaseFacade.Instance;

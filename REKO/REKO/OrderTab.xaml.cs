@@ -11,7 +11,8 @@ namespace REKO
         {
             InitializeComponent();
             DatabaseFacade db = DatabaseFacade.Instance;
-            MainListView.ItemsSource = db.GetMyOrders();
+            MainListView.ItemsSource = db.GetOrders();
+  
         }
 
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -20,6 +21,6 @@ namespace REKO
             OfferDetailed detailedPage = new OfferDetailed(Selected);
             await Navigation.PushAsync(detailedPage);
             ((ListView)sender).SelectedItem = null;
-        }
-    }
+       }
+ }
 }

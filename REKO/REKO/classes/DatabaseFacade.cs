@@ -101,12 +101,11 @@ namespace REKO
         }
 
 
-        //returns all my orders
-        public List<Order> GetMyOrders()
+        //returns all orders
+        public List<Order> GetOrders()
         {
             return GetOrdersFiltered(new FilterDefinitionBuilder<Order>().Empty);
         }
-
 
         //returns orders according to FilterDefinition, use FilterDefinitionBuilder
         public List<Order> GetOrdersFiltered(FilterDefinition<Order> filter)
@@ -116,7 +115,6 @@ namespace REKO
             collection.FindSync(filter).ForEachAsync(Order => orderList.Add(Order));
             return orderList;
         }
-
 
 
         //returns all rekorings
