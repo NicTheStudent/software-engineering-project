@@ -49,6 +49,27 @@ namespace REKO
         {
             await Navigation.PushAsync(new MyOffersPage());
         }
+
+        async void loginCell_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
+
+        async void signUpCell_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SignUpPage());
+        }
+
+        void testCell_Tapped(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(Session.Instance.GetUser().username);
+
+            /*
+            var db = DatabaseFacade.Instance;
+            db.GetUsers().ForEach(User => System.Diagnostics.Debug.WriteLine(User.firstName)); // 
+            */
+        }
+
         /*
         async void AboutAppCell_Tapped(object sender, EventArgs e)
         {
