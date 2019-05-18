@@ -166,24 +166,13 @@ namespace REKO
             return GetOrdersFiltered(new FilterDefinitionBuilder<Order>().Empty);
         }
 
-        /*
-        // return orders filtered on buyer
+
+        //return orders filtered on buyer
         public List<Order> GetOrders(User user)
         {
-            var userid = user.id;
-            var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.user, userid);
+            var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.user, user);
             return GetOrdersFiltered(filter);
         }
-
-        
-        //return orders filtered on seller
-        public List<Order> GetOrders(Producer producer)
-        {
-            var producerid = producer.id;
-            var filter = new FilterDefinitionBuilder<Order>().Eq(order => order.offer.seller.get(), producerid);
-            return
-        }
-        */
 
         //returns orders according to FilterDefinition, use FilterDefinitionBuilder
         public List<Order> GetOrdersFiltered(FilterDefinition<Order> filter)
