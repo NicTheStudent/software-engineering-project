@@ -9,7 +9,7 @@
             <TableView>
                 <TableRoot>
                     <TableSection>
-                        <TextCell x:Name="newOfferLabel" Text="Nytt erbjudande" />
+                        <TextCell x:Name="newOfferLabel" Text="Öppna Butik" />
                         <EntryCell x:Name="storeNameEntry" Label="Butikens namn" Placeholder="Välj ett namn..." />
                         <EntryCell x:Name="storeDescriptionEntry" Label="Beskrivning av din verksamhet" Placeholder="Skriv något fint..." />
                     </TableSection>

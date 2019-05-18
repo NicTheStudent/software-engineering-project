@@ -26,10 +26,11 @@ namespace REKO
                     {
                         Producer newProducer = new Producer(storeName, storeDescription, Session.Instance.GetUser(), Session.Instance.GetRekoRing());
                         DatabaseFacade.Instance.AddProducer(newProducer);
+                        DisplayAlert("Butik skapad", "du kan nu skapa erbjudanden", "OK");
+                        Navigation.PopAsync();
                     }
                 else
                     DisplayAlert("Du måste välja RekoRing först", "backa och välj", "OK");
-                    newOfferLabel.Text = "Nytt erbjudande skapat.";
                 }
                 else
                     DisplayAlert("Du har redan en butik", "Endast en per person", "OK");
