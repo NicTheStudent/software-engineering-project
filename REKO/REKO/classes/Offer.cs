@@ -10,12 +10,12 @@ namespace REKO
     {
         ObjectId id;
         String name,  unit, product;
-        User seller;
+        Producer seller;
         double price;
         int available, ordered;
         bool published;
 
-        public Offer(String name, String product, double price, User seller, int available, int ordered, String unit, bool published)
+        public Offer(String name, String product, double price, Producer seller, int available, int ordered, String unit, bool published)
         {
             this.name = name;
             this.product = product;
@@ -51,7 +51,7 @@ namespace REKO
         {
             return String.Format("{0:F2}", price);
         }
-        public User Seller
+        public Producer Seller
         {
             get { return seller; }
             set { seller = value; }

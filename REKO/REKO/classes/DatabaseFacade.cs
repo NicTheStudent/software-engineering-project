@@ -13,7 +13,9 @@ namespace REKO
 {
     public sealed class DatabaseFacade
     {
-        // SÅ HÄR SER DU DATABASEN
+        //Singleton class that does all communication with database.
+
+        // SÅ HÄR SER DU DATABASEN (GAMMALT, VI ANVÄNDER NU LOKAL DATABASSERVER)
         // steg 1: ladda ner mongodb compass https://www.mongodb.com/products/compass
         // steg 2: kopiera följande mongodb+srv://RekoUser:<password>@rekodb-fhi6h.gcp.mongodb.net/test
         // steg 3: öppna mongodb compass, den kommer säga "vill du öppna med lönken du har kopierat"
@@ -57,32 +59,34 @@ namespace REKO
             User u2 = new User("Fripperian", "pw");
             User u3 = new User("NictheStudent", "pw");
             User u4 = new User("FornMaria", "pw");
-            User u5 = new User("oscgro19", "pw"));
+            User u5 = new User("oscgro19", "pw");
             User u6 = new User("ssamuelandersson", "pw");
             User u7 = new User("LucasAndren", "pw");
 
             RekoRing r1 = new RekoRing("Göteborg");
 
-            ProducerList.Add(new Producer("Eggberts Ägg", "Jag har 800 hönor men är allergisk mot ägg, säljer därför av lite nu till påsk", r1, u1));
-            ProducerList.Add(new Producer("Bertils Betor", "Säljer schyssta röd-, gul- och polkabetor", r1, u2));
-            ProducerList.Add(new Producer("Grönqvists gurkor", "Salta och söta", r1, u3));
-            ProducerList.Add(new Producer("Marias Margarin", "Perfekt för morgonmackan", r1, u3));
-            ProducerList.Add(new Producer("Hampas och Sampas hampa", "Hampa av högsta kvalle", u4));
-            ProducerList.Add(new Producer("Niclas Nikotin", "Mängdrabatt! Extrapris på limpor och stockar. Ciggen har jag rullat själv", 19, "Göteborg"));
-            ProducerList.Add(new Producer("Lök-Lucas", "Röd-,gul-, vit- och silverlök. Fina priser!", 33, "Göteborg"));
-            ProducerList.Add(new Producer("Freddans fisk", "Varmrökt och kallrökt sump-gädda", 80, "Göteborg"));
+            Producer p1 = new Producer("Eggberts Ägg", "Jag har 800 hönor men är allergisk mot ägg, säljer därför av lite nu till påsk", u1, r1);
+            Producer p2 = new Producer("Bertils Betor", "Säljer schyssta röd-, gul- och polkabetor", u2, r1);
+            Producer p3 = new Producer("Grönqvists gurkor", "Salta och söta", u3, r1);
+            Producer p4 = new Producer("Marias Margarin", "Perfekt för morgonmackan", u4, r1);
+
+            ProducerList.Add(p1);
+            ProducerList.Add(p2);
+            ProducerList.Add(p3);
+            ProducerList.Add(p4);
 
             // kvar för att inte förstöra något gammalt
-            offerList.Add(new Offer("Eggberts Ägg", "ägg", 40, "E.L. Eggbert", 144, 0, "dussin", true));
-            offerList.Add(new Offer("Bertils betor", "betor", 10, "Bertil Knutsson", 20, 0, "kg", true));
-            offerList.Add(new Offer("Grönqvists gröna gurkor", "gurka", 30, "Oskar Grönqvist", 15, 0, "st.", true));
-            offerList.Add(new Offer("Marias margarin", "margarin", 50, "Maria", 1000, 0, "g", true));
-            offerList.Add(new Offer("Hampus & Sampas hampa", "hampa", 50, "Hampus & Samuel", 300, 0, "g", true));
+            offerList.Add(new Offer("Eggberts Ägg", "ägg", 40, p1, 144, 0, "dussin", true));
+            offerList.Add(new Offer("Bertils betor", "betor", 10, p2, 20, 0, "kg", true));
+            offerList.Add(new Offer("Grönqvists gröna gurkor", "gurka", 30, p3, 15, 0, "st.", true));
+            offerList.Add(new Offer("Marias margarin", "margarin", 50, p4, 1000, 0, "g", true));
 
 
 
 
         }
+
+        //** METHODS RELATING TO CLASS: User **
 
         //returns all users
         public List<User> GetUsers()
@@ -98,6 +102,42 @@ namespace REKO
             collection.FindSync(filter).ForEachAsync(User => userList.Add(User));
             return userList;
         }
+        //checks if a username i already taken
+        public Boolean CheckUsernameExists(string username)
+        {
+            var userList = GetUsersFiltered(new FilterDefinitionBuilder<User>().Eq(User => User.username, username));
+            if (userList.Any())
+                return true;
+            else
+                return false;
+        }
+
+        //** METHODS RELATING TO CLASS: Producer **
+
+        public void AddProducer(Producer producer)
+        {
+            var collection = db.GetCollection<Producer>("Producer");
+            collection.InsertOne(producer);
+        }
+
+        public List<Producer> GetProducers()
+        {
+            return GetProducersFiltered(new FilterDefinitionBuilder<Producer>().Empty);
+        }
+
+
+        //returns offers according to FilterDefinition, use FilterDefinitionBuilder
+        public List<Producer> GetProducersFiltered(FilterDefinition<Producer> filter)
+        {
+            List<Producer> producerList = new List<Producer>();
+            var collection = db.GetCollection<Producer>("Producer");
+            collection.FindSync(filter).ForEachAsync(Producer => producerList.Add(Producer));
+            return producerList;
+        }
+
+
+        //** METHODS RELATING TO CLASS: Offer **
+
 
         //returns all offers
         public List<Offer> GetOffers()
@@ -121,21 +161,24 @@ namespace REKO
             return GetOrdersFiltered(new FilterDefinitionBuilder<Order>().Empty);
         }
 
+        /*
         // return orders filtered on buyer
         public List<Order> GetOrders(User user)
         {
             var userid = user.id;
-            var filter = new FilterDefinitionBuilder<Order>().Eq(order => order.user, userid);
+            var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.user, userid);
             return GetOrdersFiltered(filter);
         }
 
+        
         //return orders filtered on seller
         public List<Order> GetOrders(Producer producer)
         {
             var producerid = producer.id;
-            var filter = new FilterDefinitionBuilder<Offer>().Eq(offer => offer.user, userid);
+            var filter = new FilterDefinitionBuilder<Order>().Eq(order => order.offer.seller.get(), producerid);
             return
         }
+        */
 
         //returns orders according to FilterDefinition, use FilterDefinitionBuilder
         public List<Order> GetOrdersFiltered(FilterDefinition<Order> filter)
@@ -157,6 +200,11 @@ namespace REKO
             return ringList;
         }
 
+        public void AddRekoRing(RekoRing rekoring)
+        {
+            var collection = db.GetCollection<RekoRing>("RekoRing");
+            collection.InsertOne(rekoring);
+        }
 
         //doesnt work quite yet
         public List<T> getAnythingFiltered<T>(FilterDefinition<T> filter)
