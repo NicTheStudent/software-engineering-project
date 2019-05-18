@@ -15,10 +15,12 @@ namespace REKO
          * To create a instance of Order, one must be logged in.
          * A order is created when "Beställ" is pressed.
          */
-       private User user { get; }
-       private Offer offer { get; }
-       private int orderNumber { get; }
-       private int amount { get; }
+
+        private ObjectId id { get; set; }
+        private User user { get; }
+        private Offer offer { get; }
+        private int orderNumber { get; }
+        private int amount { get; }
 
         public Order(User user, Offer offer, int orderNumber, int amount)
         {
@@ -27,6 +29,5 @@ namespace REKO
             this.orderNumber = orderNumber;
             this.amount = amount;
         }
-
     }
 }
