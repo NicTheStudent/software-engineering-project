@@ -54,11 +54,15 @@ namespace REKO
             set { orderNumber = value; }
         }
 
-       
         public int Amount
         {
             get { return amount; }
             set { amount = value; }
+        }
+
+        public double OrderSum
+        {
+            get { return amount * Offer.Price; }
         }
     }
 }

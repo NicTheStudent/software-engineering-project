@@ -16,7 +16,7 @@
             <ListView.Header>
                 <StackLayout Padding="30,0,30,0"
                     Orientation="Horizontal">
-                        <Entry Text="Toatlt"
+                        <Entry Text="Totalt"
                        FontSize="Medium"
                        IsReadOnly="true"/>
                     <Entry Text="fyrtiotusenmiljarder"
@@ -40,7 +40,7 @@
                             
                             <StackLayout Orientation="Horizontal">  
                                 <Label Text="Pris: " />
-                                <Label Text="{Binding Offer.Price}"/>
+                                <Label Text="{Binding OrderSum}"/>
                             </StackLayout>
                             
                             <StackLayout Orientation="Horizontal">
