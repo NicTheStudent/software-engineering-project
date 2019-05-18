@@ -13,6 +13,19 @@
           
             <!-- Child of MainPage.xaml which displays all orders that I've made-->
 
+            <ListView.Header>
+                <StackLayout Padding="30,0,30,0"
+                    Orientation="Horizontal">
+                        <Entry Text="Toatlt"
+                       FontSize="Medium"
+                       IsReadOnly="true"/>
+                    <Entry Text="fyrtiotusenmiljarder"
+                       FontSize="Medium"
+                       IsReadOnly="true"/>
+                </StackLayout>
+            </ListView.Header>
+
+
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

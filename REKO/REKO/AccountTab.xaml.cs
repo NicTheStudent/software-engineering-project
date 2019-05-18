@@ -58,7 +58,11 @@ namespace REKO
         async void testCell_Tapped(object sender, EventArgs e)
         {
             var db = DatabaseFacade.Instance;
+<<<<<<< HEAD
         //    db.GetUsers().ForEach(User => System.Diagnostics.Debug.WriteLine(User.firstName));
+=======
+            //db.GetUsers().ForEach(User => System.Diagnostics.Debug.WriteLine(User.firstName));
+>>>>>>> summarymyorder
         }
 
         /*
