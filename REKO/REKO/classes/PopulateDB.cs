@@ -21,6 +21,8 @@ namespace REKO
             PopulateRings();
             PopulateUsers();
             PopulateProducers();
+            PopulateOffers();
+            PopulateOrders();
         }
 
         private void PopulateRings()
@@ -96,6 +98,24 @@ namespace REKO
                 offerList.Add(new Offer("Marias Margarin", "Margarin", 50, producerList[3], 25, 0, "pkt", true));
                 offerList.ForEach(Offer => DatabaseFacade.Instance.AddOffer(Offer));
 
+            }
+        }
+
+        private void PopulateOrders()
+        {
+            List<Order>checkList = DatabaseFacade.Instance.GetOrders();
+            if (!checkList.Any())
+            {
+                List<User> userList = DatabaseFacade.Instance.GetUsers();
+                List<Offer> offerList = DatabaseFacade.Instance.GetOffers();
+
+                List<Order> orderList = new List<Order>();
+                orderList.Add(new Order(userList[0],offerList[0],1,1));
+                orderList.Add(new Order(userList[1], offerList[1], 1, 3));
+                orderList.Add(new Order(userList[2], offerList[2], 1, 4));
+                orderList.Add(new Order(userList[3], offerList[3], 1, 10));
+
+                orderList.ForEach(Order => DatabaseFacade.Instance.AddOrder(Order));
             }
         }
     }
