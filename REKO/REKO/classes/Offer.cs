@@ -9,13 +9,14 @@ namespace REKO
     public class Offer
     {
         ObjectId id;
-        String name, seller, unit, product;
+        String name,  unit, product;
+        User seller;
         double price;
         int available, ordered;
         bool published;
         Dictionary<int, int> orderMap; // Takes a orderNumber and maps it to the amount dedicated to that order.
 
-        public Offer(String name, String product, double price, String seller, int available, int ordered, String unit, bool published)
+        public Offer(String name, String product, double price, User seller, int available, int ordered, String unit, bool published)
         {
             this.name = name;
             this.product = product;
@@ -51,7 +52,7 @@ namespace REKO
         {
             return String.Format("{0:F2}", price);
         }
-        public String Seller
+        public User Seller
         {
             get { return seller; }
             set { seller = value; }

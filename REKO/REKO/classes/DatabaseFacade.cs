@@ -50,7 +50,28 @@ namespace REKO
             }
            
            db = client.GetDatabase("RekoDB");
-           
+
+
+
+            User u1 = new User("Namorb", "pw");
+            User u2 = new User("Fripperian", "pw");
+            User u3 = new User("NictheStudent", "pw");
+            User u4 = new User("FornMaria", "pw");
+            User u5 = new User("oscgro19", "pw"));
+            User u6 = new User("ssamuelandersson", "pw");
+            User u7 = new User("LucasAndren", "pw");
+
+            RekoRing r1 = new RekoRing("Göteborg");
+
+            ProducerList.Add(new Producer("Eggberts Ägg", "Jag har 800 hönor men är allergisk mot ägg, säljer därför av lite nu till påsk", r1, u1));
+            ProducerList.Add(new Producer("Bertils Betor", "Säljer schyssta röd-, gul- och polkabetor", r1, u2));
+            ProducerList.Add(new Producer("Grönqvists gurkor", "Salta och söta", r1, u3));
+            ProducerList.Add(new Producer("Marias Margarin", "Perfekt för morgonmackan", r1, u3));
+            ProducerList.Add(new Producer("Hampas och Sampas hampa", "Hampa av högsta kvalle", u4));
+            ProducerList.Add(new Producer("Niclas Nikotin", "Mängdrabatt! Extrapris på limpor och stockar. Ciggen har jag rullat själv", 19, "Göteborg"));
+            ProducerList.Add(new Producer("Lök-Lucas", "Röd-,gul-, vit- och silverlök. Fina priser!", 33, "Göteborg"));
+            ProducerList.Add(new Producer("Freddans fisk", "Varmrökt och kallrökt sump-gädda", 80, "Göteborg"));
+
             // kvar för att inte förstöra något gammalt
             offerList.Add(new Offer("Eggberts Ägg", "ägg", 40, "E.L. Eggbert", 144, 0, "dussin", true));
             offerList.Add(new Offer("Bertils betor", "betor", 10, "Bertil Knutsson", 20, 0, "kg", true));
@@ -59,14 +80,7 @@ namespace REKO
             offerList.Add(new Offer("Hampus & Sampas hampa", "hampa", 50, "Hampus & Samuel", 300, 0, "g", true));
 
 
-            ProducerList.Add(new Producer("Eggberts Ägg", "Jag har 800 hönor men är allergisk mot ägg, säljer därför av lite nu till påsk", 1337, "Göteborg"));
-            ProducerList.Add(new Producer("Bertils Betor", "Säljer schyssta röd-, gul- och polkabetor", 241, "Göteborg"));
-            ProducerList.Add(new Producer("Grönqvists gurkor", "Salta och söta", 42, "Göteborg"));
-            ProducerList.Add(new Producer("Marias Margarin", "Perfekt för morgonmackan", 81, "Göteborg"));
-            ProducerList.Add(new Producer("Hampas och Sampas hampa", "Hampa av högsta kvalle", 1, "Gävle"));
-            ProducerList.Add(new Producer("Niclas Nikotin", "Mängdrabatt! Extrapris på limpor och stockar. Ciggen har jag rullat själv", 19, "Göteborg"));
-            ProducerList.Add(new Producer("Lök-Lucas", "Röd-,gul-, vit- och silverlök. Fina priser!", 33, "Göteborg"));
-            ProducerList.Add(new Producer("Freddans fisk", "Varmrökt och kallrökt sump-gädda", 80, "Göteborg" ));
+
 
         }
 
@@ -105,6 +119,22 @@ namespace REKO
         public List<Order> GetOrders()
         {
             return GetOrdersFiltered(new FilterDefinitionBuilder<Order>().Empty);
+        }
+
+        // return orders filtered on buyer
+        public List<Order> GetOrders(User user)
+        {
+            var userid = user.id;
+            var filter = new FilterDefinitionBuilder<Order>().Eq(order => order.user, userid);
+            return GetOrdersFiltered(filter);
+        }
+
+        //return orders filtered on seller
+        public List<Order> GetOrders(Producer producer)
+        {
+            var producerid = producer.id;
+            var filter = new FilterDefinitionBuilder<Offer>().Eq(offer => offer.user, userid);
+            return
         }
 
         //returns orders according to FilterDefinition, use FilterDefinitionBuilder
