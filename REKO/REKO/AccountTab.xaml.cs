@@ -65,11 +65,6 @@ namespace REKO
         {
             //System.Diagnostics.Debug.WriteLine(Session.Instance.GetUser().username);
             System.Diagnostics.Debug.WriteLine(Session.Instance.GetRekoRing().name);
-            /*
-            var db = DatabaseFacade.Instance;
-        //    db.GetUsers().ForEach(User => System.Diagnostics.Debug.WriteLine(User.firstName));
-
-
         }
 
         /*
