@@ -61,6 +61,12 @@ namespace REKO
             await Navigation.PushAsync(new OpenStorePage());
         }
 
+        void populateUpCell_Tapped(object sender, EventArgs e)
+        {
+            var popdb = new PopulateDB();
+            popdb.Populate(); ;
+        }
+
         void testCell_Tapped(object sender, EventArgs e)
         {
             //System.Diagnostics.Debug.WriteLine(Session.Instance.GetUser().username);

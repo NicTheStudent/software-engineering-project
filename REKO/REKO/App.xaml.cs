@@ -9,8 +9,6 @@ namespace REKO
         public App()
         {
             InitializeComponent();
-            var popdb = new PopulateDB();
-            popdb.Populate();
             MainPage = new NavigationPage(new MainPage());
         }
 
