@@ -13,7 +13,9 @@ namespace REKO
 {
     public sealed class DatabaseFacade
     {
-        // SÅ HÄR SER DU DATABASEN
+        //Singleton class that does all communication with database.
+
+        // SÅ HÄR SER DU DATABASEN (GAMMALT, VI ANVÄNDER NU LOKAL DATABASSERVER)
         // steg 1: ladda ner mongodb compass https://www.mongodb.com/products/compass
         // steg 2: kopiera följande mongodb+srv://RekoUser:<password>@rekodb-fhi6h.gcp.mongodb.net/test
         // steg 3: öppna mongodb compass, den kommer säga "vill du öppna med lönken du har kopierat"
@@ -85,6 +87,16 @@ namespace REKO
             return userList;
         }
 
+        //checks if a username i already taken
+        public Boolean CheckUsernameExists(string username)
+        {
+            var userList = GetUsersFiltered(new FilterDefinitionBuilder<User>().Eq(User => User.username, username));
+            if (userList.Any())
+                return true;
+            else
+                return false;
+        }
+
         //returns all offers
         public List<Offer> GetOffers()
         {
@@ -136,21 +148,6 @@ namespace REKO
             collection.FindSync(filter).ForEachAsync(User => resultList.Add(User));
             return resultList;
         }
-
-        /*
-        // adds new user to database using many args
-       /* public void AddUser(string first, string last, string email, int phone)
-        {
-            User newUser = new User
-            {
-                firstName = first,
-                lastName = last,
-                emailAdress = email,
-                phoneNumber = phone
-            };
-            AddUser(newUser);
-        }
-        */
 
         // adds new user to database, user id should be null.
         public void AddUser(User user)
