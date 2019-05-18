@@ -68,6 +68,8 @@ namespace REKO
             /*
             var db = DatabaseFacade.Instance;
         //    db.GetUsers().ForEach(User => System.Diagnostics.Debug.WriteLine(User.firstName));
+
+
         }
 
         /*

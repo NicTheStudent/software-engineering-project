@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="TabController.xaml.cs" />
+    <Compile Remove="DetailedOrder.cs" />
   </ItemGroup>
   <ItemGroup>
 

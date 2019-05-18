@@ -17,6 +17,8 @@ namespace REKO
         //This User is a dummy-user, made to test the class. (TODO)
         User testUser;
 
+
+
         public OfferDetailed (Offer offer)
 		{
 			InitializeComponent ();
@@ -35,8 +37,7 @@ namespace REKO
 
             DisplayAlert("Din beställning har lagts!", "Tack för din beställning av " + amount + " " + Offer.Product + 
                          "\nDitt ordernummer är: " + orderNumber, "OK" );
-
-            //Remove when singleton is implemented
+            
             DatabaseFacade db = DatabaseFacade.Instance;
             db.AddOrder(newOrder);
         }
