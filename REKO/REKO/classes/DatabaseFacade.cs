@@ -167,21 +167,6 @@ namespace REKO
             return resultList;
         }
 
-        /*
-        // adds new user to database using many args
-       /* public void AddUser(string first, string last, string email, int phone)
-        {
-            User newUser = new User
-            {
-                firstName = first,
-                lastName = last,
-                emailAdress = email,
-                phoneNumber = phone
-            };
-            AddUser(newUser);
-        }
-        */
-
         // adds new user to database, user id should be null.
         public void AddUser(User user)
         {

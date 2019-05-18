@@ -19,16 +19,6 @@ namespace REKO
             this.Password = Password;
 
         }
-
-        //This is just a tester. Should probably not be placed in "User.cs" in the future."
-       /* public bool LoginValidation()
-        {
-            if (!this.Username.Equals(" ") && !this.Password.Equals(" "))
-                return true;
-            else
-                return false;
-        }
-        */
     }
 }
 
