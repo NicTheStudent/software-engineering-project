@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="REKO.OpenStorePage"
+             >
+    <ContentPage.Content>
+
+        <StackLayout>
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <TextCell x:Name="newOfferLabel" Text="Nytt erbjudande" />
+                        <EntryCell x:Name="storeNameEntry" Label="Butikens namn" Placeholder="Välj ett namn..." />
+                        <EntryCell x:Name="storeDescriptionEntry" Label="Beskrivning av din verksamhet" Placeholder="Skriv något fint..." />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+            <Button Text="Skapa" Clicked="Handle_Clicked_Open_Store" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -38,7 +39,12 @@ namespace REKO
             if (loggedInUser[0] != null)
             {
                 currentUser = loggedInUser[0];
-                currentProducer = DatabaseFacade.Instance.GetProducers(currentUser)[0];
+                loggedIn = true;
+                List<Producer> checkProducer = DatabaseFacade.Instance.GetProducers(currentUser);
+                if (checkProducer.Any()) // check if user has a store
+                    currentProducer = DatabaseFacade.Instance.GetProducers(currentUser)[0];
+                else
+                    currentProducer = null;
                 return true; //login success
             }
             else
@@ -60,9 +66,12 @@ namespace REKO
 
         public Boolean IsLoggedIn()
         {
-            if (currentUser != null && loggedIn == true)
-                return true;
-            else return false;
+            return (currentUser != null && loggedIn);
+        }
+
+        public Boolean HasStore()
+        {
+            return (currentProducer != null && IsLoggedIn());
         }
 
         public void SetRekoRing(RekoRing newRing)
@@ -75,7 +84,7 @@ namespace REKO
             return currentRekoRing;
         }
 
-        public Producer GetProcuder()
+        public Producer GetProducer()
         {
             return currentProducer;
         }
