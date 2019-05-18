@@ -39,8 +39,9 @@
                             </StackLayout>
                             
                             <StackLayout Orientation="Horizontal">  
-                                <Label Text="Pris: " />
+                                <Label Text="Totalsumma: " />
                                 <Label Text="{Binding OrderSum}"/>
+                                <Label Text=" kr"/>
                             </StackLayout>
                             
                             <StackLayout Orientation="Horizontal">

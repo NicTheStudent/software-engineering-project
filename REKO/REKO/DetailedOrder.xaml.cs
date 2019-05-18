@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace REKO
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailedOrder : ContentPage
-    {
-
-        Order Order {get; set;}
+    { 
+        public Order Order {get; set;}
        
  public DetailedOrder(Order order)
         {

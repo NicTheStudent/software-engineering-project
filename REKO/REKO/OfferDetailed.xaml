@@ -45,7 +45,7 @@
                  HorizontalOptions="Start"  
                  VerticalOptions="Center"/>
                  
-                <Entry x:Name="NrOfItems" />
+                <Entry x:Name="NrOfItems" WidthRequest="70"/>
                 
                 <Label Text="av" 
                        HorizontalOptions="Start"  

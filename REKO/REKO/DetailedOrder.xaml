@@ -5,21 +5,12 @@
     <ContentPage.Content>
         <StackLayout>
         
-            
-            <Label Text="test"
+            <Label Text="Här kommer mer information om din order"
              FontSize="Large"  
              HorizontalOptions="Center"  
              VerticalOptions="CenterAndExpand"/>
             
-         <Label Text="{Binding Amount}"
-             FontSize="Large"  
-             HorizontalOptions="Center"  
-             VerticalOptions="Center"/>    
-           
-            <Label Text="{Binding OrderSum}" 
-                   FontSize="Large"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
+    
             
         </StackLayout>
     </ContentPage.Content>
