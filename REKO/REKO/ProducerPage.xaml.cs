@@ -10,14 +10,14 @@ namespace REKO
     public partial class ProducerPage : ContentPage
     {
 
-        Producer Producer; 
+        Producer Producer;
+        
         public ProducerPage(Producer producer)
-        {
-            
+        {     
          InitializeComponent();
-
-            Producer = producer;
-            BindingContext = Producer;
+         Producer = producer;
+         BindingContext = Producer;
+         MainListView.ItemsSource = DatabaseFacade.Instance.GetOffers(Producer);
         }
 
         
