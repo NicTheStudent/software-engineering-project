@@ -12,7 +12,7 @@ namespace REKO
             InitializeComponent();
             DatabaseFacade db = DatabaseFacade.Instance;
             MainListView.ItemsSource = db.GetOrders();
-  
+
         }
 
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -21,6 +21,11 @@ namespace REKO
             DetailedOrder detailedOrder = new DetailedOrder(Selected);
             await Navigation.PushAsync(detailedOrder);
             ((ListView)sender).SelectedItem = null;
+        }
+
+        public void Handle_Clicked_Remove_My_Order(object sender, EventArgs e)
+        {
+            return;
         }
     }
 }
