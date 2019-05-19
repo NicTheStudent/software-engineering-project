@@ -10,17 +10,22 @@ namespace REKO
     public partial class ProducerPage : ContentPage
     {
 
-        Producer Producer; 
+        Producer Producer;
+        
         public ProducerPage(Producer producer)
-        {
-            
+        {     
          InitializeComponent();
-
-            Producer = producer;
-            BindingContext = Producer;
+         Producer = producer;
+         BindingContext = Producer;
+         MainListView.ItemsSource = DatabaseFacade.Instance.GetOffers(Producer);
         }
 
-        
-
+        async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var Selected = e.Item as Offer;
+            OfferDetailed detailedPage = new OfferDetailed(Selected);
+            await Navigation.PushAsync(detailedPage);
+            ((ListView)sender).SelectedItem = null;
+        }
     }
 }

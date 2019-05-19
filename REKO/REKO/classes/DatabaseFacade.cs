@@ -159,6 +159,11 @@ namespace REKO
             return offerList;
         }
 
+        public List<Offer> GetOffers(Producer producer)
+        {
+            return GetOffersFiltered(new FilterDefinitionBuilder<Offer>().Eq(Offer => Offer.Seller, producer));
+        }
+
 
         //returns all orders
         public List<Order> GetOrders()
@@ -173,6 +178,8 @@ namespace REKO
             var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.user, user);
             return GetOrdersFiltered(filter);
         }
+
+
 
         //returns orders according to FilterDefinition, use FilterDefinitionBuilder
         public List<Order> GetOrdersFiltered(FilterDefinition<Order> filter)

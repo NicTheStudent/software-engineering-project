@@ -20,11 +20,9 @@ namespace REKO
         public ProducerTab()
         {
             InitializeComponent();
-            DatabaseFacade data = DatabaseFacade.Instance;
 
-            ProducerListView.ItemsSource = data.ProducerList;
+            ProducerListView.ItemsSource = DatabaseFacade.Instance.GetProducers();
 
-    
         }
 
 async private void ProducerListView_ItemTapped(object sender, ItemTappedEventArgs e)
