@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:local="clr-namespace:REKO" 
+             xmlns:local="clr-namespace:REKO"
              x:Class="REKO.OrderTab"
              Title="Beställningar"
              Icon="ShoppingCart.png">
-   
+
     <ContentPage.Content>
         <ListView x:Name="MainListView"  
                   HasUnevenRows="True"  
                   ItemTapped="MainListView_ItemTapped">
-          
-            <!-- Child of MainPage.xaml which displays all orders that I've made-->
 
             <ListView.Header>
                 <StackLayout Padding="30,0,30,0"
                     Orientation="Horizontal">
-                        <Entry Text="Totalt"
+                    <Entry Text="Totalt"
                        FontSize="Medium"
                        IsReadOnly="true"/>
                     <Entry Text="fyrtiotusenmiljarder"
@@ -25,30 +23,39 @@
                 </StackLayout>
             </ListView.Header>
 
-
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Vertical">
-                            
-                            <StackLayout Orientation="Horizontal">
-                               <Label Text="Du har beställt: "/>
-                                <Label Text="{Binding Offer.Product}" />
-                                <Label Text="från" />
-                                <Label Text="{Binding Offer.Seller}"/>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Vertical">
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Du har beställt: "/>
+                                    <Label Text="{Binding Offer.Product}" />
+                                    <Label Text="från" />
+                                    <Label Text="{Binding Offer.Seller}"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Totalsumma: " />
+                                    <Label Text="{Binding OrderSum}"/>
+                                    <Label Text=" kr"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Hämtas: Hemma hos" />
+                                    <Label Text="{Binding Offer.Seller}"/>
+                                </StackLayout>
+
                             </StackLayout>
-                            
-                            <StackLayout Orientation="Horizontal">  
-                                <Label Text="Totalsumma: " />
-                                <Label Text="{Binding OrderSum}"/>
-                                <Label Text=" kr"/>
+
+                            <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                <Button Text="Avbeställ" 
+                                     HorizontalOptions="StartAndExpand"
+                                     VerticalOptions="Center"
+                                     Clicked="Handle_Clicked_Remove_My_Order" />
                             </StackLayout>
-                            
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="Hämtas: Hemma hos" />  
-                                <Label Text="{Binding Offer.Seller}"/>
-                            </StackLayout>
-                            
+
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
