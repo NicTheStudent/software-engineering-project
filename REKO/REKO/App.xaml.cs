@@ -9,7 +9,6 @@ namespace REKO
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new MainPage());
         }
 

@@ -25,7 +25,10 @@ namespace REKO
         {
 
             if (Session.Instance.LogIn(Ent_Anvnamn.Text, Ent_Lösen.Text) == true)
+            {
                 DisplayAlert("Inloggning lyckades", "Inloggad som " + Session.Instance.GetUser().username, "OK");
+                Navigation.PopAsync();
+            }
             else
                 DisplayAlert("Inloggning misslyckades", "Användarnamn och/eller lösenord inkorrekt", "OK");
 

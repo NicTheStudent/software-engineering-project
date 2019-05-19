@@ -10,5 +10,10 @@ namespace REKO
     {
         public ObjectId id { get; set; }
         public string name { get; set; }
+
+        public RekoRing(string name)
+        {
+            this.name = name;
+        }
     }
 }
