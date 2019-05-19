@@ -229,5 +229,12 @@ namespace REKO
             var collection = db.GetCollection<Order>("Order");
             collection.InsertOne(order);
         }
+
+        public void RemoveOrder(Order order)
+        {
+            var collection = db.GetCollection<Order>("Order");
+            var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.id, order.id);
+            collection.DeleteOne(filter);
+        }
     }
 }
