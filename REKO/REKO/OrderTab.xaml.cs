@@ -25,13 +25,15 @@ namespace REKO
             ((ListView)sender).SelectedItem = null;
         }
 
-        public void Handle_Clicked_Remove_My_Order(object sender, EventArgs e)
+        async private void Handle_Clicked_Remove_My_Order(object sender, EventArgs e)
         {
+            bool answer = await DisplayAlert("Avbeställa?", "Är du säker på att du vill avbeställa?", "Ja", "Nej");
+            if (!answer) return;
+
             var button = sender as Button;
             var order = button.BindingContext as Order;
             DatabaseFacade db = DatabaseFacade.Instance;
             db.RemoveOrder(order);
-            //db = DatabaseFacade.Instance;
             MainListView.ItemsSource = db.GetOrders();
             return;
         }
