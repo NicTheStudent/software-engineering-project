@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using REKO.classes;
-
 
 
 namespace REKO
@@ -20,11 +18,11 @@ namespace REKO
         {
             InitializeComponent();
             List<Order> o = new List<Order>();
-            o.Add(new Order(1, "Maria", 5, 42));
+            User user = new User("Maria", "123456");
+            Offer offer = new Offer("Grym Getost", "Getost", 42, "Marias mejerier", 100, 10, "st", true);
+            o.Add(new Order(user, offer, 1, 100));
             listView.ItemsSource = o;
-            
         }
-
 
     }
 }

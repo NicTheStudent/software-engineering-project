@@ -15,24 +15,24 @@
                 HorizontalOptions="CenterAndExpand"
                 FontSize="Large" >
             </Label>
-            
+
             <ListView  x:Name="listView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout BackgroundColor="#eee"
                         Orientation="Vertical">
-                                <Label Text="{Binding OrdNo}"
+                                <Label Text="{Binding orderNumber}"
                                 TextColor="#f35e20" />
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="{Binding Name}"
                                 TextColor="#f35e20" />
-                                    <Label Text="{Binding Amount}"                               
+                                    <Label Text="{Binding amount}"                               
                                 TextColor="#503026" />
-                                   <Label Text="{Binding Price}"
+                                    <Label Text="{Binding Price}"
                                 TextColor="#f35e20" />
                                 </StackLayout>
-                                
+
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
@@ -41,6 +41,6 @@
 
         </StackLayout>
 
-        
+
     </ContentPage.Content>
 </ContentPage>
