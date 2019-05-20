@@ -12,18 +12,19 @@ namespace REKO
 {
     public partial class OfferTab : ContentPage
     {
-        protected override void OnAppearing() // override this to add refresh on changing to tab
-        {
-            base.OnAppearing();
-            RefreshData();
-        }
+
 
         public OfferTab()
         {
             InitializeComponent();
-            BindingContext = this;
             DatabaseFacade db = DatabaseFacade.Instance;
             MainListView.ItemsSource = db.GetOffers();
+        }
+
+        protected override void OnAppearing() // override this to add refresh on changing to tab
+        {
+            base.OnAppearing();
+            RefreshData();
         }
 
         private void RefreshData()
