@@ -48,17 +48,21 @@ namespace REKO
             return amount * offer.Price;
         }
 
+
+        /*
         public String Name
         {
             get { return user.username; }
             set { Name = value; }
         }
 
+
         public String Price
         {
             get { return offer.GetPriceString(); }
             set { Price = value; }
         }
+        */
 
     }
 }
