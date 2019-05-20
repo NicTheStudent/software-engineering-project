@@ -35,19 +35,6 @@ namespace REKO
             }
             else
                 DisplayAlert("Fyll i både användarnamn och lösenord", "Någon av rutorna är tom", "OK");
-
-
-            /*
-            User user = new User(Ent_Anvnamn.Text, Ent_Lösen.Text);
-
-            if (user.LoginValidation())
-            {
-                Navigation.PushAsync(new MainPage());
-            }
-            else
-            {
-                DisplayAlert("Inloggning", "Inloggning misslyckades",  "Försök igen");
-            } */
         }
     }
 }
