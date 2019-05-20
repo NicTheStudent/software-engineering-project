@@ -42,20 +42,26 @@ namespace REKO
                 loggedIn = true;
                 List<Producer> checkProducer = DatabaseFacade.Instance.GetProducers(currentUser);
                 if (checkProducer.Any()) // check if user has a store
-                    currentProducer = DatabaseFacade.Instance.GetProducers(currentUser)[0];
+                    UpdateProducer();
                 else
                     currentProducer = null;
                 return true; //login success
             }
             else
                 return false; //login fail
-
-
         }
         
+
+        public void UpdateProducer()
+        {
+            currentProducer = DatabaseFacade.Instance.GetProducers(currentUser)[0];
+        }
+
+
         public void LogOut()
         {
             currentUser = null;
+            currentProducer = null;
             loggedIn = false;
         }
 
