@@ -18,14 +18,13 @@ namespace REKO
             {
                 if (!DatabaseFacade.Instance.GetProducers(Session.Instance.GetUser()).Any()){
 
-                
-
                 var storeName = storeNameEntry.Text;
                 var storeDescription = storeDescriptionEntry.Text;
                 if (Session.Instance.GetRekoRing() != null)
                     {
                         Producer newProducer = new Producer(storeName, storeDescription, Session.Instance.GetUser(), Session.Instance.GetRekoRing());
                         DatabaseFacade.Instance.AddProducer(newProducer);
+                        Session.Instance.UpdateProducer();
                         DisplayAlert("Butik skapad", "du kan nu skapa erbjudanden", "OK");
                         Navigation.PopAsync();
                     }
