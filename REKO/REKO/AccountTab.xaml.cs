@@ -22,6 +22,8 @@ namespace REKO
 
             picker.SelectedIndexChanged += OnPickerSelectedIndexChanged;
             ringLabel.Text = "Ingen REKO-ring vald";
+            myButton.Clicked += Testbutton_clicked;
+
 
             void OnPickerSelectedIndexChanged(object sender, EventArgs e)
             {
@@ -79,5 +81,6 @@ namespace REKO
             await Navigation.PushAsync(new AboutAppPage());
         }
         */
+
     }
 }

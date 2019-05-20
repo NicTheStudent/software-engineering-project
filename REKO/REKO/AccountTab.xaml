@@ -35,9 +35,7 @@
                                       
                 </TableRoot>
             </TableView>
-            <Button 
-                x:Name="myButton"
-                Text="TESTKNAPP"/>
+            
         </StackLayout>
     </ContentPage.Content>
 
