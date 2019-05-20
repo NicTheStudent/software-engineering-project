@@ -23,14 +23,19 @@ namespace REKO
          */
         void LoginClicked(object sender, EventArgs e)
         {
-
-            if (Session.Instance.LogIn(Ent_Anvnamn.Text, Ent_Lösen.Text) == true)
+            if (Ent_Anvnamn.Text != null && Ent_Lösen.Text != null)
             {
-                DisplayAlert("Inloggning lyckades", "Inloggad som " + Session.Instance.GetUser().username, "OK");
-                Navigation.PopAsync();
+                if (Session.Instance.LogIn(Ent_Anvnamn.Text, Ent_Lösen.Text) == true)
+                {
+                    DisplayAlert("Inloggning lyckades", "Inloggad som " + Session.Instance.GetUser().username, "OK");
+                    Navigation.PopAsync();
+                }
+                else
+                    DisplayAlert("Inloggning misslyckades", "Användarnamn och/eller lösenord inkorrekt", "OK");
             }
             else
-                DisplayAlert("Inloggning misslyckades", "Användarnamn och/eller lösenord inkorrekt", "OK");
+                DisplayAlert("Fyll i både användarnamn och lösenord", "Någon av rutorna är tom", "OK");
+
 
             /*
             User user = new User(Ent_Anvnamn.Text, Ent_Lösen.Text);
