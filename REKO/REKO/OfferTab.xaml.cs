@@ -20,7 +20,6 @@ namespace REKO
             MainListView.ItemsSource = db.GetOffers();
 
             UpdateRingInfo();
-
         }
 
         protected override void OnAppearing() // override this to add refresh on changing to tab
@@ -57,6 +56,7 @@ namespace REKO
             {
                 rekoringname.Text = "REKO-ring: " + current.name;
                 rekoringmeetup.Text = "Nästa meetup:"+Environment.NewLine + current.nextMeetup.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("fr-FR"));
+
             }
         }
 
