@@ -56,7 +56,7 @@ namespace REKO
             else
             {
                 rekoringname.Text = "REKO-ring: " + current.name;
-                rekoringmeetup.Text = "Nästa meetup: " + current.nextMeetup.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("fr-FR"));
+                rekoringmeetup.Text = "Nästa meetup:"+Environment.NewLine + current.nextMeetup.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("fr-FR"));
             }
         }
 
