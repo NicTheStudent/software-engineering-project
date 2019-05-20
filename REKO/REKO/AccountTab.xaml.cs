@@ -21,8 +21,7 @@ namespace REKO
             picker.ItemsSource = stringRingList;
 
             picker.SelectedIndexChanged += OnPickerSelectedIndexChanged;
-            ringLabel.Text = "Ingen REKO-ring vald";
-            myButton.Clicked += Testbutton_clicked;
+            ringLabel.Text = "Ingen REKO-ring vald";           
 
 
             void OnPickerSelectedIndexChanged(object sender, EventArgs e)
