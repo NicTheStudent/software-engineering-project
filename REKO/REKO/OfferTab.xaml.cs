@@ -33,6 +33,8 @@ namespace REKO
         {
             MainListView.ItemsSource = null;
             MainListView.ItemsSource = DatabaseFacade.Instance.GetOffers();
+
+            UpdateRingInfo();
         }
 
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
