@@ -6,8 +6,9 @@
         <StackLayout>
             <Label Text="{Binding Offer.Name}"
              FontSize="Large"  
-             HorizontalOptions="Center"  
-             VerticalOptions="Center"/>
+                HorizontalOptions="Center"  
+                VerticalOptions="Center" FontAttributes="Bold" Scale="1.5" Rotation="0" RotationX="0" TranslationY="10" TranslationX="0" TextColor="#5041BC"
+ />
 
             <StackLayout Orientation="Horizontal">
                 <Label Text="Pris: "
@@ -45,7 +46,7 @@
                  HorizontalOptions="Start"  
                  VerticalOptions="Center"/>
                  
-                <Entry x:Name="NrOfItems" WidthRequest="70"/>
+                <Entry x:Name="NrOfItems" WidthRequest="70" Placeholder="Ange..."/>
                 
                 <Label Text="av" 
                        HorizontalOptions="Start"  
@@ -67,13 +68,6 @@
                 FontSize="Small"  
                 HorizontalOptions="Start"  
                 VerticalOptions="Center"/>
-
-            <Label Text="Betalning sker med: "  
-             FontSize="Small"  
-             HorizontalOptions="Start"  
-             VerticalOptions="Center"/>
-
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

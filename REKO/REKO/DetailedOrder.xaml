@@ -4,13 +4,23 @@
              x:Class="REKO.DetailedOrder">
     <ContentPage.Content>
         <StackLayout>
-        
-            <Label Text="Här kommer mer information om din order"
-             FontSize="Large"  
-             HorizontalOptions="Center"  
-             VerticalOptions="CenterAndExpand"/>
             
-    
+            <Label Text="Ägg"
+                FontSize="Large"  
+                HorizontalOptions="Center"  
+                VerticalOptions="Center" FontAttributes="Bold" Scale="1.5" Rotation="0" RotationX="0" TranslationY="10" TranslationX="0" TextColor="#5041BC">
+				
+            </Label>
+
+            
+<TableView TranslationY="40"><TableRoot><TableSection>
+ 
+<TextCell Text="Pris" Detail="10 kr" />   
+<TextCell Text="Antal: " Detail="2" />
+ 
+<TextCell Text="Producent" Detail="Eggberts ägg" />   
+            </TableSection></TableRoot></TableView>
+            
             
         </StackLayout>
     </ContentPage.Content>
