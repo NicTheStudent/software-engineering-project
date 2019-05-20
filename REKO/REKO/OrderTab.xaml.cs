@@ -26,7 +26,7 @@ namespace REKO
         private void RefreshData()
         {
             MainListView.ItemsSource = null;
-            MainListView.ItemsSource = DatabaseFacade.Instance.GetOffers();
+            MainListView.ItemsSource = DatabaseFacade.Instance.GetOrders();
         }
 
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)

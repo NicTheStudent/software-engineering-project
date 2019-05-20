@@ -112,10 +112,10 @@ namespace REKO
                 List<Offer> offerList = DatabaseFacade.Instance.GetOffers();
 
                 List<Order> orderList = new List<Order>();
-                orderList.Add(new Order(userList[0],offerList[0],1,1));
-                orderList.Add(new Order(userList[1], offerList[1], 1, 3));
-                orderList.Add(new Order(userList[2], offerList[2], 1, 4));
-                orderList.Add(new Order(userList[3], offerList[3], 1, 10));
+                orderList.Add(new Order(userList[0], offerList[0], 1, 1, offerList[0].Seller.RekoRing.nextMeetup));
+                orderList.Add(new Order(userList[1], offerList[1], 1, 3, offerList[0].Seller.RekoRing.nextMeetup));
+                orderList.Add(new Order(userList[2], offerList[2], 1, 4, offerList[0].Seller.RekoRing.nextMeetup));
+                orderList.Add(new Order(userList[3], offerList[3], 1, 10, offerList[0].Seller.RekoRing.nextMeetup));
 
                 orderList.ForEach(Order => DatabaseFacade.Instance.AddOrder(Order));
             }

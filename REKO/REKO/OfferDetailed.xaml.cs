@@ -24,7 +24,6 @@ namespace REKO
 			InitializeComponent ();
             Offer = offer;
             BindingContext = this;
-
             testUser = new User("Sam the ham(maker)", "nalle123");
 		}
 
@@ -33,7 +32,8 @@ namespace REKO
         {
             var amount = int.Parse(NrOfItems.Text);
             var orderNumber = 3;
-            Order newOrder = new Order(testUser, Offer, orderNumber,amount);
+            DateTime timeSold = Offer.Seller.RekoRing.nextMeetup;
+            Order newOrder = new Order(testUser, Offer, orderNumber, amount, timeSold);
 
             DisplayAlert("Din beställning har lagts!", "Tack för din beställning av " + amount + " " + Offer.Product + 
                          "\nDitt ordernummer är: " + orderNumber, "OK" );
