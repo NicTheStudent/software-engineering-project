@@ -15,6 +15,7 @@
                         <EntryCell x:Name="priceEntry" Label="Pris" Placeholder="Pris per enhet" />
                         <EntryCell x:Name="unitEntry" Label="Enhet" Placeholder="Försäljningsenhet" />
                         <EntryCell x:Name="amountEntry" Label="Mängd" Placeholder="Tillgänglig mängd" />
+                        <EntryCell x:Name="offerInfo" Label="Information" Placeholder="Info..." />
                     </TableSection>
                 </TableRoot>
             </TableView>

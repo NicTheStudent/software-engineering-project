@@ -57,25 +57,13 @@
                        VerticalOptions="Center"/>
 
             </StackLayout>
-            
-            <StackLayout Orientation="Horizontal" HeightRequest="100">
-                <Label Text="Plats: "  
-                FontSize="Medium"  
-                 HorizontalOptions="Start"  
-                 VerticalOptions="Center"/>
-
-                <Label Text="Queen Street 17-19"  
-                FontSize="Medium"  
-                 HorizontalOptions="Start"  
-                 VerticalOptions="Center"/>
-            </StackLayout>
-            
+                      
             <Label Text="Information: "  
              FontSize="Medium"  
              HorizontalOptions="Start"  
              VerticalOptions="Center"/>
 
-            <Label Text="TODO "  
+            <Label Text="{Binding Offer.Info}"  
                 FontSize="Small"  
                 HorizontalOptions="Start"  
                 VerticalOptions="Center"/>

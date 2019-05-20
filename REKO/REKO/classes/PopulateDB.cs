@@ -92,10 +92,10 @@ namespace REKO
                 List<Producer> producerList = DatabaseFacade.Instance.GetProducers();
 
                 List<Offer> offerList = new List<Offer>();
-                offerList.Add(new Offer("Eggberts Ägg", "Ägg", 20, producerList[0], 144, 0, "dussin", true));
-                offerList.Add(new Offer("Bertils Betor", "Betor", 10, producerList[1], 50, 0, "kg", true));
-                offerList.Add(new Offer("Grönqvists gurkor", "Gurkor", 5, producerList[2], 100, 0, "st", true));
-                offerList.Add(new Offer("Marias Margarin", "Margarin", 50, producerList[3], 25, 0, "pkt", true));
+                offerList.Add(new Offer("Eggberts Ägg", "Ägg", 20, producerList[0], 144, 0, "dussin", "info", true));
+                offerList.Add(new Offer("Bertils Betor", "Betor", 10, producerList[1], 50, 0, "kg", "info", true));
+                offerList.Add(new Offer("Grönqvists gurkor", "Gurkor", 5, producerList[2], 100, 0, "st", "info", true));
+                offerList.Add(new Offer("Marias Margarin", "Margarin", 50, producerList[3], 25, 0, "pkt", "info", true));
                 offerList.ForEach(Offer => DatabaseFacade.Instance.AddOffer(Offer));
 
             }

@@ -76,10 +76,10 @@ namespace REKO
             ProducerList.Add(p4);
 
             // kvar för att inte förstöra något gammalt
-            offerList.Add(new Offer("Eggberts Ägg", "ägg", 40, p1, 144, 0, "dussin", true));
-            offerList.Add(new Offer("Bertils betor", "betor", 10, p2, 20, 0, "kg", true));
-            offerList.Add(new Offer("Grönqvists gröna gurkor", "gurka", 30, p3, 15, 0, "st.", true));
-            offerList.Add(new Offer("Marias margarin", "margarin", 50, p4, 1000, 0, "g", true));
+            offerList.Add(new Offer("Eggberts Ägg", "ägg", 40, p1, 144, 0, "dussin", "info", true));
+            offerList.Add(new Offer("Bertils betor", "betor", 10, p2, 20, 0, "kg", "info", true));
+            offerList.Add(new Offer("Grönqvists gröna gurkor", "gurka", 30, p3, 15, 0, "st.", "info", true));
+            offerList.Add(new Offer("Marias margarin", "margarin", 50, p4, 1000, 0, "g", "info", true));
 
 
 

@@ -14,8 +14,9 @@ namespace REKO
         double price;
         int available, ordered;
         bool published;
+        String info;
 
-        public Offer(String name, String product, double price, Producer seller, int available, int ordered, String unit, bool published)
+        public Offer(String name, String product, double price, Producer seller, int available, int ordered, String unit, String info, bool published)
         {
             this.name = name;
             this.product = product;
@@ -24,6 +25,7 @@ namespace REKO
             this.available = available;
             this.ordered = ordered;
             this.unit = unit;
+            this.info = info;
             this.published = published;
         }
         public ObjectId Id
@@ -70,6 +72,12 @@ namespace REKO
         {
             get { return unit; }
             set { unit = value; }
+        }
+
+        public String Info
+        {
+            get { return info; }
+            set { info = value; }
         }
         public bool Published
         {
