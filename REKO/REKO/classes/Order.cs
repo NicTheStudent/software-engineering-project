@@ -22,13 +22,15 @@ namespace REKO
         public Offer offer { get; set; }
         public int orderNumber;
         public int amount;
+        public DateTime timeSold { get; set; }
 
-        public Order(User user, Offer offer, int orderNumber, int amount)
+        public Order(User user, Offer offer, int orderNumber, int amount, DateTime timeSold)
         {
             this.user = user;
             this.offer = offer;
             this.orderNumber = orderNumber;
             this.amount = amount;
+            this.timeSold = timeSold;
         }
 
         public int OrderNumber
