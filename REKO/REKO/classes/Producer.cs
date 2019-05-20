@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace REKO
 {
     public class Producer
     {
-        String name, description, rekoRing;
-        int id;
+        String name, description;
+        public ObjectId id { get; set; }
+        public User user { get; set; }
+        RekoRing rekoRing;
 
-        public Producer(String name, String description, int id, String rekoRing)
+        public Producer(String name, String description, User user, RekoRing rekoRing)
         {
+            this.user = user;
             this.name = name;
             this.description = description;
-            this.id = id;
             this.rekoRing = rekoRing;
         }
         public string Name
@@ -26,15 +30,10 @@ namespace REKO
             get { return description;}
             set { description = value;}
         }
-        public string RekoRing
+        public RekoRing RekoRing
         {
             get { return rekoRing; }
             set { rekoRing = value; }
-        }
-        public int Id
-        {
-            get { return id; }
-            set { id = value;}
         }
     }
 }

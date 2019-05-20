@@ -8,29 +8,47 @@
    
     <ContentPage.Content>
         <ListView x:Name="MainListView"  
-             HasUnevenRows="True"  
-             ItemTapped="MainListView_ItemTapped">
-
+                  HasUnevenRows="True"  
+                  ItemTapped="MainListView_ItemTapped">
+          
             <!-- Child of MainPage.xaml which displays all orders that I've made-->
+
+            <ListView.Header>
+                <StackLayout Padding="30,0,30,0"
+                    Orientation="Horizontal">
+                        <Entry Text="Totalt"
+                       FontSize="Medium"
+                       IsReadOnly="true"/>
+                    <Entry Text="fyrtiotusenmiljarder"
+                       FontSize="Medium"
+                       IsReadOnly="true"/>
+                </StackLayout>
+            </ListView.Header>
+
 
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Vertical">
+                            
                             <StackLayout Orientation="Horizontal">
-
-                                <Label Text="{Binding Name}" />
+                               <Label Text="Du har beställt: "/>
+                                <Label Text="{Binding Offer.Product}" />
                                 <Label Text="från" />
-                                <Label Text="{Binding Seller}" />
-
+                                <Label Text="{Binding Offer.Seller}"/>
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Horizontal">  
+                                <Label Text="Totalsumma: " />
+                                <Label Text="{Binding OrderSum}"/>
+                                <Label Text=" kr"/>
                             </StackLayout>
                             
                             <StackLayout Orientation="Horizontal">
-                                
-                                <Label Text="Pris: " />
-                                
+                                <Label Text="Hämtas: Hemma hos" />  
+                                <Label Text="{Binding Offer.Seller}"/>
                             </StackLayout>
-                            <Label Text="Hämtas: " />
+                            
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

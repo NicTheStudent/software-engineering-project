@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using MongoDB.Driver;
 using Xamarin.Forms;
 
 namespace REKO
@@ -10,18 +10,16 @@ namespace REKO
         public OrderTab()
         {
             InitializeComponent();
-            DatabaseFacade d = new DatabaseFacade();
-
-
-            MainListView.ItemsSource = d.offerList;
-
-
+            DatabaseFacade db = DatabaseFacade.Instance;
+            MainListView.ItemsSource = db.GetOrders();
+  
         }
+
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var Selected = e.Item as Offer;
-            OfferDetailed detailedPage = new OfferDetailed(Selected);
-            await Navigation.PushAsync(detailedPage);
+            var Selected = e.Item as Order;
+            DetailedOrder detailedOrder = new DetailedOrder(Selected);
+            await Navigation.PushAsync(detailedOrder);
             ((ListView)sender).SelectedItem = null;
         }
     }

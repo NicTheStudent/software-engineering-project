@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -30,24 +30,23 @@
     <EmbeddedResource Update="OfferDetailed.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ManageOrders.xaml">
+    <EmbeddedResource Update="OpenStorePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ProducerTab.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="SignUpPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="TabController.xaml.cs" />
+    <Compile Remove="DetailedOrder.cs" />
   </ItemGroup>
   <ItemGroup>
 
     <None Remove="ProducerTab.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="ManageOrders.xaml.cs">
-      <DependentUpon>ManageOrders.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Update="AccountTab.xaml">

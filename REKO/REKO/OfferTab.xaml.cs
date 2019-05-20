@@ -15,13 +15,10 @@ namespace REKO
         public OfferTab()
         {
             InitializeComponent();
-            DatabaseFacade d = new DatabaseFacade();
-            
-
-            MainListView.ItemsSource = d.offerList;
-
-
+            DatabaseFacade db = DatabaseFacade.Instance;
+            MainListView.ItemsSource = db.GetOffers();
         }
+
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var Selected = e.Item as Offer;

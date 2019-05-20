@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using MongoDB.Bson;
+using MongoDB.Driver;
+
 namespace REKO
 {
     public class Offer
     {
-
-        String name, seller, unit, product;
+        ObjectId id;
+        String name,  unit, product;
+        Producer seller;
         double price;
         int available, ordered;
         bool published;
 
-        public Offer(String name, String product, double price, String seller, int available, int ordered, String unit, bool published)
+        public Offer(String name, String product, double price, Producer seller, int available, int ordered, String unit, bool published)
         {
             this.name = name;
             this.product = product;
@@ -21,7 +26,11 @@ namespace REKO
             this.unit = unit;
             this.published = published;
         }
-
+        public ObjectId Id
+        {   
+            get { return id;}
+            set { id = value; }
+        }
         public String Name
         {
             get { return name; }
@@ -32,11 +41,17 @@ namespace REKO
             get { return price; }
             set { price = value; }
         }
+
+        public String Product
+        {
+            get { return product; }
+            set { product = value; }
+        }
         public String GetPriceString()
         {
             return String.Format("{0:F2}", price);
         }
-        public String Seller
+        public Producer Seller
         {
             get { return seller; }
             set { seller = value; }

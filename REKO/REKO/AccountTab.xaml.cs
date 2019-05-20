@@ -13,25 +13,15 @@ namespace REKO
         {
             InitializeComponent();
 
-            List<String> ringList = new List<string>();
+            List<RekoRing> ringList = DatabaseFacade.Instance.GetRekoRings();
 
-            ringList.Add("Göteborg");
-            ringList.Add("Borås");
-            ringList.Add("Partille");
-            ringList.Add("Stenungsund");
-            ringList.Add("Kungälv");
-            ringList.Add("Mölndal");
-            ringList.Add("Hästveda");
+            List<string> stringRingList = new List<string>();
+            ringList.ForEach(RekoRing => stringRingList.Add(RekoRing.name)); // inte 100% snyggt men funkar
 
+            picker.ItemsSource = stringRingList;
 
-            picker.ItemsSource = ringList;
             picker.SelectedIndexChanged += OnPickerSelectedIndexChanged;
             ringLabel.Text = "Ingen REKO-ring vald";
-
-            myButton.Clicked += MyButton_tapped;
-                
-            
-            
 
             void OnPickerSelectedIndexChanged(object sender, EventArgs e)
             {
@@ -41,6 +31,7 @@ namespace REKO
                 if (selectedIndex != -1)
                 {
                     ringLabel.Text = "Vald: " + (string)picker.ItemsSource[selectedIndex];
+                    Session.Instance.SetRekoRing(ringList[picker.SelectedIndex]);
                 }
                 else
                 {
@@ -55,10 +46,33 @@ namespace REKO
             await Navigation.PushAsync(new MyOffersPage());
         }
 
-        async void MyButton_tapped(object sender, EventArgs e)
+        async void loginCell_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ManageOrders());
+            await Navigation.PushAsync(new LoginPage());
         }
+
+        async void signUpCell_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SignUpPage());
+        }
+
+        async void openStoreCell_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new OpenStorePage());
+        }
+
+        void populateCell_Tapped(object sender, EventArgs e)
+        {
+            var popdb = new PopulateDB();
+            popdb.Populate(); ;
+        }
+
+        void testCell_Tapped(object sender, EventArgs e)
+        {
+            //System.Diagnostics.Debug.WriteLine(Session.Instance.GetUser().username);
+            System.Diagnostics.Debug.WriteLine(Session.Instance.GetRekoRing().name);
+        }
+
         /*
         async void AboutAppCell_Tapped(object sender, EventArgs e)
         {
