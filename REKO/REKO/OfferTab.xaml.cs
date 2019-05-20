@@ -12,17 +12,6 @@ namespace REKO
 {
     public partial class OfferTab : ContentPage
     {
-        private bool _isRefreshing = false;
-        public bool IsRefreshing // bound to MainListView
-        {
-            get { return _isRefreshing; }
-            set
-            {
-                _isRefreshing = value;
-                OnPropertyChanged(nameof(IsRefreshing));
-            }
-        }
-
         protected override void OnAppearing() // override this to add refresh on changing to tab
         {
             base.OnAppearing();
@@ -35,19 +24,6 @@ namespace REKO
             BindingContext = this;
             DatabaseFacade db = DatabaseFacade.Instance;
             MainListView.ItemsSource = db.GetOffers();
-        }
-
-        public ICommand RefreshCommand // bound to MainListView
-        {
-            get
-            {
-                return new Command(() =>
-                {
-                    IsRefreshing = true;
-                    RefreshData();
-                    IsRefreshing = false;
-                });
-            }
         }
 
         private void RefreshData()

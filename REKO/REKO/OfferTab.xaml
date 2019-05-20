@@ -11,10 +11,7 @@
     
     <ListView x:Name="MainListView"  
              HasUnevenRows="True"  
-             ItemTapped="MainListView_ItemTapped"
-             IsPullToRefreshEnabled="True"
-             RefreshCommand="{Binding RefreshCommand}"
-             IsRefreshing="{Binding IsRefreshing}" >
+             ItemTapped="MainListView_ItemTapped">
         
         <ListView.Header>
                 <StackLayout Padding="30,0,30,0">

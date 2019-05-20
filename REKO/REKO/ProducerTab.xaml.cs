@@ -25,7 +25,19 @@ namespace REKO
 
         }
 
-async private void ProducerListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        protected override void OnAppearing() // override this to add refresh on changing to tab
+        {
+            base.OnAppearing();
+            RefreshData();
+        }
+
+        private void RefreshData()
+        {
+            ProducerListView.ItemsSource = null;
+            ProducerListView.ItemsSource = DatabaseFacade.Instance.GetOffers();
+        }
+
+        async private void ProducerListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var Selected = e.Item as Producer;
 
