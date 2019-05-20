@@ -40,8 +40,50 @@ namespace REKO
                 }
             }
 
-
         }
+
+        protected override void OnAppearing() // override this to add refresh on changing to tab
+        {
+            base.OnAppearing();
+            HideOrShowOptions();
+        }
+
+
+        TableSection loginSignup;
+        TableSection openStore;
+        TableSection myOffers;
+        TableSection logout;
+
+        private void HideOrShowOptions()
+        {
+            if (loginSignup != null)
+                loginSignup = Table.Root[Table.Root.IndexOf(loginSection)];
+            if (openStore != null)
+                openStore = Table.Root[Table.Root.IndexOf(openStoreSection)];
+            if (myOffers != null)
+                myOffers = Table.Root[Table.Root.IndexOf(myOffersSection)];
+            if (logout != null)
+                logout = Table.Root[Table.Root.IndexOf(logoutSection)];
+
+            Table.Root.Remove(loginSection);
+            Table.Root.Remove(openStoreSection);
+            Table.Root.Remove(myOffersSection);
+            Table.Root.Remove(logoutSection);
+
+            if (!Session.Instance.IsLoggedIn())
+                Table.Root.Insert(0, loginSection);
+            else
+                Table.Root.Insert(0, logoutSection);
+
+            if (Session.Instance.HasStore())
+                Table.Root.Insert(0, myOffersSection);
+
+            else if (Session.Instance.IsLoggedIn())
+                Table.Root.Insert(0, openStoreSection);
+        }
+
+
+
         async void MyOffersCell_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MyOffersPage());
@@ -68,10 +110,17 @@ namespace REKO
             popdb.Populate(); ;
         }
 
+        void logoutCell_Tapped(object sender, EventArgs e)
+        {
+            Session.Instance.LogOut();
+            HideOrShowOptions();
+            DisplayAlert("Du har loggats ut", "Vi saknar dig redan", "OK");
+
+        }
+
         void testCell_Tapped(object sender, EventArgs e)
         {
-            //System.Diagnostics.Debug.WriteLine(Session.Instance.GetUser().username);
-            System.Diagnostics.Debug.WriteLine(Session.Instance.GetRekoRing().name);
+            //for testing
         }
 
         /*
