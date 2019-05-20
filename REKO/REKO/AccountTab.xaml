@@ -32,8 +32,10 @@
                         <TextCell x:Name="populateCell" Text="PopulateDB()" Tapped="populateCell_Tapped" Detail=""/>
                         <TextCell x:Name="testCell" Text="Testknapp" Tapped="testCell_Tapped" Detail=""/>
                     </TableSection>
+                                      
                 </TableRoot>
             </TableView>
+            
         </StackLayout>
     </ContentPage.Content>
 

@@ -21,7 +21,8 @@ namespace REKO
             picker.ItemsSource = stringRingList;
 
             picker.SelectedIndexChanged += OnPickerSelectedIndexChanged;
-            ringLabel.Text = "Ingen REKO-ring vald";
+            ringLabel.Text = "Ingen REKO-ring vald";           
+
 
             void OnPickerSelectedIndexChanged(object sender, EventArgs e)
             {
@@ -79,5 +80,6 @@ namespace REKO
             await Navigation.PushAsync(new AboutAppPage());
         }
         */
+
     }
 }
