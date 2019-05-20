@@ -4,7 +4,7 @@
              x:Class="REKO.MyOffersPage">
     <ContentPage.Content>
         <StackLayout>
-            <Button x:Name="NewOfferButton" Text="Nytt Erbjudande" Clicked="NewOfferButton_Clicked"/>
+            <Button x:Name="NewOfferButton" Text="Nytt Erbjudande" Clicked="NewOfferButton_Clicked" BackgroundColor="Lime"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

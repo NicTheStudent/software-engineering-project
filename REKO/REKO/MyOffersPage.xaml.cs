@@ -19,6 +19,9 @@ namespace REKO
 
         private async void NewOfferButton_Clicked(object sender, EventArgs e)
         {
+            //RekoRing nyreko = new RekoRing("Stockholm", new DateTime(2019, 7, 16, 18, 0, 0));
+            RekoRing nyreko2 = new RekoRing("Stockholm");
+            DatabaseFacade.Instance.AddRekoRingWithDate(nyreko2);
             await Navigation.PushAsync(new NewOffer());
         }
     }
