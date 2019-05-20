@@ -179,8 +179,6 @@ namespace REKO
             return GetOrdersFiltered(filter);
         }
 
-
-
         //returns orders according to FilterDefinition, use FilterDefinitionBuilder
         public List<Order> GetOrdersFiltered(FilterDefinition<Order> filter)
         {
