@@ -8,13 +8,15 @@ namespace REKO
 {
     public partial class OrderTab : ContentPage
     {
-
+        double totalOrderSum;
+        List<Order> orderList;
         public OrderTab()
         {
             InitializeComponent();
             DatabaseFacade db = DatabaseFacade.Instance;
-            MainListView.ItemsSource = db.GetOrders();
-
+            orderList = db.GetOrders();
+            MainListView.ItemsSource = orderList;
+            BindingContext = this;
         }
        
          /*
@@ -51,5 +53,24 @@ namespace REKO
             MainListView.ItemsSource = db.GetOrders();
             return;
         }
+
+        public double calculateOrderSum()
+            {
+                foreach (Order order in orderList)
+                {
+                    totalOrderSum = totalOrderSum + order.OrderSum;
+                }
+                return totalOrderSum;
+            Console.Write(totalOrderSum);
+
+        }
+        public double TotalOrderSum
+        {
+            get
+            {
+                return calculateOrderSum();
+            }
+        }
+       
     }
 }
