@@ -21,9 +21,6 @@ namespace REKO
             RefreshData();
             BindingContext = this;
         }
-
-    
-       
          
         protected override void OnAppearing() // override this to add refresh on changing to tab
         {
@@ -38,7 +35,6 @@ namespace REKO
             MainListView.ItemsSource = orderList;
             TotalOrderSum = 0;
             orderList.ForEach(Order => TotalOrderSum += Order.OrderSum);
-            System.Diagnostics.Debug.WriteLine("TOTAL SUM: " + TotalOrderSum);
         }
 
 
