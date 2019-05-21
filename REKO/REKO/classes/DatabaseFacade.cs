@@ -63,7 +63,7 @@ namespace REKO
             User u6 = new User("ssamuelandersson", "pw");
             User u7 = new User("LucasAndren", "pw");
 
-            RekoRing r1 = new RekoRing("Göteborg");
+            RekoRing r1 = new RekoRing("Göteborg", new DateTime(2019, 6, 20, 18, 0, 0));
 
             Producer p1 = new Producer("Eggberts Ägg", "Jag har 800 hönor men är allergisk mot ägg, säljer därför av lite nu till påsk", u1, r1);
             Producer p2 = new Producer("Bertils Betor", "Säljer schyssta röd-, gul- och polkabetor", u2, r1);

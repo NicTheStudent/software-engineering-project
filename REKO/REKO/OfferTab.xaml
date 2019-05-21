@@ -15,10 +15,14 @@
         
         <ListView.Header>
                 <StackLayout Padding="30,0,30,0">
-                    <Entry Text="REKO-ringen Göteborg"
+                    <Entry 
+                       x:Name="rekoringname"
+                       Text="REKO-ringen Göteborg"
                        FontSize="Medium"
                        IsReadOnly="true"/>
-                    <Entry Text="Nästa meetup 5/4, 13.15"
+                    <Entry 
+                       x:Name="rekoringmeetup"
+                       Text="Nästa meetup 5/4, 13.15"
                        FontSize="Small"
                        IsReadOnly="true"/>
                 </StackLayout>

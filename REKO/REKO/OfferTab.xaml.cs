@@ -18,6 +18,8 @@ namespace REKO
             InitializeComponent();
             DatabaseFacade db = DatabaseFacade.Instance;
             MainListView.ItemsSource = db.GetOffers();
+
+            UpdateRingInfo();
         }
 
         protected override void OnAppearing() // override this to add refresh on changing to tab
@@ -30,6 +32,8 @@ namespace REKO
         {
             MainListView.ItemsSource = null;
             MainListView.ItemsSource = DatabaseFacade.Instance.GetOffers();
+
+            UpdateRingInfo();
         }
 
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -39,5 +43,22 @@ namespace REKO
             await Navigation.PushAsync(detailedPage);
             ((ListView)sender).SelectedItem = null;
         }
+
+        public void UpdateRingInfo()
+        {
+            RekoRing current = Session.Instance.GetRekoRing();
+            if (current == null)
+            {
+                rekoringname.Text = "Ingen REKO-ring vald.";
+                rekoringmeetup.Text = "";
+            }
+            else
+            {
+                rekoringname.Text = "REKO-ring: " + current.name;
+                rekoringmeetup.Text = "Nästa meetup:"+Environment.NewLine + current.nextMeetup.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("fr-FR"));
+
+            }
+        }
+
     }
 }

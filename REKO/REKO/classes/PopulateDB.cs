@@ -32,12 +32,14 @@ namespace REKO
             if (!checkList.Any())
             {
                 List<RekoRing> ringList = new List<RekoRing>();
-                ringList.Add(new RekoRing("Göteborg"));
-                ringList.Add(new RekoRing("Borås"));
-                ringList.Add(new RekoRing("Partille"));
-                ringList.Add(new RekoRing("Stenungsund"));
-                ringList.Add(new RekoRing("Mölndal"));
-                ringList.Add(new RekoRing("Hästveda"));
+                ringList.Add(new RekoRing("Göteborg", new DateTime(2019,6,20,18,0,0)));
+                ringList.Add(new RekoRing("Borås", new DateTime(2019,7,1,18,0,0)));
+
+                // Gamla versioner av RekoRing
+                //ringList.Add(new RekoRing("Partille"));
+                //ringList.Add(new RekoRing("Stenungsund"));
+                //ringList.Add(new RekoRing("Mölndal"));
+                //ringList.Add(new RekoRing("Hästveda"));
 
                 ringList.ForEach(RekoRing => DatabaseFacade.Instance.AddRekoRing(RekoRing));
              }
