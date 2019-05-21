@@ -51,7 +51,7 @@ namespace REKO
             }
         }
         /*
-         * Looks through all the orders in the DB and returns the highest+1
+         * Looks through all the ordernumbers in the DB and returns the highest+1
          */
         private int NextOrderNumber(List<Order> list)
         {

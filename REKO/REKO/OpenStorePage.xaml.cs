@@ -18,7 +18,6 @@ namespace REKO
             {
                 if (!DatabaseFacade.Instance.GetProducers(Session.Instance.GetUser()).Any())
                 {
-
                     var storeName = storeNameEntry.Text;
                     var storeDescription = storeDescriptionEntry.Text;
                     if (Session.Instance.GetRekoRing() != null)
@@ -63,11 +62,8 @@ namespace REKO
         public async void RedirectOnInfo()
         {
             bool answer = await DisplayAlert("Inloggning krävs", "För att öppna en butik måste du vara inloggad", "Logga in","Avbryt");
-
             if (answer)
-            {
-                await Navigation.PushAsync(new LoginPage());
-            }
+            { await Navigation.PushAsync(new LoginPage()); }
         }
     }
 }
