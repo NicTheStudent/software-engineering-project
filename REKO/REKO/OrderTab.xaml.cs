@@ -8,7 +8,6 @@ namespace REKO
 {
     public partial class OrderTab : ContentPage
     {
-        public double TotalSumOrders { get; set; }
 
         public OrderTab()
         {
@@ -24,12 +23,9 @@ namespace REKO
 
         private void RefreshData()
         {
-            TotalSumOrders = 0;
             MainListView.ItemsSource = null;
             List<Order> userOrders = DatabaseFacade.Instance.GetOrders(Session.Instance.GetUser());
-            userOrders.ForEach(Order => TotalSumOrders += Order.Amount * Order.Offer.Price);
             MainListView.ItemsSource = userOrders;
-            System.Diagnostics.Debug.WriteLine("DOES IT WORK?  " + TotalSumOrders);
         }
 
 

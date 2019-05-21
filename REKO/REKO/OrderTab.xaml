@@ -7,14 +7,8 @@
              Icon="ShoppingCart.png">
 
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation= "Horizontal">
-                <Label Text = "Total summa: " />
-                <Label Text = "{Binding TotalSumOrders}" />
-            </StackLayout>
-            
-            
-            <ListView x:Name="MainListView"  
+        
+        <ListView x:Name="MainListView"  
                   HasUnevenRows="True"  
                   ItemTapped="MainListView_ItemTapped">
 
