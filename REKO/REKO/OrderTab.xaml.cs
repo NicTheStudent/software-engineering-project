@@ -28,7 +28,7 @@ namespace REKO
 
         private void RefreshData()
         {
-            orderList = DatabaseFacade.Instance.GetOrders();
+            orderList = DatabaseFacade.Instance.GetOrders(Session.Instance.GetUser());
             MainListView.ItemsSource = null;
             MainListView.ItemsSource = orderList;
             CalculateOrderSum();
