@@ -7,7 +7,7 @@
              Icon="ShoppingCart.png">
 
     <ContentPage.Content>
-        
+
         <ListView x:Name="MainListView"  
                   HasUnevenRows="True"  
                   ItemTapped="MainListView_ItemTapped">
@@ -62,6 +62,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-     </StackLayout>
     </ContentPage.Content>
 </ContentPage>
