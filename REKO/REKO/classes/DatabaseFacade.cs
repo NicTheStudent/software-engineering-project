@@ -175,7 +175,7 @@ namespace REKO
         //return orders filtered on buyer
         public List<Order> GetOrders(User user)
         {
-            var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.user, user);
+            var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.User, user);
             return GetOrdersFiltered(filter);
         }
 

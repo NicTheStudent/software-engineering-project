@@ -8,16 +8,14 @@ namespace REKO
 {
     public partial class OrderTab : ContentPage
     {
+        public double TotalSumOrders { get; set; }
 
         public OrderTab()
         {
             InitializeComponent();
-            DatabaseFacade db = DatabaseFacade.Instance;
-            MainListView.ItemsSource = db.GetOrders();
-
+            RefreshData();
         }
        
-         /*
         protected override void OnAppearing() // override this to add refresh on changing to tab
         {
             base.OnAppearing();
@@ -26,10 +24,14 @@ namespace REKO
 
         private void RefreshData()
         {
+            TotalSumOrders = 0;
             MainListView.ItemsSource = null;
-            MainListView.ItemsSource = DatabaseFacade.Instance.GetOffers();
+            List<Order> userOrders = DatabaseFacade.Instance.GetOrders(Session.Instance.GetUser());
+            userOrders.ForEach(Order => TotalSumOrders += Order.Amount * Order.Offer.Price);
+            MainListView.ItemsSource = userOrders;
+            System.Diagnostics.Debug.WriteLine("DOES IT WORK?  " + TotalSumOrders);
         }
-        */
+
 
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {

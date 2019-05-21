@@ -7,23 +7,18 @@
              Icon="ShoppingCart.png">
 
     <ContentPage.Content>
-        <ListView x:Name="MainListView"  
+        <StackLayout>
+            <StackLayout Orientation= "Horizontal">
+                <Label Text = "Total summa: " />
+                <Label Text = "{Binding TotalSumOrders}" />
+            </StackLayout>
+            
+            
+            <ListView x:Name="MainListView"  
                   HasUnevenRows="True"  
                   ItemTapped="MainListView_ItemTapped">
 
-            <ListView.Header>
-                <StackLayout Padding="30,0,30,0"
-                    Orientation="Horizontal">
-                    <Entry Text="Totalt"
-                       FontSize="Medium"
-                       IsReadOnly="true"/>
-                    <Entry Text="fyrtiotusenmiljarder"
-                       FontSize="Medium"
-                       IsReadOnly="true"/>
-                </StackLayout>
-            </ListView.Header>
-
-            <ListView.ItemTemplate>
+                <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
@@ -33,7 +28,7 @@
                                     <Label Text="Du har beställt: "/>
                                     <Label Text="{Binding Offer.Product}" />
                                     <Label Text="från" />
-                                    <Label Text="{Binding Offer.Seller}"/>
+                                    <Label Text="{Binding Offer.Seller.Name}"/>
                                 </StackLayout>
 
                                 <StackLayout Orientation="Horizontal">
@@ -44,7 +39,7 @@
 
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Hämtas: Hemma hos" />
-                                    <Label Text="{Binding Offer.Seller}"/>
+                                    <Label Text="**rekoring-location**"/>
                                 </StackLayout>
 
                             </StackLayout>
@@ -61,5 +56,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+     </StackLayout>
     </ContentPage.Content>
 </ContentPage>

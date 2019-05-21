@@ -59,8 +59,8 @@ namespace REKO
             int tempNr = 0;
             foreach(Order item in list)
             {
-                if (item.orderNumber > tempNr)
-                    tempNr = item.orderNumber;
+                if (item.OrderNumber > tempNr)
+                    tempNr = item.OrderNumber;
             }
             return tempNr + 1;
         }
