@@ -18,20 +18,20 @@ namespace REKO
             MainListView.ItemsSource = orderList;
             BindingContext = this;
         }
-       
-         /*
-        protected override void OnAppearing() // override this to add refresh on changing to tab
-        {
-            base.OnAppearing();
-            RefreshData();
-        }
 
-        private void RefreshData()
-        {
-            MainListView.ItemsSource = null;
-            MainListView.ItemsSource = DatabaseFacade.Instance.GetOffers();
-        }
-        */
+        /*
+       protected override void OnAppearing() // override this to add refresh on changing to tab
+       {
+           base.OnAppearing();
+           RefreshData();
+       }
+
+       private void RefreshData()
+       {
+           MainListView.ItemsSource = null;
+           MainListView.ItemsSource = DatabaseFacade.Instance.GetOffers();
+       }
+       */
 
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
@@ -55,13 +55,12 @@ namespace REKO
         }
 
         public double calculateOrderSum()
+        {
+            foreach (Order order in orderList)
             {
-                foreach (Order order in orderList)
-                {
-                    totalOrderSum = totalOrderSum + order.OrderSum;
-                }
-                return totalOrderSum;
-            Console.Write(totalOrderSum);
+                totalOrderSum = totalOrderSum + order.OrderSum;
+            }
+            return totalOrderSum;
 
         }
         public double TotalOrderSum
@@ -71,6 +70,6 @@ namespace REKO
                 return calculateOrderSum();
             }
         }
-       
+
     }
 }

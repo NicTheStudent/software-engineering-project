@@ -9,7 +9,7 @@ namespace REKO
     public class Offer
     {
         ObjectId id;
-        String name,  unit, product;
+        String name, unit, product;
         Producer seller;
         double price;
         int available, ordered;
@@ -21,13 +21,13 @@ namespace REKO
             this.product = product;
             this.price = price;
             this.seller = seller;
-            this.available = available;
+            this.available = available; 
             this.ordered = ordered;
             this.unit = unit;
             this.published = published;
         }
         public ObjectId Id
-        {   
+        {
             get { return id;}
             set { id = value; }
         }
