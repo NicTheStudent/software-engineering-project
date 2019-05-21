@@ -12,16 +12,25 @@
 				
             </Label>
 
-            
-<TableView TranslationY="40"><TableRoot><TableSection>
- 
-<TextCell Text="Pris" Detail="10 kr" />   
-<TextCell Text="Antal: " Detail="2" />
- 
-<TextCell Text="Producent" Detail="Eggberts ägg" />   
-            </TableSection></TableRoot></TableView>
-            
-            
+            <Label Text="Eggberts ägg" HorizontalOptions="Center" TranslationY="10" FontSize="Large" />
+
+            <StackLayout Orientation="Horizontal" TranslationX="15" TranslationY="15">
+                <Label Text="Pris: " FontAttributes="Bold" FontSize="Medium" TextColor="#5041BC"/>
+                <Label Text="10" FontSize="Medium"/>
+                <Label Text="kr /" FontSize="Medium" />
+                <Label Text="st" FontSize="Medium"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" TranslationX="15" TranslationY="15">
+                <Label Text="Beställda: " FontAttributes="Bold" FontSize="Medium" TextColor="#5041BC"/>
+                <Label Text="2" FontSize="Medium"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" TranslationX="15" TranslationY="15">
+                <Label Text="Totalsumma: " FontAttributes="Bold" FontSize="Large" TextColor="#5041BC" />
+                <Label Text="20" FontSize="Large" />
+                <Label Text="kr" FontSize="Large" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
