@@ -31,9 +31,9 @@
 
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Du har beställt: "/>
-                                    <Label Text="{Binding Offer.Product}" />
+                                    <Label Text="{Binding offer.Product}" />
                                     <Label Text="från" />
-                                    <Label Text="{Binding Offer.Seller}"/>
+                                    <Label Text="{Binding offer.Name}"/>
                                 </StackLayout>
 
                                 <StackLayout Orientation="Horizontal">
@@ -44,7 +44,7 @@
 
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Hämtas: Hemma hos" />
-                                    <Label Text="{Binding Offer.Seller}"/>
+                                    <Label Text="{Binding offer.Name}"/>
                                 </StackLayout>
 
                             </StackLayout>

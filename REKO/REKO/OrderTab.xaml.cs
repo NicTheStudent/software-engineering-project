@@ -26,7 +26,7 @@ namespace REKO
         private void RefreshData()
         {
             MainListView.ItemsSource = null;
-            MainListView.ItemsSource = DatabaseFacade.Instance.GetOffers();
+            MainListView.ItemsSource = DatabaseFacade.Instance.GetOrders();
         }
 
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -35,6 +35,7 @@ namespace REKO
             DetailedOrder detailedOrder = new DetailedOrder(selected);
             await Navigation.PushAsync(detailedOrder);
             ((ListView)sender).SelectedItem = null;
+
         }
 
         async private void Handle_Clicked_Remove_My_Order(object sender, EventArgs e)

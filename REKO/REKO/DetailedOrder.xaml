@@ -4,31 +4,36 @@
              x:Class="REKO.DetailedOrder">
     <ContentPage.Content>
         <StackLayout>
-            
-            <Label Text="Ägg"
+
+            <Label Text="{Binding Order.offer.Product}"
                 FontSize="Large"  
                 HorizontalOptions="Center"  
                 VerticalOptions="Center" FontAttributes="Bold" Scale="1.5" Rotation="0" RotationX="0" TranslationY="10" TranslationX="0" TextColor="#5041BC">
 				
             </Label>
 
-            <Label Text="Eggberts ägg" HorizontalOptions="Center" TranslationY="10" FontSize="Large" />
+            <Label Text="{Binding Order.offer.Name}" HorizontalOptions="Center" TranslationY="10" FontSize="Large" />
 
             <StackLayout Orientation="Horizontal" TranslationX="15" TranslationY="15">
+                <Label Text="Ordernummer: " FontAttributes="Bold" FontSize="Medium" TextColor="#5041BC"/>
+                <Label Text="{Binding Order.OrderNumber}" FontSize="Medium"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" TranslationX="15" TranslationY="15">
                 <Label Text="Pris: " FontAttributes="Bold" FontSize="Medium" TextColor="#5041BC"/>
-                <Label Text="10" FontSize="Medium"/>
+                <Label Text="{Binding Order.offer.Price}" FontSize="Medium"/>
                 <Label Text="kr /" FontSize="Medium" />
-                <Label Text="st" FontSize="Medium"/>
+                <Label Text="{Binding Order.offer.Unit}" FontSize="Medium"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" TranslationX="15" TranslationY="15">
                 <Label Text="Beställda: " FontAttributes="Bold" FontSize="Medium" TextColor="#5041BC"/>
-                <Label Text="2" FontSize="Medium"/>
+                <Label Text="{Binding Order.Amount}" FontSize="Medium"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" TranslationX="15" TranslationY="15">
                 <Label Text="Totalsumma: " FontAttributes="Bold" FontSize="Large" TextColor="#5041BC" />
-                <Label Text="20" FontSize="Large" />
+                <Label Text="{Binding Order.OrderSum}" FontSize="Large" />
                 <Label Text="kr" FontSize="Large" />
             </StackLayout>
         </StackLayout>
