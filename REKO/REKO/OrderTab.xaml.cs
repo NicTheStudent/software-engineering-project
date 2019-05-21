@@ -17,7 +17,7 @@ namespace REKO
 
         }
        
-         /*
+         
         protected override void OnAppearing() // override this to add refresh on changing to tab
         {
             base.OnAppearing();
@@ -27,9 +27,9 @@ namespace REKO
         private void RefreshData()
         {
             MainListView.ItemsSource = null;
-            MainListView.ItemsSource = DatabaseFacade.Instance.GetOffers();
+            MainListView.ItemsSource = DatabaseFacade.Instance.GetOrders();
         }
-        */
+
 
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {

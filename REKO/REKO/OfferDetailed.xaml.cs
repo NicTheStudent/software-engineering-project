@@ -48,7 +48,6 @@ namespace REKO
             else
             {
             RedirectOnInfo();
-               
             }
         }
         /*
