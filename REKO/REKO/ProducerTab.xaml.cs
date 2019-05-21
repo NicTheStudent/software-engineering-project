@@ -34,7 +34,7 @@ namespace REKO
         private void RefreshData()
         {
             ProducerListView.ItemsSource = null;
-            ProducerListView.ItemsSource = DatabaseFacade.Instance.GetOffers();
+            ProducerListView.ItemsSource = DatabaseFacade.Instance.GetProducers();
         }
 
         async private void ProducerListView_ItemTapped(object sender, ItemTappedEventArgs e)

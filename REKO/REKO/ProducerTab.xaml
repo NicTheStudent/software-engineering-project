@@ -15,12 +15,10 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Vertical">
-                            <Label Text="{Binding Name}" 
-                                   FontSize="Large"/>
-                         </StackLayout>
-                    </ViewCell>
+                    <ImageCell
+                        ImageSource="Eggs.png"
+                        Text="{Binding Name}"
+                        Detail ="{Binding Description}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
             
