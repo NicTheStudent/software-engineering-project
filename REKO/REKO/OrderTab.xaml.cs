@@ -37,10 +37,6 @@ namespace REKO
             orderList.ForEach(Order => TotalOrderSum += Order.OrderSum);
         }
 
-
-
-
-
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var selected = e.Item as Order;

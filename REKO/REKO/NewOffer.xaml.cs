@@ -20,9 +20,10 @@ namespace REKO
                 var product = productEntry.Text;
                 var price = Double.Parse(priceEntry.Text);
                 var unit = unitEntry.Text;
-                var amount = int.Parse(amountEntry.Text);
+                var availableAmount = int.Parse(amountEntry.Text);
+                var orderedAmount = 0;
 
-                Offer newOffer = new Offer(name, product, price, Session.Instance.GetProducer(), amount, 0, unit, true);
+                Offer newOffer = new Offer(name, product, price, Session.Instance.GetProducer(), availableAmount, orderedAmount, unit, true);
                 DatabaseFacade db = DatabaseFacade.Instance;
                 db.AddOffer(newOffer);
                 DisplayAlert("Nytt erbjudande skapat", "det blir säkerligen mycket populärt", "OK");

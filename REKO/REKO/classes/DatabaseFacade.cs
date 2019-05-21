@@ -241,5 +241,13 @@ namespace REKO
             var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.id, order.id);
             collection.DeleteOne(filter);
         }
+
+        public void UpdateOfferAmount(Offer offer)
+        {
+            var collection = db.GetCollection<Offer>("Offer");
+            var filter = new FilterDefinitionBuilder<Offer>().Eq(Offer => Offer.Id, offer.Id);
+            var update = new UpdateDefinitionBuilder<Offer>().Set(Offer => Offer.CurrentAmount, offer.CurrentAmount);
+            collection.UpdateOne(filter, update);
+        }
     }
 }

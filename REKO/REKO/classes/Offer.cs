@@ -12,19 +12,22 @@ namespace REKO
         String name, unit, product;
         Producer seller;
         double price;
-        int available, ordered;
+        int startAmount, currentAmount, orderedAmount;
         bool published;
 
-        public Offer(String name, String product, double price, Producer seller, int available, int ordered, String unit, bool published)
+
+        //Remove orderedAmount if noone is using it.
+        public Offer(String name, String product, double price, Producer seller, int startAmount, int orderedAmount, String unit, bool published)
         {
             this.name = name;
             this.product = product;
             this.price = price;
             this.seller = seller;
-            this.available = available; 
-            this.ordered = ordered;
+            this.startAmount = startAmount; 
+            this.orderedAmount = orderedAmount;
             this.unit = unit;
             this.published = published;
+            this.currentAmount = startAmount;
         }
         public ObjectId Id
         {
@@ -56,15 +59,22 @@ namespace REKO
             get { return seller; }
             set { seller = value; }
         }
-        public int Available
+        public int StartAmount
         {
-            get { return available; }
-            set { available = value; }
+            get { return startAmount; }
+            set { startAmount = value; }
         }
-        public int Ordered
+
+        public int CurrentAmount
         {
-            get { return ordered; }
-            set { ordered = value; }
+            get { return currentAmount; }
+            set { currentAmount = value; }
+        }
+
+        public int OrderedAmount
+        {
+            get { return orderedAmount; }
+            set { orderedAmount = value; }
         }
         public String Unit
         {

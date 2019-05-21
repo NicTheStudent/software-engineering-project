@@ -32,7 +32,6 @@ namespace REKO
                 }
                 else
                 {
-
                     var amount = int.Parse(NrOfItems.Text);
 
                     DatabaseFacade db = DatabaseFacade.Instance;
@@ -41,8 +40,10 @@ namespace REKO
 
                     DisplayAlert("Din beställning har lagts!", "Tack för din beställning av " + amount + " " + Offer.Product +
                                  "\nDitt ordernummer är: " + orderNumber, "OK");
-
                     db.AddOrder(newOrder);
+
+                    Offer.CurrentAmount -= amount;
+                    db.UpdateOfferAmount(Offer);
                 }
             }
             else

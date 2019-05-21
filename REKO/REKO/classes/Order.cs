@@ -14,12 +14,10 @@ namespace REKO
          * OrderNumber is the same number as the key in Dictonary found in Offer.cs.
          * To create a instance of Order, one must be logged in.
          * A order is created when "Beställ" is pressed.
-         * 
-         * All vars set to public, to be able to see how eveything works in MongoDB
+         *
          */
         public ObjectId id { get; set; }
 
-        
         private User user;
         private Offer offer;
         private int orderNumber;

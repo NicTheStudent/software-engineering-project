@@ -19,6 +19,7 @@
                        FontSize="Medium"
                        IsReadOnly="true"/>
                     <Entry Text="{Binding TotalOrderSum}"
+                           WidthRequest="70"
                        FontSize="Medium"
                        IsReadOnly="true"/>
                 </StackLayout>
