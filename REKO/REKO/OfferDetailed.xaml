@@ -39,7 +39,7 @@
 
                 <Button Text="Beställ" 
                      HorizontalOptions="EndAndExpand"
-                     TranslationX="-15"
+                     TranslationX="-20"
                      VerticalOptions="Center"
                             Clicked="Handle_Clicked_Place_My_Order"/>
 
