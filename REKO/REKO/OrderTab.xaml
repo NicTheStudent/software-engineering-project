@@ -12,7 +12,19 @@
                   HasUnevenRows="True"  
                   ItemTapped="MainListView_ItemTapped">
 
-                <ListView.ItemTemplate>
+            <ListView.Header>
+                <StackLayout Padding="30,0,30,0"
+                    Orientation="Horizontal">
+                    <Entry Text="Totalt"
+                       FontSize="Medium"
+                       IsReadOnly="true"/>
+                    <Entry Text="{Binding TotalOrderSum}"
+                       FontSize="Medium"
+                       IsReadOnly="true"/>
+                </StackLayout>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
