@@ -8,14 +8,18 @@ namespace REKO
 {
     public partial class OrderTab : ContentPage
     {
-
+        double totalOrderSum;
+        List<Order> orderList;
         public OrderTab()
         {
             InitializeComponent();
             DatabaseFacade db = DatabaseFacade.Instance;
-            MainListView.ItemsSource = db.GetOrders();
-
+            orderList = db.GetOrders();
+            MainListView.ItemsSource = orderList;
+            BindingContext = this;
         }
+
+    
        
          
         protected override void OnAppearing() // override this to add refresh on changing to tab
@@ -29,6 +33,9 @@ namespace REKO
             MainListView.ItemsSource = null;
             MainListView.ItemsSource = DatabaseFacade.Instance.GetOrders();
         }
+
+
+
 
 
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -51,5 +58,23 @@ namespace REKO
             MainListView.ItemsSource = db.GetOrders();
             return;
         }
+
+        public double calculateOrderSum()
+        {
+            foreach (Order order in orderList)
+            {
+                totalOrderSum = totalOrderSum + order.OrderSum;
+            }
+            return totalOrderSum;
+
+        }
+        public double TotalOrderSum
+        {
+            get
+            {
+                return calculateOrderSum();
+            }
+        }
+
     }
 }
