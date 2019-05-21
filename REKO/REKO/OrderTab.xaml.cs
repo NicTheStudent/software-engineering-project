@@ -13,9 +13,7 @@ namespace REKO
         public OrderTab()
         {
             InitializeComponent();
-            DatabaseFacade db = DatabaseFacade.Instance;
-            orderList = db.GetOrders();
-            MainListView.ItemsSource = orderList;
+            RefreshData();
             BindingContext = this;
         }
 
@@ -30,8 +28,10 @@ namespace REKO
 
         private void RefreshData()
         {
+            orderList = DatabaseFacade.Instance.GetOrders(Session.Instance.GetUser());
             MainListView.ItemsSource = null;
-            MainListView.ItemsSource = DatabaseFacade.Instance.GetOrders();
+            MainListView.ItemsSource = orderList;
+            CalculateOrderSum();
         }
 
 
@@ -59,7 +59,7 @@ namespace REKO
             return;
         }
 
-        public double calculateOrderSum()
+        public double CalculateOrderSum()
         {
             foreach (Order order in orderList)
             {
@@ -72,7 +72,7 @@ namespace REKO
         {
             get
             {
-                return calculateOrderSum();
+                return CalculateOrderSum();
             }
         }
 
