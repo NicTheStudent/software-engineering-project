@@ -188,6 +188,18 @@ namespace REKO
             return orderList;
         }
 
+        //returns all orders that belong to a user and are no longer active
+        public List<Order> GetOrdersFilteredOldAndUser(User user)
+        {
+            List<Order> orderList = new List<Order>();
+            var collection = db.GetCollection<Order>("Order");
+            var filterTime = new FilterDefinitionBuilder<Order>().Lt(Order => Order.TimeSold, DateTime.Now);
+            var filterUser = new FilterDefinitionBuilder<Order>().Eq(Order => Order.User, user);
+            var filter = filterTime & filterUser;
+            collection.FindSync(filter).ForEachAsync(Order => orderList.Add(Order));
+            return orderList;
+        }
+
 
         //returns all rekorings
         public List<RekoRing> GetRekoRings()

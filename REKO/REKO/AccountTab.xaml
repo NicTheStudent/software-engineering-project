@@ -11,6 +11,7 @@
                 <TableRoot>
                     <TableSection>
                         <TextCell x:Name="myOffersCell" Text="Mina Erbjudanden" Tapped="MyOffersCell_Tapped" Detail=""/>
+                        <TextCell x:Name="olderOrdersCell" Text="Gamla Beställningar" Tapped="OlderOrdersCell_Tapped" Detail=""/>
                         <SwitchCell Text="Notifikationer" On="false" />
                         <ViewCell>
                             <ViewCell.View>

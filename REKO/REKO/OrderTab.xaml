@@ -8,60 +8,61 @@
 
     <ContentPage.Content>
 
-        <ListView x:Name="MainListView"  
-                  HasUnevenRows="True"  
-                  ItemTapped="MainListView_ItemTapped">
+            <ListView x:Name="MainListView"  
+                      HasUnevenRows="True"  
+                      ItemTapped="MainListView_ItemTapped">
 
-            <ListView.Header>
-                <StackLayout Padding="30,0,30,0"
-                    Orientation="Horizontal">
-                    <Entry Text="Totalt"
-                       FontSize="Medium"
-                       IsReadOnly="true"/>
-                    <Entry Text="{Binding TotalOrderSum}"
-                           WidthRequest="70"
-                       FontSize="Medium"
-                       IsReadOnly="true"/>
-                </StackLayout>
-            </ListView.Header>
+                <ListView.Header>
+                    <StackLayout Padding="30,0,30,0"
+                        Orientation="Horizontal">
+                        <Entry Text="Totalt"
+                           FontSize="Medium"
+                           IsReadOnly="true"/>
+                        <Entry Text="{Binding TotalOrderSum}"
+                               WidthRequest="70"
+                           FontSize="Medium"
+                           IsReadOnly="true"/>
+                    </StackLayout>
+                </ListView.Header>
 
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal">
-                            <StackLayout Orientation="Vertical">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Vertical">
 
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Du har beställt: "/>
-                                    <Label Text="{Binding Offer.Product}" />
-                                    <Label Text="från" />
-                                    <Label Text="{Binding Offer.Seller.Name}"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Du har beställt: "/>
+                                        <Label Text="{Binding Offer.Product}" />
+                                        <Label Text="från" />
+                                        <Label Text="{Binding Offer.Seller.Name}"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Totalsumma: " />
+                                        <Label Text="{Binding OrderSum}"/>
+                                        <Label Text=" kr"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Hämtas: Hemma hos" />
+                                        <Label Text="**rekoring-location**"/>
+                                    </StackLayout>
+
                                 </StackLayout>
 
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Totalsumma: " />
-                                    <Label Text="{Binding OrderSum}"/>
-                                    <Label Text=" kr"/>
-                                </StackLayout>
-
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Hämtas: Hemma hos" />
-                                    <Label Text="**rekoring-location**"/>
+                                <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Button Text="Avbeställ" 
+                                         HorizontalOptions="StartAndExpand"
+                                         VerticalOptions="Center"
+                                         Clicked="Handle_Clicked_Remove_My_Order" />
                                 </StackLayout>
 
                             </StackLayout>
-
-                            <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-                                <Button Text="Avbeställ" 
-                                     HorizontalOptions="StartAndExpand"
-                                     VerticalOptions="Center"
-                                     Clicked="Handle_Clicked_Remove_My_Order" />
-                            </StackLayout>
-
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
     </ContentPage.Content>
 </ContentPage>

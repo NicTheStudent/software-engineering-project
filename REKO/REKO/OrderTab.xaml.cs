@@ -9,6 +9,8 @@ namespace REKO
     public partial class OrderTab : ContentPage
     {
         private double _orderSum;
+
+
         public double TotalOrderSum
         {
             get { return _orderSum; }
