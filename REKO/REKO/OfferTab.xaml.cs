@@ -61,7 +61,7 @@ namespace REKO
             }
         }
 
-            public void UpdateRingInfo()
+        public void UpdateRingInfo()
         {
             RekoRing current = Session.Instance.GetRekoRing();
             if (current == null)
