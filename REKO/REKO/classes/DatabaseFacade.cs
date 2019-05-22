@@ -63,7 +63,7 @@ namespace REKO
             User u6 = new User("ssamuelandersson", "pw");
             User u7 = new User("LucasAndren", "pw");
 
-            RekoRing r1 = new RekoRing("Göteborg");
+            RekoRing r1 = new RekoRing("Göteborg", new DateTime(2019, 6, 20, 18, 0, 0));
 
             Producer p1 = new Producer("Eggberts Ägg", "Jag har 800 hönor men är allergisk mot ägg, säljer därför av lite nu till påsk", u1, r1);
             Producer p2 = new Producer("Bertils Betor", "Säljer schyssta röd-, gul- och polkabetor", u2, r1);
@@ -175,7 +175,7 @@ namespace REKO
         //return orders filtered on buyer
         public List<Order> GetOrders(User user)
         {
-            var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.user, user);
+            var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.User, user);
             return GetOrdersFiltered(filter);
         }
 
@@ -240,6 +240,14 @@ namespace REKO
             var collection = db.GetCollection<Order>("Order");
             var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.id, order.id);
             collection.DeleteOne(filter);
+        }
+
+        public void UpdateOfferAmount(Offer offer)
+        {
+            var collection = db.GetCollection<Offer>("Offer");
+            var filter = new FilterDefinitionBuilder<Offer>().Eq(Offer => Offer.Id, offer.Id);
+            var update = new UpdateDefinitionBuilder<Offer>().Set(Offer => Offer.CurrentAmount, offer.CurrentAmount);
+            collection.UpdateOne(filter, update);
         }
     }
 }

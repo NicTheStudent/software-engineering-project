@@ -51,7 +51,7 @@
                        HorizontalOptions="Start"  
                        VerticalOptions="Center"/>
                 
-                <Label Text="{Binding Offer.Available}"  
+                <Label Text="{Binding Offer.CurrentAmount}"  
                        FontSize="Small"  
                        HorizontalOptions="Start"  
                        VerticalOptions="Center"/>

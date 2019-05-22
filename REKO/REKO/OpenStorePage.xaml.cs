@@ -30,14 +30,42 @@ namespace REKO
                         DisplayAlert("Butik skapad", "du kan nu skapa erbjudanden", "OK");
                         Navigation.PopAsync();
                     }
-                else
-                    DisplayAlert("Du måste välja RekoRing först", "backa och välj", "OK");
+                    else
+                        ChooseRekoRingInAlert();
                 }
                 else
                     DisplayAlert("Du har redan en butik", "Endast en per person", "OK");
             }
             else
-                DisplayAlert("Du är inte inloggad", "Vänligen logga in för att kunna skapa ett erbjudande", "OK");
+                RedirectOnInfo();
+        }
+
+        private async void ChooseRekoRingInAlert()
+        {
+            DatabaseFacade db = DatabaseFacade.Instance;
+            List<RekoRing> rekoRingList = db.GetRekoRings();
+            string[] rekoRing = new string[rekoRingList.Count];
+
+
+            for (int n = 0; n < rekoRing.Length; n++)
+            {
+                rekoRing[n] = rekoRingList.ElementAt(n).name;
+            }
+
+            string result = await DisplayActionSheet("Välj RekoRing", "Avbryt", null, rekoRing);
+            
+            foreach (RekoRing item in rekoRingList)
+                if (item.name.Equals(result))
+                {
+                    Session.Instance.SetRekoRing(item);
+                }
+        }
+
+        public async void RedirectOnInfo()
+        {
+            bool answer = await DisplayAlert("Inloggning krävs", "För att öppna en butik måste du vara inloggad", "Logga in","Avbryt");
+            if (answer)
+            { await Navigation.PushAsync(new LoginPage()); }
         }
         
     }

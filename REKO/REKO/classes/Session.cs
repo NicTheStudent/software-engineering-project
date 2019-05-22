@@ -30,13 +30,12 @@ namespace REKO
             }
         }
 
-        
         public Boolean LogIn(string username, string password)
         {
             var dbf = DatabaseFacade.Instance;
             var filter = Builders<User>.Filter.Eq(user => user.username, username) & Builders<User>.Filter.Eq(user => user.password, password);
             List<User> loggedInUser = dbf.GetUsersFiltered(filter);
-            if (loggedInUser[0] != null)
+            if (loggedInUser.Any())
             {
                 currentUser = loggedInUser[0];
                 loggedIn = true;
@@ -56,7 +55,6 @@ namespace REKO
         {
             currentProducer = DatabaseFacade.Instance.GetProducers(currentUser)[0];
         }
-
 
         public void LogOut()
         {
