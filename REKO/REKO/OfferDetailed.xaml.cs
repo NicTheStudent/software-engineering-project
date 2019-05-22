@@ -32,18 +32,26 @@ namespace REKO
                 }
                 else
                 {
+
                     var amount = int.Parse(NrOfItems.Text);
 
-                    DatabaseFacade db = DatabaseFacade.Instance;
-                    var orderNumber = NextOrderNumber(db.GetOrders());  //Checks the hidghest orderNr in the database and gives the next 
-                    Order newOrder = new Order(Session.Instance.GetUser(), Offer, orderNumber, amount);
+                    if (amount > Offer.CurrentAmount || amount <= 0)
+                    {
+                        DisplayAlert("Felaktig beställning", "Kontrollera att du fyllt i alla fält korrekt", "OK");
+                    }
+                    else
+                    {
+                        DatabaseFacade db = DatabaseFacade.Instance;
+                        var orderNumber = NextOrderNumber(db.GetOrders());  //Checks the hidghest orderNr in the database and gives the next 
+                        Order newOrder = new Order(Session.Instance.GetUser(), Offer, orderNumber, amount);
 
-                    DisplayAlert("Din beställning har lagts!", "Tack för din beställning av " + amount + " " + Offer.Product +
-                                 "\nDitt ordernummer är: " + orderNumber, "OK");
-                    db.AddOrder(newOrder);
+                        DisplayAlert("Din beställning har lagts!", "Tack för din beställning av " + amount + " " + Offer.Unit + " " + Offer.Product +
+                                     "\nDitt ordernummer är: " + orderNumber, "OK");
+                        db.AddOrder(newOrder);
 
-                    Offer.CurrentAmount -= amount;
-                    db.UpdateOfferAmount(Offer);
+                        Offer.CurrentAmount -= amount;
+                        db.UpdateOfferAmount(Offer);
+                    }
                 }
             }
             else
@@ -65,11 +73,13 @@ namespace REKO
             return tempNr + 1;
         }
       
+
         public async void RedirectOnInfo()
         {
             string answer = await DisplayActionSheet("Inloggning krävs", "Avbryt", null, "Logga in", "Skapa konto");
 
-            if(answer.Equals("Logga in")) {
+            if(answer.Equals("Logga in")) 
+            {
                await Navigation.PushAsync(new LoginPage());
             }
             else if (answer.Equals("Skapa konto"))

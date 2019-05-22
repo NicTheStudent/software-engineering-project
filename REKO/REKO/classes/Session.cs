@@ -30,7 +30,6 @@ namespace REKO
             }
         }
 
-        
         public Boolean LogIn(string username, string password)
         {
             var dbf = DatabaseFacade.Instance;
@@ -56,7 +55,6 @@ namespace REKO
         {
             currentProducer = DatabaseFacade.Instance.GetProducers(currentUser)[0];
         }
-
 
         public void LogOut()
         {

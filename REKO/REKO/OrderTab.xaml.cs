@@ -15,6 +15,8 @@ namespace REKO
             set { _orderSum = value; OnPropertyChanged(); }
         }
         List<Order> orderList;
+       
+    
         public OrderTab()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace REKO
 
         private void RefreshData()
         {
+
             orderList = DatabaseFacade.Instance.GetOrders(Session.Instance.GetUser());
             MainListView.ItemsSource = null;
             MainListView.ItemsSource = orderList;
@@ -47,14 +50,22 @@ namespace REKO
 
         async private void Handle_Clicked_Remove_My_Order(object sender, EventArgs e)
         {
+
+            DatabaseFacade db = DatabaseFacade.Instance;
+
             bool answer = await DisplayAlert("Avbeställa?", "Är du säker på att du vill avbeställa?", "Ja", "Nej");
             if (!answer) return;
-
             var button = sender as Button;
             var order = button.BindingContext as Order;
-            DatabaseFacade db = DatabaseFacade.Instance;
+
+            var filter = Builders<Offer>.Filter.Eq(Offer => Offer.Id, order.Offer.Id);
+            List<Offer> changedOffer = db.GetOffersFiltered(filter);
+
             db.RemoveOrder(order);
             MainListView.ItemsSource = db.GetOrders();
+
+            changedOffer[0].CurrentAmount += order.Amount;
+            db.UpdateOfferAmount(changedOffer[0]);
             return;
         }
     }
