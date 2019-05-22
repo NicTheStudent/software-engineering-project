@@ -179,6 +179,13 @@ namespace REKO
             return GetOrdersFiltered(filter);
         }
 
+        //Returns all Orders on an Offer
+        public List<Order> GetOrders(Offer offer)
+        {
+            var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.Offer, offer);
+            return GetOrdersFiltered(filter);
+        }
+
         //returns orders according to FilterDefinition, use FilterDefinitionBuilder
         public List<Order> GetOrdersFiltered(FilterDefinition<Order> filter)
         {

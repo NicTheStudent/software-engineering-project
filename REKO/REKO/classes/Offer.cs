@@ -16,7 +16,6 @@ namespace REKO
         bool published;
 
 
-        //Remove orderedAmount if noone is using it.
         public Offer(String name, String product, double price, Producer seller, int startAmount, int orderedAmount, String unit, bool published)
         {
             this.name = name;

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="REKO.ShowMyOffer">
+    <ContentPage.Content>
+
+        <ListView x:Name="MainListView"  
+             HasUnevenRows="True"  
+             ItemTapped="MainListView_ItemTapped">
+
+            <ListView.Header>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Label Text="{Binding Product}" VerticalOptions="Center" FontSize="Large"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" >
+                        <Label Text="{Binding CurrentAmount}"  FontSize="Medium"/>
+                        <Label Text="av" FontSize="Medium"/>
+                        <Label Text="{Binding StartAmount}"  FontSize="Medium"/>
+                        <Label Text="kvar."  FontSize="Medium"/>
+                    </StackLayout>
+                    <Button Text="Ta bort erbjudande" />
+                </StackLayout>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Name}" />
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Price}" />
+                                <Label Text="kr /" />
+                                <Label Text="{Binding Unit}" />
+                            </StackLayout>
+                            <Label Text="{Binding Seller}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
