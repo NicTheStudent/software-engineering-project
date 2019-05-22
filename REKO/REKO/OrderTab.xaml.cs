@@ -50,7 +50,6 @@ namespace REKO
 
         async private void Handle_Clicked_Remove_My_Order(object sender, EventArgs e)
         {
-
             DatabaseFacade db = DatabaseFacade.Instance;
 
             bool answer = await DisplayAlert("Avbeställa?", "Är du säker på att du vill avbeställa?", "Ja", "Nej");

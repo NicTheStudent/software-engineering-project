@@ -47,6 +47,7 @@ namespace REKO
 
                         DisplayAlert("Din beställning har lagts!", "Tack för din beställning av " + amount + " " + Offer.Unit + " " + Offer.Product +
                                      "\nDitt ordernummer är: " + orderNumber, "OK");
+                        Navigation.PopAsync();
                         db.AddOrder(newOrder);
 
                         Offer.CurrentAmount -= amount;
