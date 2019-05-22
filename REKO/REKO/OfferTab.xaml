@@ -6,14 +6,13 @@
              Title="Erbjudanden"
              Icon="MyOffers.png">
    
-   
     <ContentPage.Content>
     
-    <ListView x:Name="MainListView"  
-             HasUnevenRows="True"  
-             ItemTapped="MainListView_ItemTapped">
-        
-        <ListView.Header>
+        <ListView x:Name="MainListView"  
+                  HasUnevenRows="True"  
+                  ItemTapped="MainListView_ItemTapped">
+            
+            <ListView.Header>
                 <StackLayout Padding="30,0,30,0">
                     <Entry 
                        x:Name="rekoringname"
@@ -27,23 +26,23 @@
                        IsReadOnly="true"/>
                 </StackLayout>
             </ListView.Header>
-        
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Orientation="Vertical">
-                        <Label Text="{Binding Name}" />
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Price}" />
-                                <Label Text="kr /" />
-                                <Label Text="{Binding Unit}" />
-                            </StackLayout>
-                        <Label Text="{Binding Seller}" />
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Name}" />
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Price}" />
+                                    <Label Text="kr /" />
+                                    <Label Text="{Binding Unit}" />
+                                </StackLayout>
+                            <Label Text="{Binding Seller}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
    </ContentPage.Content>
 </ContentPage>
 

@@ -7,6 +7,7 @@
              Icon="ShoppingCart.png">
 
     <ContentPage.Content>
+        
         <ListView x:Name="MainListView"  
                   HasUnevenRows="True"  
                   ItemTapped="MainListView_ItemTapped">
@@ -31,9 +32,9 @@
 
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Du har beställt: "/>
-                                    <Label Text="{Binding Offer.Product}" />
+                                    <Label Text="{Binding Product}" />
                                     <Label Text="från" />
-                                    <Label Text="{Binding Offer.Seller}"/>
+                                    <Label Text="{Binding Seller}"/>
                                 </StackLayout>
 
                                 <StackLayout Orientation="Horizontal">
@@ -41,12 +42,6 @@
                                     <Label Text="{Binding OrderSum}"/>
                                     <Label Text=" kr"/>
                                 </StackLayout>
-
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Hämtas: Hemma hos" />
-                                    <Label Text="{Binding Offer.Seller}"/>
-                                </StackLayout>
-
                             </StackLayout>
 
                             <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
