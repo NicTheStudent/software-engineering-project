@@ -62,7 +62,6 @@ namespace REKO
 
             db.RemoveOrder(order);
             MainListView.ItemsSource = db.GetOrders();
-
             changedOffer[0].CurrentAmount += order.Amount;
             db.UpdateOfferAmount(changedOffer[0]);
             return;
