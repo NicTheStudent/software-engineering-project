@@ -10,10 +10,12 @@ namespace REKO
     {
         public ObjectId id { get; set; }
         public string name { get; set; }
+        public DateTime nextMeetup { get; set; }
 
-        public RekoRing(string name)
+        public RekoRing(string name, DateTime nextMeetup)
         {
             this.name = name;
+            this.nextMeetup = nextMeetup;
         }
     }
 }
