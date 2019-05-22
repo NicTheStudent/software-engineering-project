@@ -28,10 +28,8 @@ namespace REKO
 
         private void RefreshData()
         {
-            MainListView.ItemsSource = null;
             resultsList = DatabaseFacade.Instance.GetOffers();
             FilterOnSearchString(MainListViewSearchBar.Text);
-            MainListView.ItemsSource = resultsList;
             UpdateRingInfo();
         }
 
@@ -57,7 +55,6 @@ namespace REKO
             else
             {
                 var searchedOfferList = new List<Offer>();
-                MainListView.ItemsSource = null;
                 searchedOfferList.AddRange(resultsList.Where(offer => offer.Name.ToUpper().Contains(searchString.ToUpper())));
                 searchedOfferList.AddRange(resultsList.Where(offer => offer.Product.ToUpper().Contains(searchString.ToUpper())));
                 MainListView.ItemsSource = searchedOfferList;
