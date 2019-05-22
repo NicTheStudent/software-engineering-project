@@ -16,9 +16,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ImageCell
-                        ImageSource="Eggs.png"
+                        ImageSource="{Binding ImagePath}"
                         Text="{Binding Name}"
-                        Detail ="{Binding Description}"/>
+                        Detail ="{Binding ShortDescription}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
             

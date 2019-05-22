@@ -9,16 +9,20 @@ namespace REKO
     public class Producer
     {
         String name, description;
+        public String ImagePath { get; set; }
+        public String ShortDescription { get; set; }
         public ObjectId id { get; set; }
         public User user { get; set; }
         RekoRing rekoRing;
 
-        public Producer(String name, String description, User user, RekoRing rekoRing)
+        public Producer(String name, String description, User user, RekoRing rekoRing, String shortDescription, String imagePath)
         {
             this.user = user;
             this.name = name;
             this.description = description;
             this.rekoRing = rekoRing;
+            this.ShortDescription = shortDescription;
+            this.ImagePath = imagePath;
         }
         public string Name
         {

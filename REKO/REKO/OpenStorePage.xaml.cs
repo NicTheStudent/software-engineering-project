@@ -20,9 +20,11 @@ namespace REKO
 
                 var storeName = storeNameEntry.Text;
                 var storeDescription = storeDescriptionEntry.Text;
-                if (Session.Instance.GetRekoRing() != null)
+                var storeShortDescription = storeShortDescriptionEntry.Text;
+
+                    if (Session.Instance.GetRekoRing() != null)
                     {
-                        Producer newProducer = new Producer(storeName, storeDescription, Session.Instance.GetUser(), Session.Instance.GetRekoRing());
+                        Producer newProducer = new Producer(storeName, storeDescription, Session.Instance.GetUser(), Session.Instance.GetRekoRing(), storeShortDescription, "Other.png");
                         DatabaseFacade.Instance.AddProducer(newProducer);
                         Session.Instance.UpdateProducer();
                         DisplayAlert("Butik skapad", "du kan nu skapa erbjudanden", "OK");
@@ -37,5 +39,6 @@ namespace REKO
             else
                 DisplayAlert("Du är inte inloggad", "Vänligen logga in för att kunna skapa ett erbjudande", "OK");
         }
+        
     }
 }

@@ -12,6 +12,7 @@
                         <TextCell x:Name="newOfferLabel" Text="Öppna Butik" />
                         <EntryCell x:Name="storeNameEntry" Label="Butikens namn" Placeholder="Välj ett namn..." />
                         <EntryCell x:Name="storeDescriptionEntry" Label="Beskrivning av din verksamhet" Placeholder="Skriv något fint..." />
+                        <EntryCell x:Name="storeShortDescriptionEntry" Label="Kort beskrivning av din verksamhet" Placeholder="Skriv något fint..." />
                     </TableSection>
                 </TableRoot>
             </TableView>

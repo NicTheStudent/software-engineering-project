@@ -76,10 +76,10 @@ namespace REKO
                 List<RekoRing> ringList = DatabaseFacade.Instance.GetRekoRings();
 
                 List<Producer> producerList= new List<Producer>();
-                producerList.Add(new Producer("Eggberts Äggfarm", "Jag har 800 hönor men är allergisk mot ägg, säljer därför av lite nu till påsk", userList[0], ringList[0]));
-                producerList.Add(new Producer("Bertils Betodling", "Säljer schyssta röd-, gul- och polkabetor", userList[1], ringList[0]));
-                producerList.Add(new Producer("Grönqvists gurkplantage", "Salta och söta", userList[2], ringList[0]));
-                producerList.Add(new Producer("Marias Margarinfabrik", "Perfekt för morgonmackan", userList[3], ringList[0]));
+                producerList.Add(new Producer("Eggberts Äggfarm", "Jag har 800 hönor men är allergisk mot ägg, säljer därför av lite nu till påsk", userList[0], ringList[0], "Äggstra goda ägg","Eggs.png"));
+                producerList.Add(new Producer("Bertils Betodling", "Säljer schyssta röd-, gul- och polkabetor", userList[1], ringList[0], "Beta av mina betor", "Beetroot.png"));
+                producerList.Add(new Producer("Grönqvists gurkplantage", "Salta och söta", userList[2], ringList[0], "Herr Gurka dansar inte längre", "Cucumber.png"));
+                producerList.Add(new Producer("Marias Margarinfabrik", "Perfekt för morgonmackan", userList[3], ringList[0], "Marginellt sämre än smör", "Butter.png"));
                 producerList.ForEach(Producer => DatabaseFacade.Instance.AddProducer(Producer));
             }
         }

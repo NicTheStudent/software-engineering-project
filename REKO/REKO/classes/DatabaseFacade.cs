@@ -54,7 +54,7 @@ namespace REKO
            db = client.GetDatabase("RekoDB");
 
 
-
+            /*
             User u1 = new User("Namorb", "pw");
             User u2 = new User("Fripperian", "pw");
             User u3 = new User("NictheStudent", "pw");
@@ -80,7 +80,7 @@ namespace REKO
             offerList.Add(new Offer("Bertils betor", "betor", 10, p2, 20, 0, "kg", true));
             offerList.Add(new Offer("Grönqvists gröna gurkor", "gurka", 30, p3, 15, 0, "st.", true));
             offerList.Add(new Offer("Marias margarin", "margarin", 50, p4, 1000, 0, "g", true));
-
+            */
 
 
 
