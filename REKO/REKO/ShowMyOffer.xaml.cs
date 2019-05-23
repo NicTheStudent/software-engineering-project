@@ -12,14 +12,14 @@ namespace REKO
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ShowMyOffer : ContentPage
 	{
-        Offer offer;
-		public ShowMyOffer (Offer offer)
+        public Offer Offer { get; set; }
+        public ShowMyOffer (Offer offer)
 		{
-            this.offer = offer;
+            InitializeComponent();
+            this.Offer = offer;
             RefreshData();
-
-			InitializeComponent ();
-		}
+            BindingContext = this;
+    }
 
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
@@ -31,7 +31,7 @@ namespace REKO
 
         private void RefreshData()
         {
-            List<Order> ordersOnOffer = DatabaseFacade.Instance.GetOrders(offer);
+            List<Order> ordersOnOffer = DatabaseFacade.Instance.GetOrders(Offer);
             MainListView.ItemsSource = ordersOnOffer;
 
         }

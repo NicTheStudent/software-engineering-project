@@ -11,12 +11,13 @@
             <ListView.Header>
                 <StackLayout Orientation="Vertical">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                        <Label Text="{Binding Product}" VerticalOptions="Center" FontSize="Large"/>
+                        <Label Text="{Binding Offer.Product}" VerticalOptions="Center" FontSize="Large"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" >
-                        <Label Text="{Binding CurrentAmount}"  FontSize="Medium"/>
+                        <Label Text="{Binding Offer.CurrentAmount}"  FontSize="Medium"/>
                         <Label Text="av" FontSize="Medium"/>
-                        <Label Text="{Binding StartAmount}"  FontSize="Medium"/>
+                        <Label Text="{Binding Offer.StartAmount}"  FontSize="Medium"/>
+                        <Label Text="{Binding Offer.Unit}"  FontSize="Medium"/>
                         <Label Text="kvar."  FontSize="Medium"/>
                     </StackLayout>
                     <Button Text="Ta bort erbjudande" />
@@ -27,13 +28,11 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Vertical">
-                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding User.username}" FontSize="Large"/>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Price}" />
-                                <Label Text="kr /" />
-                                <Label Text="{Binding Unit}" />
+                                <Label Text="{Binding Amount}" FontSize="Medium" />
+                                <Label Text="{Binding Offer.Unit}"  FontSize="Medium"/>
                             </StackLayout>
-                            <Label Text="{Binding Seller}" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

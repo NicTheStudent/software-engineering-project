@@ -23,6 +23,7 @@
                                 <Label Text="{Binding CurrentAmount}"  FontSize="Large"/>
                                 <Label Text="av" FontSize="Large"/>
                                 <Label Text="{Binding StartAmount}"  FontSize="Large"/>
+                                <Label Text="{Binding Unit}"  FontSize="Large"/>
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>
