@@ -30,7 +30,8 @@ namespace REKO
             this.offer = offer;
             this.orderNumber = orderNumber;
             this.amount = amount;
-            this.timeSold = timeSold;
+            //Lägger till två timmar för att ordern ska bli gammal efter att ringen är över
+            this.timeSold = timeSold.AddHours(2);
         }
 
         public Offer Offer
