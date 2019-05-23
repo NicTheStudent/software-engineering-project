@@ -12,13 +12,11 @@ namespace REKO
     public partial class OfferTab : ContentPage
     {
 
+        List<Offer> resultsList;
 
         public OfferTab()
         {
             InitializeComponent();
-            DatabaseFacade db = DatabaseFacade.Instance;
-            MainListView.ItemsSource = db.GetOffers();
-
             UpdateRingInfo();
         }
 
@@ -30,9 +28,8 @@ namespace REKO
 
         private void RefreshData()
         {
-            MainListView.ItemsSource = null;
-            MainListView.ItemsSource = DatabaseFacade.Instance.GetOffers();
-
+            resultsList = DatabaseFacade.Instance.GetOffers();
+            FilterOnSearchString(MainListViewSearchBar.Text);
             UpdateRingInfo();
         }
 
@@ -42,6 +39,26 @@ namespace REKO
             OfferDetailed detailedPage = new OfferDetailed(Selected);
             await Navigation.PushAsync(detailedPage);
             ((ListView)sender).SelectedItem = null;
+        }
+
+        private void SearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            FilterOnSearchString(e.NewTextValue);
+        }
+
+        private void FilterOnSearchString(string searchString)
+        {
+            if (string.IsNullOrWhiteSpace(searchString))
+            {
+                MainListView.ItemsSource = resultsList;
+            }
+            else
+            {
+                var searchedOfferList = new List<Offer>();
+                searchedOfferList.AddRange(resultsList.Where(offer => offer.Name.ToUpper().Contains(searchString.ToUpper())));
+                searchedOfferList.AddRange(resultsList.Where(offer => offer.Product.ToUpper().Contains(searchString.ToUpper())));
+                MainListView.ItemsSource = searchedOfferList;
+            }
         }
 
         public void UpdateRingInfo()
@@ -59,6 +76,5 @@ namespace REKO
 
             }
         }
-
     }
 }

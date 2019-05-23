@@ -7,11 +7,25 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <TableView>
-                <TableRoot>
-                    <TableSection>
+            <TableView x:Name="Table">
+                <TableRoot x:Name="Root">
+                    <TableSection x:Name="loginSection">
+                        <TextCell x:Name="loginCell" Text="Logga in" Tapped="loginCell_Tapped" Detail=""/>
+                        <TextCell x:Name="signUpCell" Text="Skapa ny användare" Tapped="signUpCell_Tapped" Detail=""/>
+                    </TableSection>
+                    <TableSection x:Name="logoutSection">
+                        <TextCell x:Name="logoutCell" Text="Logga ut" Tapped="logoutCell_Tapped" Detail=""/>
+                    </TableSection>
+                    <TableSection x:Name="openStoreSection">
+                        <TextCell x:Name="openStoreCell" Text="Öppna Butik" Tapped="openStoreCell_Tapped" Detail=""/>
+                    </TableSection>
+                    <TableSection x:Name="myOffersSection">
                         <TextCell x:Name="myOffersCell" Text="Mina Erbjudanden" Tapped="MyOffersCell_Tapped" Detail=""/>
+                    </TableSection>
+                    <TableSection>
                         <TextCell x:Name="olderOrdersCell" Text="Gamla Beställningar" Tapped="OlderOrdersCell_Tapped" Detail=""/>
+                    </TableSection>
+                    <TableSection>
                         <SwitchCell Text="Notifikationer" On="false" />
                         <ViewCell>
                             <ViewCell.View>
@@ -27,9 +41,6 @@
                             </ViewCell.View>
                         </ViewCell>
                         <TextCell x:Name="ringLabel" Text="Ingen REKO-ring vald" />
-                        <TextCell x:Name="loginCell" Text="Logga in" Tapped="loginCell_Tapped" Detail=""/>
-                        <TextCell x:Name="signUpCell" Text="Skapa ny användare" Tapped="signUpCell_Tapped" Detail=""/>
-                        <TextCell x:Name="openStoreCell" Text="Öppna Butik" Tapped="openStoreCell_Tapped" Detail=""/>
                         <TextCell x:Name="populateCell" Text="PopulateDB()" Tapped="populateCell_Tapped" Detail=""/>
                         <TextCell x:Name="testCell" Text="Testknapp" Tapped="testCell_Tapped" Detail=""/>
                     </TableSection>
