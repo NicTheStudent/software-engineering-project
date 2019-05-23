@@ -20,7 +20,7 @@
                         <Label Text="{Binding Offer.Unit}"  FontSize="Medium"/>
                         <Label Text="kvar."  FontSize="Medium"/>
                     </StackLayout>
-                    <Button Text="Ta bort erbjudande" />
+                    <Button Text="Ta bort erbjudande" Clicked="Handle_Clicked_Remove_My_Offer"/>
                 </StackLayout>
             </ListView.Header>
 

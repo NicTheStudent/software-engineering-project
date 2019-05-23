@@ -19,6 +19,12 @@ namespace REKO
             RefreshData();
         }
 
+        protected override void OnAppearing() // override this to add refresh on changing to tab
+        {
+            base.OnAppearing();
+            RefreshData();
+        }
+
         private async void NewOfferButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new NewOffer());

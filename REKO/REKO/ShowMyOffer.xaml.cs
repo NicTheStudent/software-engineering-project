@@ -21,6 +21,7 @@ namespace REKO
             BindingContext = this;
     }
 
+
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var Selected = e.Item as Offer;
@@ -31,9 +32,33 @@ namespace REKO
 
         private void RefreshData()
         {
-            List<Order> ordersOnOffer = DatabaseFacade.Instance.GetOrders(Offer);
-            MainListView.ItemsSource = ordersOnOffer;
+            if (Offer != null)
+            {
+                List<Order> ordersOnOffer = DatabaseFacade.Instance.GetOrders(Offer);
+                MainListView.ItemsSource = ordersOnOffer;
+            }
+            else
+            {
+                MainListView.ItemsSource = null;
+            }
+            
 
+        }
+
+        async private void Handle_Clicked_Remove_My_Offer(object sender, EventArgs e)
+        {
+
+            bool answer = await DisplayAlert("Ta bort erbjudande?", "Är du säker på att du vill ta bort ditt erbjudande?", "Ja", "Nej");
+            if (!answer) return;
+
+            List<Order> ordersOnOffer = DatabaseFacade.Instance.GetOrders(Offer);
+            ordersOnOffer.ForEach(Order => DatabaseFacade.Instance.RemoveOrder(Order));
+            DatabaseFacade.Instance.RemoveOffer(Offer);
+            Offer = null;
+            RefreshData();
+            await Navigation.PopAsync();
+            //await Navigation.PushAsync(new MyOffersPage());
+            return;
         }
     }
 }
