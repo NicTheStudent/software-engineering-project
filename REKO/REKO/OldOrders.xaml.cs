@@ -18,7 +18,7 @@ namespace REKO
 
         private void RefreshData()
         {
-            oldOrderList = DatabaseFacade.Instance.GetOrdersFilteredOldAndUser(Session.Instance.GetUser());
+            oldOrderList = DatabaseFacade.Instance.GetOldOrders(Session.Instance.GetUser());
             MainListView.ItemsSource = oldOrderList;
         }
 
