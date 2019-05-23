@@ -43,7 +43,7 @@ namespace REKO
                     {
                         DatabaseFacade db = DatabaseFacade.Instance;
                         var orderNumber = NextOrderNumber(db.GetOrders());  //Checks the hidghest orderNr in the database and gives the next 
-                        Order newOrder = new Order(Session.Instance.GetUser(), Offer, orderNumber, amount);
+                        Order newOrder = new Order(Session.Instance.GetUser(), Offer, orderNumber, amount, Offer.Seller.RekoRing.nextMeetup);
 
                         DisplayAlert("Din beställning har lagts!", "Tack för din beställning av " + amount + " " + Offer.Unit + " " + Offer.Product +
                                      "\nDitt ordernummer är: " + orderNumber, "OK");

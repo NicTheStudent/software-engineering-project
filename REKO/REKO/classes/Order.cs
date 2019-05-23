@@ -22,13 +22,16 @@ namespace REKO
         private Offer offer;
         private int orderNumber;
         private int amount;
+        private DateTime timeSold;
         
-        public Order(User user, Offer offer, int orderNumber, int amount)
+        public Order(User user, Offer offer, int orderNumber, int amount, DateTime timeSold)
         {
             this.user = user;
             this.offer = offer;
             this.orderNumber = orderNumber;
             this.amount = amount;
+            //Lägger till två timmar för att ordern ska bli gammal efter att ringen är över
+            this.timeSold = timeSold.AddHours(2);
         }
 
         public Offer Offer
@@ -53,6 +56,12 @@ namespace REKO
         {
             get { return amount; }
             set { amount = value; }
+        }
+
+        public DateTime TimeSold
+        {
+            get { return timeSold; }
+            set { timeSold = value; }
         }
 
         public double OrderSum
