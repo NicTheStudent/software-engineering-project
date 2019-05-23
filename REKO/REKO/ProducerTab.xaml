@@ -16,10 +16,12 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Vertical">
-                            <Label Text="{Binding Name}" 
+                        <Frame Padding="2" Margin="0,5,0,5">
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Name}" 
                                    FontSize="Large"/>
-                         </StackLayout>
+                            </StackLayout>
+                        </Frame>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -28,37 +28,39 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal">
-                            <StackLayout Orientation="Vertical">
+                        <Frame Padding="2" Margin="0,5,0,5">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Vertical">
 
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Du har beställt: "/>
-                                    <Label Text="{Binding Offer.Product}" />
-                                    <Label Text="från" />
-                                    <Label Text="{Binding Offer.Seller.Name}"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Du har beställt: "/>
+                                        <Label Text="{Binding Offer.Product}" />
+                                        <Label Text="från" />
+                                        <Label Text="{Binding Offer.Seller.Name}"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Totalsumma: " />
+                                        <Label Text="{Binding OrderSum}"/>
+                                        <Label Text=" kr"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Hämtas: Hemma hos" />
+                                        <Label Text="**rekoring-location**"/>
+                                    </StackLayout>
+
                                 </StackLayout>
 
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Totalsumma: " />
-                                    <Label Text="{Binding OrderSum}"/>
-                                    <Label Text=" kr"/>
-                                </StackLayout>
-
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Hämtas: Hemma hos" />
-                                    <Label Text="**rekoring-location**"/>
+                                <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Button Text="Avbeställ" 
+                                         HorizontalOptions="StartAndExpand"
+                                         VerticalOptions="Center"
+                                         Clicked="Handle_Clicked_Remove_My_Order" />
                                 </StackLayout>
 
                             </StackLayout>
-
-                            <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-                                <Button Text="Avbeställ" 
-                                     HorizontalOptions="StartAndExpand"
-                                     VerticalOptions="Center"
-                                     Clicked="Handle_Clicked_Remove_My_Order" />
-                            </StackLayout>
-
-                        </StackLayout>
+                        </Frame>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
