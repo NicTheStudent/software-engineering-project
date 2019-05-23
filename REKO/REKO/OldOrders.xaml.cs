@@ -16,17 +16,9 @@ namespace REKO
             BindingContext = this;
         }
 
-        protected override void OnAppearing() // override this to add refresh on changing to tab
-        {
-            base.OnAppearing();
-            RefreshData();
-        }
-
         private void RefreshData()
         {
-
             oldOrderList = DatabaseFacade.Instance.GetOrdersFilteredOldAndUser(Session.Instance.GetUser());
-            MainListView.ItemsSource = null;
             MainListView.ItemsSource = oldOrderList;
         }
 
