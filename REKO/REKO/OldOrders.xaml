@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="REKO.OldOrders">
+    <ContentPage.Content>
+
+        <ListView x:Name="MainListView"  
+                  HasUnevenRows="True"  
+                  ItemTapped="MainListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Label TextColor="Red" Text="Du har beställt: "/>
+                                <Label TextColor="Red" Text="{Binding Offer.Product}" />
+                                <Label TextColor="Red" Text="från" />
+                                <Label TextColor="Red" Text="{Binding Offer.Seller.Name}"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label TextColor="Red" Text="Totalsumma: " />
+                                <Label TextColor="Red" Text="{Binding OrderSum}"/>
+                                <Label TextColor="Red" Text=" kr"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

@@ -23,7 +23,10 @@
                         <TextCell x:Name="myOffersCell" Text="Mina Erbjudanden" Tapped="MyOffersCell_Tapped" Detail=""/>
                     </TableSection>
                     <TableSection>
-                    <SwitchCell Text="Notifikationer" On="false" />
+                        <TextCell x:Name="olderOrdersCell" Text="Gamla Beställningar" Tapped="OlderOrdersCell_Tapped" Detail=""/>
+                    </TableSection>
+                    <TableSection>
+                        <SwitchCell Text="Notifikationer" On="false" />
                         <ViewCell>
                             <ViewCell.View>
                                 <StackLayout Orientation="Horizontal" Padding="13, 0">

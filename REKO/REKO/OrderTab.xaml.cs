@@ -9,6 +9,8 @@ namespace REKO
     public partial class OrderTab : ContentPage
     {
         private double _orderSum;
+
+
         public double TotalOrderSum
         {
             get { return _orderSum; }
@@ -33,7 +35,7 @@ namespace REKO
         private void RefreshData()
         {
 
-            orderList = DatabaseFacade.Instance.GetOrders(Session.Instance.GetUser());
+            orderList = DatabaseFacade.Instance.GetCurrentOrders(Session.Instance.GetUser());
             MainListView.ItemsSource = null;
             MainListView.ItemsSource = orderList;
             TotalOrderSum = 0;

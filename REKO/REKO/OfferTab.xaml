@@ -5,45 +5,48 @@
              x:Class="REKO.OfferTab"
              Title="Erbjudanden"
              Icon="MyOffers.png">
-   
-   
+
+
     <ContentPage.Content>
-    
-    <ListView x:Name="MainListView"  
+
+        <ListView x:Name="MainListView"  
              HasUnevenRows="True"  
              ItemTapped="MainListView_ItemTapped">
-        
-        <ListView.Header>
-                <StackLayout Padding="30,0,30,0">
-                    <Entry 
-                       x:Name="rekoringname"
-                       Text="REKO-ringen Göteborg"
-                       FontSize="Medium"
-                       IsReadOnly="true"/>
-                    <Entry 
-                       x:Name="rekoringmeetup"
-                       Text="Nästa meetup 5/4, 13.15"
-                       FontSize="Small"
-                       IsReadOnly="true"/>
+
+            <ListView.Header>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Padding="30,0,30,0">
+                        <Entry 
+                               x:Name="rekoringname"
+                               Text="REKO-ringen Göteborg"
+                               FontSize="Medium"
+                               IsReadOnly="true"/>
+                        <Entry 
+                               x:Name="rekoringmeetup"
+                               Text="Nästa meetup 5/4, 13.15"
+                               FontSize="Small"
+                               IsReadOnly="true"/>
+                    </StackLayout>
+                    <SearchBar x:Name ="MainListViewSearchBar" Placeholder="Sök..." TextChanged="SearchBar_OnTextChanged"></SearchBar>
                 </StackLayout>
             </ListView.Header>
-        
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Orientation="Vertical">
-                        <Label Text="{Binding Name}" />
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Name}" />
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="{Binding Price}" />
                                 <Label Text="kr /" />
                                 <Label Text="{Binding Unit}" />
                             </StackLayout>
-                        <Label Text="{Binding Seller}" />
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-   </ContentPage.Content>
+                            <Label Text="{Binding Seller}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
 </ContentPage>
 
