@@ -6,32 +6,38 @@
 
 
         <StackLayout>
-            <Label Text="{Binding Offer.Name}"
-             FontSize="Large"  
+
+            <Label Text="{Binding Offer.Product}"
+                FontSize="Large"  
                 HorizontalOptions="Center"  
-                VerticalOptions="Center" FontAttributes="Bold" Scale="1.5" Rotation="0" RotationX="0" TranslationY="10" TranslationX="0" TextColor="#5041BC"/>
+                VerticalOptions="Center" FontAttributes="Bold" Scale="1.5" Rotation="0" RotationX="0" TranslationY="10" TranslationX="0">
+
+            </Label>
+
+            <Label Text="{Binding Offer.Name}" HorizontalOptions="Center" TranslationY="10" FontSize="Large" />
+
 
             <StackLayout Orientation="Horizontal" TranslationX="15" TranslationY="15">
-                <Label Text="Pris: " FontAttributes="Bold" FontSize="Medium" TextColor="#5041BC"/>
+                <Label Text="Pris: " FontAttributes="Bold" FontSize="Medium"/>
                 <Label Text="{Binding Offer.Price}" FontSize="Medium"/>
                 <Label Text="kr /" FontSize="Medium" />
                 <Label Text="{Binding Offer.Unit}" FontSize="Medium"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" TranslationX="15" TranslationY="15">
-                <Label Text="Tillgängligt: " FontAttributes="Bold" FontSize="Medium" TextColor="#5041BC"/>
+                <Label Text="Tillgängligt: " FontAttributes="Bold" FontSize="Medium"/>
                 <Label Text="{Binding Offer.CurrentAmount}" FontSize="Medium"/>
                 <Label Text="{Binding Offer.Unit}" FontSize="Medium"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" TranslationX="15" TranslationY="15">
-                <Label Text="Information: " FontAttributes="Bold" FontSize="Medium" TextColor="#5041BC"/>
+                <Label Text="Information: " FontAttributes="Bold" FontSize="Medium"/>
                 <Label Text="Info?" FontSize="Medium"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" TranslationX="15" TranslationY="20">
                 <Label Text="Antal: "  
-                FontAttributes="Bold" FontSize="Medium" TextColor="#5041BC"  
+                FontAttributes="Bold" FontSize="Medium" 
                  HorizontalOptions="Start"  
                  VerticalOptions="Center"/>
 
