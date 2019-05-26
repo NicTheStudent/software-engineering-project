@@ -63,9 +63,12 @@ namespace REKO
             List<Offer> changedOffer = db.GetOffersFiltered(filter);
 
             db.RemoveOrder(order);
-            MainListView.ItemsSource = db.GetOrders();
+            orderList = DatabaseFacade.Instance.GetCurrentOrders(Session.Instance.GetUser());
+            MainListView.ItemsSource = null;
+            MainListView.ItemsSource = orderList;
             changedOffer[0].CurrentAmount += order.Amount;
             db.UpdateOfferAmount(changedOffer[0]);
+            TotalOrderSum = 0;
             return;
         }
     }

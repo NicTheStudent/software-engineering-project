@@ -45,11 +45,6 @@
                                         <Label Text=" kr"/>
                                     </StackLayout>
 
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="Hämtas: Hemma hos" />
-                                        <Label Text="**rekoring-location**"/>
-                                    </StackLayout>
-
                                 </StackLayout>
 
                                 <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
