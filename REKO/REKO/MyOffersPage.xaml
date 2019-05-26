@@ -2,9 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="REKO.MyOffersPage">
+
     <ContentPage.Content>
-        <StackLayout>
-            <Button x:Name="NewOfferButton" Text="Nytt Erbjudande" Clicked="NewOfferButton_Clicked"/>
-        </StackLayout>
+        <ListView x:Name="MainListView"  
+             HasUnevenRows="True"  
+             ItemTapped="MainListView_ItemTapped">
+
+            <ListView.Header>
+                <StackLayout>
+                    <Button x:Name="NewOfferButton" Text="Nytt Erbjudande" Clicked="NewOfferButton_Clicked"/>
+                </StackLayout>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="100">
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Product}" FontSize="Large"/>
+                                <Label Text="{Binding CurrentAmount}"  FontSize="Large"/>
+                                <Label Text="av" FontSize="Large"/>
+                                <Label Text="{Binding StartAmount}"  FontSize="Large"/>
+                                <Label Text="{Binding Unit}"  FontSize="Large"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

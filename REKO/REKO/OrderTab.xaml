@@ -8,22 +8,22 @@
 
     <ContentPage.Content>
 
-        <ListView x:Name="MainListView"  
-                  HasUnevenRows="True"  
-                  ItemTapped="MainListView_ItemTapped">
+            <ListView x:Name="MainListView"  
+                      HasUnevenRows="True"  
+                      ItemTapped="MainListView_ItemTapped">
 
-            <ListView.Header>
-                <StackLayout Padding="30,0,30,0"
-                    Orientation="Horizontal">
-                    <Entry Text="Totalt"
-                       FontSize="Medium"
-                       IsReadOnly="true"/>
-                    <Entry Text="{Binding TotalOrderSum}"
-                           WidthRequest="70"
-                       FontSize="Medium"
-                       IsReadOnly="true"/>
-                </StackLayout>
-            </ListView.Header>
+                <ListView.Header>
+                    <StackLayout Padding="30,0,30,0"
+                        Orientation="Horizontal">
+                        <Entry Text="Totalt"
+                           FontSize="Medium"
+                           IsReadOnly="true"/>
+                        <Entry Text="{Binding TotalOrderSum}"
+                               WidthRequest="70"
+                           FontSize="Medium"
+                           IsReadOnly="true"/>
+                    </StackLayout>
+                </ListView.Header>
 
             <ListView.ItemTemplate>
                 <DataTemplate>

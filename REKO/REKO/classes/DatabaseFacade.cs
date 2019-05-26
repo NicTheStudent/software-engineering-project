@@ -179,11 +179,41 @@ namespace REKO
             return GetOrdersFiltered(filter);
         }
 
+        //Returns all Orders on an Offer
+        public List<Order> GetOrders(Offer offer)
+        {
+            var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.Offer.Id, offer.Id);
+            return GetOrdersFiltered(filter);
+        }
+
         //returns orders according to FilterDefinition, use FilterDefinitionBuilder
         public List<Order> GetOrdersFiltered(FilterDefinition<Order> filter)
         {
             List<Order> orderList = new List<Order>();
             var collection = db.GetCollection<Order>("Order");
+            collection.FindSync(filter).ForEachAsync(Order => orderList.Add(Order));
+            return orderList;
+        }
+
+        public List<Order> GetCurrentOrders(User user)
+        {
+            List<Order> orderList = new List<Order>();
+            var collection = db.GetCollection<Order>("Order");
+            var filterTime = new FilterDefinitionBuilder<Order>().Gt(Order => Order.TimeSold, DateTime.Now);
+            var filterUser = new FilterDefinitionBuilder<Order>().Eq(Order => Order.User, user);
+            var filter = filterTime & filterUser;
+            collection.FindSync(filter).ForEachAsync(Order => orderList.Add(Order));
+            return orderList;
+        }
+
+        //returns all orders that belong to a user and are no longer active
+        public List<Order> GetOldOrders(User user)
+        {
+            List<Order> orderList = new List<Order>();
+            var collection = db.GetCollection<Order>("Order");
+            var filterTime = new FilterDefinitionBuilder<Order>().Lt(Order => Order.TimeSold, DateTime.Now);
+            var filterUser = new FilterDefinitionBuilder<Order>().Eq(Order => Order.User, user);
+            var filter = filterTime & filterUser;
             collection.FindSync(filter).ForEachAsync(Order => orderList.Add(Order));
             return orderList;
         }
@@ -239,6 +269,13 @@ namespace REKO
         {
             var collection = db.GetCollection<Order>("Order");
             var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.id, order.id);
+            collection.DeleteOne(filter);
+        }
+
+        public void RemoveOffer(Offer offer)
+        {
+            var collection = db.GetCollection<Offer>("Offer");
+            var filter = new FilterDefinitionBuilder<Offer>().Eq(Offer => Offer.Id, offer.Id);
             collection.DeleteOne(filter);
         }
 
