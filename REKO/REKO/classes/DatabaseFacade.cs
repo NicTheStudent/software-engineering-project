@@ -179,6 +179,13 @@ namespace REKO
             return GetOrdersFiltered(filter);
         }
 
+        //Returns all Orders on an Offer
+        public List<Order> GetOrders(Offer offer)
+        {
+            var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.Offer.Id, offer.Id);
+            return GetOrdersFiltered(filter);
+        }
+
         //returns orders according to FilterDefinition, use FilterDefinitionBuilder
         public List<Order> GetOrdersFiltered(FilterDefinition<Order> filter)
         {
@@ -262,6 +269,13 @@ namespace REKO
         {
             var collection = db.GetCollection<Order>("Order");
             var filter = new FilterDefinitionBuilder<Order>().Eq(Order => Order.id, order.id);
+            collection.DeleteOne(filter);
+        }
+
+        public void RemoveOffer(Offer offer)
+        {
+            var collection = db.GetCollection<Offer>("Offer");
+            var filter = new FilterDefinitionBuilder<Offer>().Eq(Offer => Offer.Id, offer.Id);
             collection.DeleteOne(filter);
         }
 

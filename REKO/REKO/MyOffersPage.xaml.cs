@@ -15,11 +15,37 @@ namespace REKO
         public MyOffersPage()
         {
             InitializeComponent();
+
+            RefreshData();
+        }
+
+        protected override void OnAppearing() // override this to add refresh on changing to tab
+        {
+            base.OnAppearing();
+            RefreshData();
         }
 
         private async void NewOfferButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new NewOffer());
+        }
+
+        async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var Selected = e.Item as Offer;
+            ShowMyOffer page = new ShowMyOffer(Selected);
+            await Navigation.PushAsync(page);
+            ((ListView)sender).SelectedItem = null;
+        }
+
+        private void RefreshData()
+        {
+            if(!Session.Instance.IsLoggedIn()) return;
+
+            Producer me = Session.Instance.GetProducer();
+            List<Offer> myOffers = DatabaseFacade.Instance.GetOffers(me);
+            MainListView.ItemsSource = myOffers;
+
         }
     }
 }
