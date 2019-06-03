@@ -8,6 +8,7 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson.Serialization;
+using System.Security.Authentication;
 
 namespace REKO
 {
@@ -44,11 +45,14 @@ namespace REKO
         {
             try
             {
-                client = new MongoClient("mongodb://10.0.2.2:27017");  // "mongodb://localhost:27017" "mongodb+srv://RekoUser:pw@rekodb-fhi6h.gcp.mongodb.net/test?retryWrites=true"
+                string connectionString = @"mongodb://rekoadmin:PGM8IEyhVIYkzlQnO1lIt6hW2hLdswWcJ9v9MKPwoEE3RnHvzGmDaZAwMEz7OdKwWnEApgSgkwsDVx4OwwdpMA==@rekoadmin.documents.azure.com:10255/?ssl=true&replicaSet=globaldb";
+                MongoClientSettings settings = MongoClientSettings.FromUrl(new MongoUrl(connectionString));
+                settings.SslSettings = new SslSettings() { EnabledSslProtocols = SslProtocols.Tls12 };
+                client = new MongoClient(settings);
             }
-            catch (AggregateException e)
+            catch
             {
-                System.Diagnostics.Debug.WriteLine("THE EXCPETION" + e.ToString());
+                System.Diagnostics.Debug.WriteLine("DB CONNECTION ERROR");
             }
            
            db = client.GetDatabase("RekoDB");
