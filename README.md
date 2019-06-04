@@ -8,13 +8,13 @@ The project can be run in Visual Studio together with the Xamarin.Forms library.
 
 ## Contributors
 
-osgro19             Oskar Grönqvist  
-Fripperian          Fredrik Lindberg  
-DecibelM            Maria Fornmark  
-NicTheStudent       Niclas Theodorsson  
-HBroman             Hampus Broman  
-LucasAndren         Lucas Andrén  
-ssamuelandersson    Samuel Andersson  
+osgro19 - Oskar Grönqvist  
+Fripperian - Fredrik Lindberg  
+DecibelM - Maria Fornmark  
+NicTheStudent - Niclas Theodorsson  
+HBroman - Hampus Broman  
+LucasAndren - Lucas Andrén  
+ssamuelandersson - Samuel Andersson  
 
 Work has been divided into smaller groups. That means that sometimes one person has commited code written by multiple people. These are the groups:  
 
@@ -30,17 +30,17 @@ Google Drive - https://drive.google.com/drive/folders/1K0LllGfOBBXWoWTfRZCHUH743
 
 ## Google Drive Structure
 
-Folders:
-  Designdokument: Mock-ups, sketches of user-flow for testing and acceptance criteria.  
-  Gruppdokument: GitInspector, DoD, social contract, KPIs, BMC, project description, etc.  
-  Möten: Notes from meetings.  
-  Reflektioner Sprint 1-6: Individual and team reflections for the different sprints.  
-  Final Reflections: Final individual and team reflections.  
+Folders:  
+ 	**Designdokument:** Mock-ups, sketches of user-flow for testing and acceptance criteria.  
+  	**Gruppdokument:** GitInspector, DoD, social contract, KPIs, BMC, project description, etc.  
+	**Möten:** Notes from meetings.  
+  	**Reflektioner Sprint 1-6:** Individual and team reflections for the different sprints.  
+  	**Final Reflections:** Final individual and team reflections.  
 
 
 Files:  
-  The final presentation.  
-  Our own preliminary product backlog, contains all user stories unsorted. These can be found in Trello.
+	The final presentation.  
+	Our own preliminary product backlog, contains all user stories unsorted. These can be found in Trello.
 
 ## GitHub Structure
 
