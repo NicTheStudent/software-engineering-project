@@ -8,18 +8,18 @@ The project can be run in Visual Studio together with the Xamarin.Forms library.
 
 ## Contributors
 
-osgro19             Oskar Grönqvist
-Fripperian          Fredrik Lindberg
-DecibelM            Maria Fornmark
-NicTheStudent       Niclas Theodorsson
-HBroman             Hampus Broman
-LucasAndren         Lucas Andrén
-ssamuelandersson    Samuel Andersson
+osgro19             Oskar Grönqvist  
+Fripperian          Fredrik Lindberg  
+DecibelM            Maria Fornmark  
+NicTheStudent       Niclas Theodorsson  
+HBroman             Hampus Broman  
+LucasAndren         Lucas Andrén  
+ssamuelandersson    Samuel Andersson  
 
-Work has been divided into smaller groups. That means that sometimes one person has commited code written by multiple people. These are the groups:
+Work has been divided into smaller groups. That means that sometimes one person has commited code written by multiple people. These are the groups:  
 
-Lucas & Samuel
-Fredrik & Niclas
+Lucas & Samuel  
+Fredrik & Niclas  
 Hampus, Maria & Oskar
 
 ## Links
@@ -31,14 +31,15 @@ Google Drive - https://drive.google.com/drive/folders/1K0LllGfOBBXWoWTfRZCHUH743
 ## Google Drive Structure
 
 Folders:
-  Designdokument: Mock-ups, sketches of user-flow for testing and acceptance criteria.
-  Gruppdokument: DoD, social contract, KPIs, BMC, project description, etc.
-  Möten: Notes from meetings.
-  Reflektioner Sprint 1-6: Individual and team reflections for the different sprints.
-  Final Reflections: Final individual and team reflections.
+  Designdokument: Mock-ups, sketches of user-flow for testing and acceptance criteria.  
+  Gruppdokument: GitInspector, DoD, social contract, KPIs, BMC, project description, etc.  
+  Möten: Notes from meetings.  
+  Reflektioner Sprint 1-6: Individual and team reflections for the different sprints.  
+  Final Reflections: Final individual and team reflections.  
 
-Files:
-  The final presentation.
+
+Files:  
+  The final presentation.  
   Our own preliminary product backlog, contains all user stories unsorted. These can be found in Trello.
 
 ## GitHub Structure
@@ -51,7 +52,7 @@ Some classes for the creation of objects to be saved in the database can be foun
 
 ## GitInspector
 
-TODO
+Screenshot and original HTML file of Gitinspector is found in the folder named "Gruppdokument". Our perception is that the Gitinspector doesn't show an adequate representation of how the contributions actually have looked throughout the course. We would therefor recommend you to compare these numbers to the numbers at the "Insights" tab in the Github repo, as well as the reflections.
 
 
 
