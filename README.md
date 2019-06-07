@@ -24,7 +24,7 @@ Work has been divided into smaller groups. That means that sometimes one person 
 
 Lucas & Samuel  
 Fredrik & Niclas  
-Maria & Oskar
+Maria & Oskar  
 Hampus
 
 ## Links
