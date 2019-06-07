@@ -16,18 +16,6 @@ namespace REKO
     {
         //Singleton class that does all communication with database.
 
-        // SÅ HÄR SER DU DATABASEN (GAMMALT, VI ANVÄNDER NU LOKAL DATABASSERVER)
-        // steg 1: ladda ner mongodb compass https://www.mongodb.com/products/compass
-        // steg 2: kopiera följande mongodb+srv://RekoUser:<password>@rekodb-fhi6h.gcp.mongodb.net/test
-        // steg 3: öppna mongodb compass, den kommer säga "vill du öppna med lönken du har kopierat"
-        // steg 4: klicka ja
-        // steg 5: fyll i lådan "password" med "pw"
-        // steg 6: klicka på connect
-
-
-        public  List<Offer> offerList = new List<Offer>();
-        public List<Producer> ProducerList= new List<Producer>();
-
         private static readonly DatabaseFacade INSTANCE = new DatabaseFacade();
 
         MongoClient client;
@@ -40,6 +28,7 @@ namespace REKO
                 return INSTANCE;
             }
         }
+
 
         private DatabaseFacade()
         {
@@ -56,37 +45,6 @@ namespace REKO
             }
            
            db = client.GetDatabase("RekoDB");
-
-
-
-            User u1 = new User("Namorb", "pw");
-            User u2 = new User("Fripperian", "pw");
-            User u3 = new User("NictheStudent", "pw");
-            User u4 = new User("FornMaria", "pw");
-            User u5 = new User("oscgro19", "pw");
-            User u6 = new User("ssamuelandersson", "pw");
-            User u7 = new User("LucasAndren", "pw");
-
-            RekoRing r1 = new RekoRing("Göteborg", new DateTime(2019, 6, 20, 18, 0, 0));
-
-            Producer p1 = new Producer("Eggberts Ägg", "Jag har 800 hönor men är allergisk mot ägg, säljer därför av lite nu till påsk", u1, r1);
-            Producer p2 = new Producer("Bertils Betor", "Säljer schyssta röd-, gul- och polkabetor", u2, r1);
-            Producer p3 = new Producer("Grönqvists gurkor", "Salta och söta", u3, r1);
-            Producer p4 = new Producer("Marias Margarin", "Perfekt för morgonmackan", u4, r1);
-
-            ProducerList.Add(p1);
-            ProducerList.Add(p2);
-            ProducerList.Add(p3);
-            ProducerList.Add(p4);
-
-            // kvar för att inte förstöra något gammalt
-            offerList.Add(new Offer("Eggberts Ägg", "ägg", 40, p1, 144, 0, "dussin", true));
-            offerList.Add(new Offer("Bertils betor", "betor", 10, p2, 20, 0, "kg", true));
-            offerList.Add(new Offer("Grönqvists gröna gurkor", "gurka", 30, p3, 15, 0, "st.", true));
-            offerList.Add(new Offer("Marias margarin", "margarin", 50, p4, 1000, 0, "g", true));
-
-
-
 
         }
 
@@ -115,6 +73,7 @@ namespace REKO
             else
                 return false;
         }
+
 
         //** METHODS RELATING TO CLASS: Producer **
 
@@ -289,6 +248,15 @@ namespace REKO
             var filter = new FilterDefinitionBuilder<Offer>().Eq(Offer => Offer.Id, offer.Id);
             var update = new UpdateDefinitionBuilder<Offer>().Set(Offer => Offer.CurrentAmount, offer.CurrentAmount);
             collection.UpdateOne(filter, update);
+        }
+
+        public void RemoveData()
+        {
+            db.DropCollection("Offer");
+            db.DropCollection("Order");
+            db.DropCollection("User");
+            db.DropCollection("RekoRing");
+            db.DropCollection("Producer");
         }
     }
 }

@@ -2,9 +2,14 @@
 
 REKO-ring is an app used for buying and selling self-produced or self-refined goods, such as crops, meat or honey. The purpose for this app is to advocate a market for local goods without the need of social media.
 
-## Installation
+## Installation & User Instructions
 
 The project can be run in Visual Studio together with the Xamarin.Forms library. The debug has only been tested on Android emulators. The computer needs to be connected to the internet and allow connections to remote Mongo databases.
+
+ **-** Start the app  
+ **-** Press the "PopulateDB()" button on the tab called "Mitt konto" (we've created some examples to be able to test the app).  
+ **-** Look around in the app, place orders, choose RekoRing, create offers etc. To be able to create new offers, you have to log in and open a shop, which you can do on the "Mitt Konto" tab.  
+ **-** Create a new account, or log in as user 'LucasAndren' with password 'pw', to be able to see "Gamla beställningar" on the "Mitt Konto" tab (these are just orders with dates that have expired, i.e. orders with a date older than the date for the last meeting with the producers).  
 
 ## Contributors
 
@@ -53,18 +58,6 @@ Some classes for the creation of objects to be saved in the database can be foun
 ## GitInspector
 
 Screenshot and original HTML file of Gitinspector is found in the folder named "Gruppdokument". Our perception is that the Gitinspector doesn't show an adequate representation of how the contributions actually have looked throughout the course. We would therefor recommend you to compare these numbers to the numbers at the "Insights" tab in the Github repo, as well as the reflections.
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

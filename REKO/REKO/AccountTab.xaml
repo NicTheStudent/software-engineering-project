@@ -40,11 +40,10 @@
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>
-                        <TextCell x:Name="ringLabel" Text="Ingen REKO-ring vald" TextColor="Gray"/>
+                        <TextCell x:Name="ringLabel" Text = "" TextColor="Gray"/>
                         <TextCell x:Name="populateCell" Text="PopulateDB()" Tapped="populateCell_Tapped" Detail=""/>
-                        <TextCell x:Name="testCell" Text="Testknapp" Tapped="testCell_Tapped" Detail=""/>
-                    </TableSection>
-                                      
+                        <TextCell x:Name="RemoveData" Text="DropDB()" Tapped="RemoveData_Tapped" Detail=""/>
+                    </TableSection>                   
                 </TableRoot>
             </TableView>
             

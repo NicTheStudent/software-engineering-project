@@ -20,9 +20,9 @@ namespace REKO
         void SignUpClicked(object sender, EventArgs e)
         {
             if (Ent_Lösen1.Text != Ent_Lösen2.Text) // check matching passwords
-                DisplayAlert("Konto kunde inte skapas", "lösenorden stämmer inte överens", "OK"); 
+                DisplayAlert("Konto kunde inte skapas", "Lösenorden stämmer inte överens", "OK"); 
             else if (DatabaseFacade.Instance.CheckUsernameExists(Ent_Anvnamn.Text))
-                DisplayAlert("Konto kunde inte skapas", "användarnamnet är upptaget ", "OK");
+                DisplayAlert("Konto kunde inte skapas", "Användarnamnet är upptaget ", "OK");
             else
             {
                 User newUser = new User(Ent_Anvnamn.Text, Ent_Lösen1.Text);

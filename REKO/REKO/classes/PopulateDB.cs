@@ -35,12 +35,6 @@ namespace REKO
                 ringList.Add(new RekoRing("Göteborg", new DateTime(2019,6,20,18,0,0)));
                 ringList.Add(new RekoRing("Borås", new DateTime(2019,7,1,18,0,0)));
 
-                // Gamla versioner av RekoRing
-                //ringList.Add(new RekoRing("Partille"));
-                //ringList.Add(new RekoRing("Stenungsund"));
-                //ringList.Add(new RekoRing("Mölndal"));
-                //ringList.Add(new RekoRing("Hästveda"));
-
                 ringList.ForEach(RekoRing => DatabaseFacade.Instance.AddRekoRing(RekoRing));
              }
 
@@ -78,9 +72,9 @@ namespace REKO
                 List<RekoRing> ringList = DatabaseFacade.Instance.GetRekoRings();
 
                 List<Producer> producerList= new List<Producer>();
-                producerList.Add(new Producer("Eggberts Äggfarm", "Jag har 800 hönor men är allergisk mot ägg, säljer därför av lite nu till påsk", userList[0], ringList[0]));
+                producerList.Add(new Producer("Eggberts Äggfarm", "Jag har 800 hönor men är allergisk mot ägg, säljer därför av några inför sommaren", userList[0], ringList[0]));
                 producerList.Add(new Producer("Bertils Betodling", "Säljer schyssta röd-, gul- och polkabetor", userList[1], ringList[0]));
-                producerList.Add(new Producer("Grönqvists gurkplantage", "Salta och söta", userList[2], ringList[0]));
+                producerList.Add(new Producer("Grönqvists Gurkplantage", "Salta och söta", userList[2], ringList[0]));
                 producerList.Add(new Producer("Marias Margarinfabrik", "Perfekt för morgonmackan", userList[3], ringList[0]));
                 producerList.ForEach(Producer => DatabaseFacade.Instance.AddProducer(Producer));
             }
@@ -119,8 +113,8 @@ namespace REKO
                 orderList.Add(new Order(userList[4], offerList[0], 1, 5, offerList[0].Seller.RekoRing.nextMeetup));
 
                 //Adding older orders
-                orderList.Add(new Order(userList[4], offerList[0], 1, 2, new DateTime(1997,2,23,22,9,0)));
-                orderList.Add(new Order(userList[4], offerList[1], 1, 3, new DateTime(2019,4,25,18,0,0)));
+                orderList.Add(new Order(userList[6], offerList[0], 1, 2, new DateTime(1997,2,23,22,9,0)));
+                orderList.Add(new Order(userList[6], offerList[1], 1, 3, new DateTime(2019,4,25,18,0,0)));
 
                 orderList.ForEach(Order => DatabaseFacade.Instance.AddOrder(Order));
             }

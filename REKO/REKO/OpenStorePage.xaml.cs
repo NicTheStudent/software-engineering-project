@@ -25,7 +25,7 @@ namespace REKO
                         Producer newProducer = new Producer(storeName, storeDescription, Session.Instance.GetUser(), Session.Instance.GetRekoRing());
                         DatabaseFacade.Instance.AddProducer(newProducer);
                         Session.Instance.UpdateProducer();
-                        DisplayAlert("Butik skapad", "du kan nu skapa erbjudanden", "OK");
+                        DisplayAlert("Butik skapad", "Du kan nu skapa erbjudanden", "OK");
                         Navigation.PopAsync();
                     }
                     else

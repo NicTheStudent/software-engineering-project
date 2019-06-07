@@ -26,7 +26,7 @@ namespace REKO
                 Offer newOffer = new Offer(name, product, price, Session.Instance.GetProducer(), availableAmount, orderedAmount, unit, true);
                 DatabaseFacade db = DatabaseFacade.Instance;
                 db.AddOffer(newOffer);
-                DisplayAlert("Nytt erbjudande skapat", "det blir säkerligen mycket populärt", "OK");
+                DisplayAlert("Nytt erbjudande skapat", "Det blir säkerligen mycket populärt", "OK");
                 Navigation.PopAsync();
             }
             else if (!Session.Instance.IsLoggedIn())

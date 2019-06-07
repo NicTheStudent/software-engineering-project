@@ -7,22 +7,14 @@ namespace REKO
 {
     public partial class AccountTab : ContentPage
     {
-
+        List<RekoRing> ringList;
 
         public AccountTab()
         {
             InitializeComponent();
-
-            List<RekoRing> ringList = DatabaseFacade.Instance.GetRekoRings();
-
-            List<string> stringRingList = new List<string>();
-            ringList.ForEach(RekoRing => stringRingList.Add(RekoRing.name)); // inte 100% snyggt men funkar
-
-            picker.ItemsSource = stringRingList;
-
+           
             picker.SelectedIndexChanged += OnPickerSelectedIndexChanged;
-            ringLabel.Text = "Ingen REKO-ring vald";           
-
+            ringLabel.Text = "Ingen REKO-ring vald";
 
             void OnPickerSelectedIndexChanged(object sender, EventArgs e)
             {
@@ -34,20 +26,25 @@ namespace REKO
                     ringLabel.Text = "Vald: " + (string)picker.ItemsSource[selectedIndex];
                     Session.Instance.SetRekoRing(ringList[picker.SelectedIndex]);
                 }
-                else
-                {
-                    ringLabel.Text = "Ingen REKO-ring vald";
-                }
             }
-
         }
 
         protected override void OnAppearing() // override this to add refresh on changing to tab
         {
             base.OnAppearing();
+            RefreshData();
             HideOrShowOptions();
         }
 
+        private void RefreshData ()
+        {
+            ringList = DatabaseFacade.Instance.GetRekoRings();
+
+            List<string> stringRingList = new List<string>();
+            ringList.ForEach(RekoRing => stringRingList.Add(RekoRing.name)); // inte 100% snyggt men funkar
+
+            picker.ItemsSource = stringRingList;
+        }
 
         TableSection loginSignup;
         TableSection openStore;
@@ -123,9 +120,10 @@ namespace REKO
 
         }
 
-        void testCell_Tapped(object sender, EventArgs e)
+        void RemoveData_Tapped(object sender, EventArgs e)
         {
-            //for testing
+            DatabaseFacade db = DatabaseFacade.Instance;
+            db.RemoveData();
         }
 
         /*
