@@ -57,6 +57,6 @@ Some classes for the creation of objects to be saved in the database can be foun
 
 ## GitInspector
 
-Screenshot and original HTML file of Gitinspector is found in the folder named "Gruppdokument". While gitinspector did a good job for 6/7 members, it does for Oscar Grönquist. Likely this is becuase he pushed the original Visual Studio project (we failed to make gitinspector disregard these changes). For a more reasonable account of his contribution check github insights from April 15th.
+Screenshot and original HTML file of Gitinspector is found in the folder named "Gruppdokument". While gitinspector did a good job for 6/7 members, it does not for Oscar Grönquist. Likely this is becuase he pushed the original Visual Studio project (we failed to make gitinspector disregard these changes). For a more reasonable account of his contribution check github insights from April 15th.
 
 
